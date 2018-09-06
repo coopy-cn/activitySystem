@@ -1,0 +1,2456 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://i.hd.fkw.com/version2/myActive.jsp -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>凡科互动</title>
+<link href="../css/base.min.css" rel="stylesheet" type="text/css">
+<link href="../css/myActive.min.css" rel="stylesheet" type="text/css">
+<style>
+    #hdBanneContainer .close{
+        position:absolute;
+        background:url(//hd.faisys.com/image/yunying/platinumClose_gq.png) center 0 no-repeat; 
+        top:4px; 
+        right:4px;
+        width:19px;
+        height:19px; 
+        cursor: pointer;
+        z-index:10;
+    }
+    #hdBanneContainer .close:hover{
+        background-image:url(//hd.faisys.com/image/yunying/platinumClose_gq_hover.png);
+    }
+    #hdBanneContainer .btn{
+        width:110px; 
+        height:40px; 
+        display:block;
+        background:url(//hd.faisys.com/image/yunying/platinumBtn_gq.png) center 0 no-repeat; 
+        position:absolute;
+        top:56px; 
+        left:250px;
+    }
+    #hdBanneContainer .btn:hover{
+        background-image:url(//hd.faisys.com/image/yunying/platinumBtn_gq_hover.png);
+    }
+    #closeTip .msg{
+        font-size:14px;
+        color:#F96C25;
+        margin:15px 0 0 30px;
+    }
+    #closeTip .msg .link{
+        color:#74c1ed;
+        text-decoration: underline;
+        margin-left: 10px;
+    }
+</style>
+<link href="../css/previewBox.min.css" rel="stylesheet"><link href="./my_files/canalBox.min.css" rel="stylesheet"><link href="./my_files/newRegister.min.css" rel="stylesheet"></head>
+<body>
+    
+    <!--20180108 下掉大赛banner-->
+    <div id="myActContainer" class="container" style="padding:15px 28px 0 28px;">
+        <div class="banner hide"><span class="icon" id="closeIcon"></span></div>
+    
+        <div id="activityListTitle" class="hide"><span class="icon"></span><a href="javascript:;" onclick="showTab(2)">我的活动</a>/<span class="name">活动回收站</span></div>
+        <div id="tableContent" class="tableContent">
+            <div class="myActContainTitle">
+                <div class="tableTitleName">我的活动</div>
+                
+                <div onclick="showTab(1)" id="recycleBinTitle" class="main-Button"><span class="icon"></span>活动回收站(<span class="actNum">0</span>)</div>
+                
+                <div id="clearRecycleBox" class="main-Button hide" onclick="clearRecycleBin()"><span class="icon"></span>清空回收站</div>
+            </div>
+            <div id="showActiveTable" class="showActiveTable" style="min-width: 880px;"><div class="faiTableWrap"><div class="center"><table class="faiTable" cellpadding="0" cellspacing="0"><thead><tr class="scrollFixedTr"><th data-key="name" class="column1 textLeft  sep"><div class="padding">活动名称</div></th><th data-key="id" class="column2 textCenter sep"><div class="padding">活动编号</div></th><th data-key="startTime" class="column3 textCenter sep"><div class="padding">活动时间</div></th><th data-key="status" class="column4 textCenter sep dropDown pointer"><div class="padding">全部状态<span class="icon"></span></div><div class="faiTable_poupBox dropDownBox_sub hide" style="display: none;"><div class="optionsWarp"><div class="options primary" _index="0">全部状态</div><div class="options" _index="1">未发布</div><div class="options" _index="2">未开始</div><div class="options" _index="3">进行中</div><div class="options" _index="4">已结束</div><div class="options" _index="5">违规关闭</div></div></div></th><th data-key="setting" class="column3  textCenter sep"><div class="padding">参与人数/最大限制</div></th><th data-key="lessHBPrice" class="column9  textCenter sep"><div class="padding"><div class="hongbaoLessNumPrice"><span>活动剩余资产</span><span class="icon"></span></div></div></th><th data-key="operate" class="column7 textRight"><div class="padding">操作</div></th></tr><tr class="trClone hide"><th data-key="name" class="column1 textLeft  sep"><div class="padding">活动名称</div></th><th data-key="id" class="column2 textCenter sep"><div class="padding">活动编号</div></th><th data-key="startTime" class="column3 textCenter sep"><div class="padding">活动时间</div></th><th data-key="status" class="column4 textCenter sep dropDown pointer"><div class="padding">全部状态<span class="icon"></span></div><div class="faiTable_poupBox dropDownBox_sub hide" style="display: none;"><div class="optionsWarp"><div class="options primary" _index="0">全部状态</div><div class="options" _index="1">未发布</div><div class="options" _index="2">未开始</div><div class="options" _index="3">进行中</div><div class="options" _index="4">已结束</div><div class="options" _index="5">违规关闭</div></div></div></th><th data-key="setting" class="column3  textCenter sep"><div class="padding">参与人数/最大限制</div></th><th data-key="lessHBPrice" class="column9  textCenter sep"><div class="padding"><div class="hongbaoLessNumPrice"><span>活动剩余资产</span><span class="icon"></span></div></div></th><th data-key="operate" class="column7 textRight"><div class="padding">操作</div></th></tr></thead><tbody><tr _index="0" class="odd hover"><td class="textLeft active_activeName ellipsis"><div class="padding ellipsis tdWrap"><div><div class="qrcodeIcon" _index="0"></div><div class="imgBox"><img src="../img/AAEIABACGAAgjJnK1wUogNjluQQwwgM4_gE.jpg" style="width:100%;"></div><div class="textBox"><div onclick="editActive(3,0)">参与活动赢大奖</div></div></div></div></td><td class="textCenter ellipsis tmpShowHoverTips"><div class="padding ellipsis tdWrap"><div class="textCenter">HD3</div></div></td><td class="textCenter ellipsis tmpShowHoverTips"><div class="padding ellipsis tdWrap">2018-09-03 11:40:55<br>2018-09-10 11:40:55</div></td><td class="textCenter ellipsis tmpShowHoverTips"><div class="padding ellipsis tdWrap"><div style="color:#999;">未发布</div></div></td><td class="textCenter ellipsis tmpShowHoverTips"><div class="padding ellipsis tdWrap">0/100</div></td><td class="textCenter ellipsis tmpShowHoverTips"><div class="padding ellipsis tdWrap"></div></td><td class="textRight ellipsis"><div class="padding ellipsis tdWrap"><div class="textRight"><span style=""><a href="https://i.hd.fkw.com/version2/myActive.jsp#" class="publishStyle" id="publishBtn" onclick="showPublishBox(0);return false;">发布</a></span><span style="display:none"><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="endActive(3);return false;">结束</a></span><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="editActive(3,0,-1,75); return false;">编辑</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" class="actLink" onclick="fromLink(3,0); return false;">预览</a><a class="moreMenuBtn" onclick="showMoreMenuBtn($(this))">更多<span class="icon"></span></a><div class="moreOptionBox hide" style="display: none;"><div class="tipsBoxArrow"></div><a href="https://i.hd.fkw.com/version2/myActive.jsp#" class="copyActiveBtn" rstyle="75" onclick="copyActive(3, this)">复制</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="showCanal(3,0); return false;">渠道管理</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="moveToRecycleBin(3,0);return false;">删除</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="showGameData(3,1);return false;">传播数据</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="showGameData(3,2);return false;">获奖名单</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" class="hd_set_vertifiers">配置核销员</a></div></div></div></td></tr><tr _index="1" class="even"><td class="textLeft active_activeName ellipsis"><div class="padding ellipsis tdWrap"><div><div class="qrcodeIcon" _index="1"></div><div class="imgBox"><img src="../img/AAEIABACGAAgjJnK1wUogNjluQQwwgM4_gE.jpg" style="width:100%;"></div><div class="textBox"><div onclick="editActive(2,1)">参与活动赢大奖</div></div></div></div></td><td class="textCenter ellipsis tmpShowHoverTips"><div class="padding ellipsis tdWrap"><div class="textCenter">HD2</div></div></td><td class="textCenter ellipsis tmpShowHoverTips"><div class="padding ellipsis tdWrap">2018-09-03 11:40:12<br>2018-09-10 11:40:12</div></td><td class="textCenter ellipsis tmpShowHoverTips"><div class="padding ellipsis tdWrap"><div style="color:#999;">未发布</div></div></td><td class="textCenter ellipsis tmpShowHoverTips"><div class="padding ellipsis tdWrap">0/100</div></td><td class="textCenter ellipsis tmpShowHoverTips"><div class="padding ellipsis tdWrap"></div></td><td class="textRight ellipsis"><div class="padding ellipsis tdWrap"><div class="textRight"><span style=""><a href="https://i.hd.fkw.com/version2/myActive.jsp#" class="publishStyle" id="publishBtn" onclick="showPublishBox(1);return false;">发布</a></span><span style="display:none"><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="endActive(2);return false;">结束</a></span><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="editActive(2,1,-1,75); return false;">编辑</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" class="actLink" onclick="fromLink(2,1); return false;">预览</a><a class="moreMenuBtn" onclick="showMoreMenuBtn($(this))">更多<span class="icon"></span></a><div class="moreOptionBox hide" style="display: none;"><div class="tipsBoxArrow"></div><a href="https://i.hd.fkw.com/version2/myActive.jsp#" class="copyActiveBtn" rstyle="75" onclick="copyActive(2, this)">复制</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="showCanal(2,1); return false;">渠道管理</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="moveToRecycleBin(2,1);return false;">删除</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="showGameData(2,1);return false;">传播数据</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="showGameData(2,2);return false;">获奖名单</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" class="hd_set_vertifiers">配置核销员</a></div></div></div></td></tr><tr _index="2" class="odd"><td class="textLeft active_activeName ellipsis"><div class="padding ellipsis tdWrap"><div><div class="qrcodeIcon" _index="2"></div><div class="imgBox"><img src="../img/AAEIABACGAAgjJnK1wUogNjluQQwwgM4_gE.jpg" style="width:100%;"></div><div class="textBox"><div onclick="editActive(1,2)">参与活动赢大奖</div></div></div></div></td><td class="textCenter ellipsis tmpShowHoverTips"><div class="padding ellipsis tdWrap"><div class="textCenter">HD1</div></div></td><td class="textCenter ellipsis tmpShowHoverTips"><div class="padding ellipsis tdWrap">2018-09-03 10:08:07<br>2018-09-10 10:08:07</div></td><td class="textCenter ellipsis tmpShowHoverTips"><div class="padding ellipsis tdWrap"><div style="color:#999;">未发布</div></div></td><td class="textCenter ellipsis tmpShowHoverTips"><div class="padding ellipsis tdWrap">0/100</div></td><td class="textCenter ellipsis tmpShowHoverTips"><div class="padding ellipsis tdWrap"></div></td><td class="textRight ellipsis"><div class="padding ellipsis tdWrap"><div class="textRight"><span style=""><a href="https://i.hd.fkw.com/version2/myActive.jsp#" class="publishStyle" id="publishBtn" onclick="showPublishBox(2);return false;">发布</a></span><span style="display:none"><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="endActive(1);return false;">结束</a></span><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="editActive(1,2,-1,75); return false;">编辑</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" class="actLink" onclick="fromLink(1,2); return false;">预览</a><a class="moreMenuBtn" onclick="showMoreMenuBtn($(this))">更多<span class="icon"></span></a><div class="moreOptionBox hide" style="display: none;"><div class="tipsBoxArrow"></div><a href="https://i.hd.fkw.com/version2/myActive.jsp#" class="copyActiveBtn" rstyle="75" onclick="copyActive(1, this)">复制</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="showCanal(1,2); return false;">渠道管理</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="moveToRecycleBin(1,2);return false;">删除</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="showGameData(1,1);return false;">传播数据</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="showGameData(1,2);return false;">获奖名单</a><a href="https://i.hd.fkw.com/version2/myActive.jsp#" class="hd_set_vertifiers">配置核销员</a></div></div></div></td></tr></tbody><tfoot></tfoot></table></div><div class="bottom"><div class="total"><span class="allTotal">共有 3 条记录 ，每页显示</span><div class="dropDownBox"><div class="dropDownArea">10</div><div class="faiTable_poupBox optionsBox hide"><div class="options">10</div><div class="options">50</div><div class="options">100</div><div class="options">500</div></div></div></div><div class="pageBox"><div class="page"><a href="javascript:;" hidefocus="true" class="prevPage disabledBtn"></a><span class="currentPage">1 / 1</span><a href="javascript:;" hidefocus="true" class="nextPage disabledBtn"></a></div><span class="pageJump"> <input maxlength="1" class="jumpInput" type="text"> <div class="jumpSubmit pointer">跳转</div></span></div></div></div></div>
+            <!-- 活动回收站div-->
+            <div id="showRecycleTable" class="showRecycleTable" style="min-width: 880px; display: none;"><div class="faiTableWrap"><div class="center"><table class="faiTable" cellpadding="0" cellspacing="0"><thead><tr><th data-key="name" class="column1 textLeft sep"><div class="padding">活动名称</div></th><th data-key="id" class="column2 textCenter sep"><div class="padding">活动编号</div></th><th data-key="recyleTime" class="column4 textCenter sep"><div class="padding">移入回收站时间</div></th><th data-key="deadTime" class="column5 textCenter sep"><div class="padding"><div class="autoCleanTimer"><span class="icon"></span><span>自动清除时间</span><span id="clearDetailImg" onmouseover="showTip()" onmouseout="hideTip()"></span></div></div></th><th data-key="player" class="column3  textCenter sep"><div class="padding">参与人数/最大限制</div></th><th data-key="thelessHBPrice" class="column9  textCenter sep"><div class="padding"><div class="hongbaoLessNumPrice"><span>活动剩余资产</span><span class="icon recycleIcon"></span></div></div></th><th data-key="operate" class="column7 textCenter textRight"><div class="padding">操作</div></th></tr></thead><tbody><tr class="queryIngTr odd"><td class="padding" colspan="7">暂无活动 <a href="https://i.hd.fkw.com/version2/myActive.jsp#" onclick="goNow(); return false;" style="margin-left:8px;"></a></td></tr></tbody><tfoot></tfoot></table></div><div class="bottom"><div class="total"><span class="allTotal">共有 0 条记录 ，每页显示</span><div class="dropDownBox"><div class="dropDownArea">10</div><div class="faiTable_poupBox optionsBox hide"><div class="options">10</div><div class="options">50</div><div class="options">100</div><div class="options">500</div></div></div></div><div class="pageBox"><div class="page"><a href="javascript:;" hidefocus="true" class="prevPage disabledBtn"></a><span class="currentPage">1 / 1</span><a href="javascript:;" hidefocus="true" class="nextPage disabledBtn"></a></div></div></div></div></div>
+        </div>
+        <div id="showPrizeList" class="showPrizeListBox slidShowBox" style="display: none;">
+            <iframe id="editPrizeFramePage" class="editPrizeFramePage" frameborder="0" scrolling="auto" style="width:100%;height:100%;" src="./my_files/saved_resource.html"></iframe>
+        </div>
+        <div id="showBg" class="showBg"></div>
+    </div>
+    <div id="showGameData" class="showGameDataBox slidShowBox" style="display: none;">
+        <iframe id="gameDataFramePage" class="gameDataFramePage" frameborder="0" scrolling="auto" style="width:100%;height:100%;" src="./my_files/saved_resource(1).html"></iframe>
+        <iframe id="helpListFramePage" class="helpListFramePage" frameborder="0" scrolling="auto" style="width:100%;height:100%;" src="./my_files/saved_resource(2).html"></iframe>
+        <iframe id="memberListFramePage" class="memberListFramePage" frameborder="0" scrolling="auto" style="width:100%;height:100%;" src="./my_files/saved_resource(3).html"></iframe>
+    </div>
+    <div id="editActive" class="editActBox slidShowBox" style="display: none;"></div>
+
+<meta id="_TOKEN" value="08d6fadb30e21d57116e78a72a68d878" type="hidden">
+<meta content="always" name="referrer">
+
+<link rel="shortcut icon" href="https://i.hd.fkw.com/favicon.ico">
+<link rel="bookmark" href="https://i.hd.fkw.com/favicon.ico" type="image/x-icon" 　="">
+<script src="../js/hawkEye.min.js.下载"></script><script type="text/javascript">
+	document.domain = 'fkw.com';
+    var g_timeDeviation = 1536052012781 - new Date().getTime(); //服务器时间与系统时间偏差
+    var g_isVersion3 = false;
+</script>
+<script type="text/javascript" src="../js/jquery-core.min.js.下载"></script>
+<script type="text/javascript" src="../js/fai_hd.min.js.下载"></script>
+<script type="text/javascript" src="../js/jquery-ui-core.min.js.下载"></script>
+<script type="text/javascript" src="../js/faiui.min.js.下载"></script>
+<script type="text/javascript" src="../js/hdportal.min.js.下载"></script>
+
+<script type="text/javascript">
+try {
+	hdFai.top = parent.hdFai.top;
+} catch (e) {
+}
+$.extend(HdPortal,{"m_debug":false,"isOem":false,"isStoreVer":false,"_isInnerAccount":true,"storeId":0,"areaId":0,"HdPortalHost":"i.fkw.com","HomeHost":"fkw.com","OemPortalHost":"adm.webportal.top","isYKY":false,"noSupportTipA":"<a onclick='openQuickPay()' href='javascript:;'>前往升级<\/a>","buyProductAuth":true,"canRecharge":true,"closeRecharge":false,"accreditRecharge":true,"isMainstore":true,"isStaff":false,"hdOpenTime":1535939094129,"feePercent":0.02,"resRoot":"//hd.faisys.com","hdVer":{"FREE":0,"BY":1,"BJ":2,"MD":4,"ZS":3},"_cssUrlInfo":{"editPoupBox":"//hd.faisys.com/version2/css/poupBox/editPoupBox.min.css?v=201808061808","js_ZeroClipboard":"//hd.faisys.com/version2/js/comm/ZeroClipboard/ZeroClipboard.swf?v=201704111734"},"timeLimit":{"quickPay":0},"$data":{"gameHost":"hd.faisco.cn","hpHost":"i.hd.fkw.com","hdhomeHost":"hd.fkw.com","aid":17485030,"httpStr":"https","comfortToAward":{"comoptx":"optx","comattentionimg":"attentionimg","comimgw":"aimgw","comimg":"aimg","ctlmt":"tlmt","comimgh":"aimgh","comiscuscode":"iscuscode","cttype":"t_type","comfbt":"cfbt","comoci":"ocimg","comstl":"stl","comoct":"oct","comopti":"opti","conlinect":"onlinect","comcashtype":"cashtype","comiscancelver":"iscancelver","conlinewxnum":"onlinewxnum","comOpqrc":"opqrc","comStoreType":"storeType","comservicephone":"servicepho","comcashinfo":"cashinfo","comcet":"cet","combtn":"btn","cas":"style","comtxn":"txn","combtl":"btl","ca":"name","comcontinfo":"continfo","comNeedLessConsume":"needlessconsume","comStoresIds":"storesIds","comattention":"attention","comcbt":"cbt","comtxc":"txc","comAwardtype":"awardtype","comft":"cft","comOplink":"oplink","comcashsite":"cashsite","cc":"","ccc":""},"isFaier":false,"portalVer":0,"hblimit":50000,"isOpenABTest":false,"isOpenOem":false}});
+
+
+function openQuickPay(logId, srcId){
+    if($.type(logId) == 'array'){
+        HdPortal.logDogList(logId);
+    }else{
+        logId && srcId && HdPortal.logDog(logId, srcId);
+    }
+    // m_aid % 2 == 0
+    if((true || HdPortal.hdOpenTime <= HdPortal.timeLimit.quickPay) && true){
+        if(true){
+            window.open("http://i.fkw.com/jump.jsp?t=42");
+        }else{
+            window.open("http://adm.webportal.top/portal.jsp#appId=shop&tab=4");
+        }
+        
+    }else{
+        var verInfo = 1;
+        if(true){
+            verInfo = 1;
+        }else if(false){
+            verInfo = 2;
+        }else if(false){
+            verInfo = 3;
+        }
+        HdPortal.quickPayMent({verInfo: verInfo, type: 2});
+    }
+}
+var limitGameFor19 = ["47","69"];
+if(hdFai.top.indexTest || HdPortal.m_debug){
+    $(function(){
+        $('body').append('<a id="oneself_link" href="'+document.URL+'" target="_blank">self</a>');
+    })
+}
+</script>
+<script type="text/javascript">  
+(function() { 
+var fs = document.createElement("script"); 
+fs.src = "../js/hawkEye.min.js?v=201807231924";
+window.FAI_HAWK_EYE = {}; 
+window.FAI_HAWK_EYE.jssdk_report_url = "//report.fkw.com/js/report"; 
+window.FAI_HAWK_EYE.jssdk_appid = 5004; 
+window.FAI_HAWK_EYE.fai_aid = 0; 
+window.FAI_HAWK_EYE.fai_bs_aid = 17485030; 
+window.FAI_HAWK_EYE.fai_bs_id = 0; 
+window.FAI_HAWK_EYE.fai_bs_wid = 0; 
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(fs, s);
+})();</script>
+
+
+<script type="text/javascript" src="../js/ZeroClipboard.min.js.下载"></script>
+<script type="text/javascript" src="../js/poupBox.min.js.下载"></script>
+
+<script type="text/javascript">AAEIABACGAAgjJnK1wUogNjluQQwwgM4_gE
+    var nowTime = new Date().getTime();
+    //var isActTime = nowTime < 1513526399000 || nowTime > 1513699199000 ? true : false;
+    // var isActTime = (nowTime > 1516204799000 && nowTime < 1517759999000) ? true : false;
+    var isActTime = nowTime > 1519833600000 && nowTime < 1521388800000;
+    var recycleList = [];
+    var m_debug = false;
+    var isFaier = false;
+    var aid = 17485030;
+    var isClose = false;
+    top.step = 14;
+    top.newSign = true;
+    
+    hdFai.top = window;
+    if((aid == 936152 && !$.cookie("closeBanner"+aid)) || (aid != 936152 && isActTime && !$.cookie("closeBanner"+aid))){
+        $("#myActContainer .banner").show();
+        $("#myActContainer").css("padding","28px 28px 0");
+    }
+
+    function copyActive(id, obj){
+        if($.inArray($(obj).attr("rstyle"), limitGameFor19)!=-1){
+            var options = {
+                content: '为营造和谐安全的网络环境，提升用户体验，该功能近期正快马加鞭升级中，请耐心等待，造成不便敬请原谅！',
+                hasTitle: false,
+                contentStyles: 'text-align: center; padding-top: 55px;'
+            };
+            if(false){
+                if(true){
+                    HdPortal.popup(options);
+                    return false;
+                }
+            }else if(false){
+                HdPortal.popup(options);
+                return false;
+            }
+        }
+        if(!id){
+            return;
+        }
+        HdPortal.logDog(1000156 ,5);
+        HdPortal.wxCardProgress.init(true, 100, 1000, "复制活动中，请不要关闭。");
+        $.ajax({
+            url: HdPortal.versionURL+'/ajax/hpFaiTabel_h.jsp?cmd=copyActive',
+            type: 'post',
+            data: {gameId: id},
+            success: function(result){
+                result = $.parseJSON(result);
+                if(result.success){
+                    HdPortal.wxCardProgress.end(function(){
+                        HdPortal.hdShowMsg("right", "复制成功, 请自行调整活动时间。", true);
+                        if(result.data){
+                            /*$("#showActiveTable").faiTable('addData', result.data, activeList.length - 1, 0);
+                            $.each(activeList, function(index, val) {
+                                val._index += 1;
+                            });*/
+                            $('#showActiveTable').faiTable("loadAjaxPage");
+                        }
+                    });
+                }else{
+                    HdPortal.wxCardProgress.end(function(){
+                        HdPortal.hdShowMsg("error", result.msg, false);
+                    });
+                }
+            },
+            error: function(){
+                HdPortal.wxCardProgress.end(function(){
+                    HdPortal.hdShowMsg("error", "系统繁忙，请稍候再试", false);
+                });
+            }
+        });
+    }
+    $(function(){
+        showMyActiveTable();    
+        showRecycleTable();
+        
+        HdPortal.hoverTipsBox.hover([$('#tableContent'),'.incrementImg'],'up','已购买去广告服务',{'min-width':'auto'},'center');
+        
+        $("#showActiveTable").on("click",".hd_set_vertifiers",function(){
+            var theObject = $(this).parents("tr");
+            var index = parseInt(theObject.attr("_index"));
+            var game = $('#showActiveTable').faiTable("getPrimaryKeyData", index , true);
+            var gameId = parseInt(game['id']);
+            HdPortal.popupWindow({title:'编辑核销员',frameSrcUrl:'manage/setWriteoff.jsp?id='+gameId+'&ram='+Math.random(),width:640,height:500});
+        })
+        $(".banner #closeIcon").on("click",function(e){
+            e.stopPropagation();
+            $(this).parent().hide();
+            $("#myActContainer").css("padding","28px 28px 0 28px");
+            $.cookie("closeBanner"+aid,true,{expires: 7,domain:document.domain,path:"/"});
+        })
+        $(document).on("click", "html",function(e){
+            if(!$(e.target).is('.moreOptionBox') && !$(e.target).is('.moreMenuBtn') && !$(e.target).is('.moreMenuBtn *') ){
+                $('.moreOptionBox').hide();
+                $('a.moreMenuBtn').removeClass('checked');
+            }
+
+            if (!$(e.target).is(".guideTipsBoxBtn") && !$(e.target).is(".closeIcon")) {
+                HdPortal.hoverTipsBox.hide();
+            }
+
+            if($(e.target).is('.downWxPicLine *') || $(e.target).is('.valida') || $(e.target).is('.thexiagnxiINfo') || $(e.target).is('.theXiangXiInroduce')){
+
+            }else if($(e.target).is('a.actLink') || $(e.target).is('.linkBox *') ){
+                return false;
+            }else{
+                $('.linkBox').remove();
+            }
+        });
+
+        init();
+        $('#showActiveTable').on('mouseenter','tr',function(event){
+            event.stopPropagation();
+            event.preventDefault();
+            // $(this).find('.actNum').stop(true, true).slideDown({duration:200,queue:true});
+        });
+        $('#showActiveTable').on('mouseleave','tr',function(event){
+            event.stopPropagation();
+            event.preventDefault();
+            // $(this).find('.actNum').stop(true, true).slideUp({duration:200,queue:true});
+        });
+        var lastInfo= $.parseJSON(HdPortal.getLocalStorage('delGameInRecycle'));
+		if(lastInfo&&lastInfo.flag=='nodel'){
+			HdPortal.removeLocalStorage('delGameInRecycle');
+			showMyActiveTable();    
+            showRecycleTable();
+			$("#recycleBinTitle").click();
+		}else if(lastInfo){
+			HdPortal.removeLocalStorage('delGameInRecycle');
+			showMyActiveTable();    
+            showRecycleTable();
+			$("#recycleBinTitle").click();
+		    global_one = false;
+			delActiveExcute();
+		}
+		
+        //这里实现只在直销地址环境下执行以下代码
+
+        //退回红包余额
+        var returnMoneyProtect = true;
+        $('#showActiveTable').on('click','.ReturnMoney',function(event){
+            // if(returnMoneyProtect){
+                event.stopPropagation();
+                event.preventDefault();
+                returnMoneyProtect = false;
+                var theObject = $(this).parents("tr");
+                var that = $(this);
+                if(true){
+                    HdPortal.poupUpBox("您确定把剩余红包金额退回到余额吗？退回后，该活动未派出的奖品将设置为零，且已中奖但未被领取的红包将设为失效，获奖玩家无法领取",1,'','',true,'nav_ReturnMoney',function(){
+                        var index = parseInt(theObject.attr("_index"));
+                        var data = $('#showActiveTable').faiTable("getPrimaryKeyData", index , true);
+                        var theHongBaoLessMoney = parseFloat(data['remainMoney']);
+                        var gameId = parseInt(data['id']);
+                        if(theHongBaoLessMoney > 0){
+                            $.ajax({
+                                type    : "post",
+                                url     : HdPortal.versionURL+"/ajax/hdportal_h.jsp",
+                                data    : "cmd=returnTheRedPackage&gameId="+gameId+"&money="+theHongBaoLessMoney,
+                                error   : function(){  
+                                    returnMoneyProtect = true;
+                                },
+                                success : function(theData){
+                                    var result = $.parseJSON(theData);
+                                    if(result.rt == 0){    
+                                        HdPortal.hdShowMsg("right",result.msg,true);
+                                        afterTheAddActive();
+                                    }else{
+                                        returnMoneyProtect = true;
+                                        var theMsg = result.msg;
+                                        if(result.rt == 45){
+                                            that.parent().find(".theShowRedPackageNum").text("0.00");
+                                            that.remove();
+                                            theMsg = "该活动红包金额已被全部领取";
+                                        }
+                                        HdPortal.hdShowMsg("error",theMsg,true);
+                                        return;
+                                    }
+                                }
+                            }); 
+                        }   
+                    },true)
+                }else{
+                    returnMoneyProtect = true;
+                    HdPortal.hdShowMsg("error","没有删除权限",true);
+                } 
+            // }
+            
+        });
+        var timer = null;
+        var tipHtml = $('<div id="tag" class="g_tipBox" style="margin-top:-40px;margin-left:-716px;width:220px;position:absolute;padding:6px;line-height:18px;border:1px solid #FFD376;background:#FFFFCC;white-space:normal;">'+
+            '<div class="sanjiao" style="width:0;height:0;border-width:9px 6px 0;border-style:solid;border-color:#FFD376 transparent transparent;left:18px;top:46px;position:absolute;">'+
+            '<div class="sanjiao" style="width:0;height:0;border-width:7px 6px 0;border-style:solid;border-color:#FFFFCC transparent transparent;left:-6px;top:-9px;position:absolute;"></div></div>'+
+            '<div style="color:#333;font-size:12px;line-height:18px;">' +
+                '促销截止日期：2016.05.31 </div>'+
+            '<a href="http://i.fkw.com/portal.jsp#appId=shop&tab=3" onclick="HdPortal.logDog(100102,1);" target="_blank" style="text-decoration:underline;color:red;margin-right:10px;font-weight:bold;">用现金券升级 最高3折优惠</a>'+
+            '<a href="http://i.fkw.com/portal.jsp#appId=shop&tab=3" onclick="HdPortal.logDog(100102,1);" target="_blank" style="color:#83acd3;text-decoration:underline;cursor:pointer;font-weight:bold;">详情>></a>'+
+        '</div>');
+        //事件代理（防止当页面换页时，iFrame里的jQ对象会更新从而事件绑定不到）
+   //      $('.faiTable').on('mouseenter','.g_tipBox',function(event){
+   //       //$('代理对象的上级对象').on('绑定事件','代理对象',function(){方法体作用于代理对象})
+   //          clearTimeout(timer);
+   //      });
+   //      $('.faiTable').on('mouseleave','.g_tipBox',function(event){
+   //          timer = setTimeout(function(){tipHtml.hide();},20);
+   //      });
+        
+   //      $('.faiTable').on('mouseenter','td',function(event){
+   //          var tipHover = $(this).find('.tipHover');
+            
+   //          if(tipHover.length === 0 ){
+   //              return;
+   //          }
+            // var befPrice = parseInt(tipHover.find('.price').html());
+            // var aftPrice = 49.9;
+            // if(befPrice == 200){
+            //  aftPrice = 99.8;
+            // }
+   //          clearTimeout(timer);
+   //          $(this).parent().append(tipHtml);
+            // tipHtml.find('.disPrice').html(aftPrice);
+   //          tipHtml.show();
+   //      });
+   //      $('.faiTable').on('mouseleave','td',function(event){
+   //          var self = $(this);
+   //          if(self.find('.tipHover').length === 0){
+   //              return;
+   //          }
+   //          timer = setTimeout(function(){tipHtml.hide();},20);
+   //      });
+        
+        /*$(".tipHover").parents('td').on('mouseleave',function(){
+            timer = setTimeout(function(){tipHtml.hide();},20);
+        });*/
+
+
+        /*var timer = null;
+        $(".tipHover").on("hover",function(e){
+            //if( $("#tag").length > 0 ){
+                //$(".g_tipBox").remove();
+            //}
+            if( e.type == 'mouseenter' ){
+                clearTimeout(timer);
+                var  tipHtml =      '<div id="tag" class="g_tipBox" style="width:222px;position:relative;padding:8px;border:1px solid #FFD376;background:#FFFFCC;">'+
+                                            '<div class="sanjiao" style="width:0;height:0;border-width:9px 6px 0;border-style:solid;border-color:#FFD376 transparent transparent;left:18px;top:52px;position:absolute;">'+
+                                            '<div class="sanjiao" style="width:0;height:0;border-width:7px 6px 0;border-style:solid;border-color:#FFFFCC transparent transparent;left:-6px;top:-9px;position:absolute;"></div></div>'+
+                                            '<span style="color:#333;font-size:12px;line-height:18px;">' +
+                                                '升级后，该活动拥有参与人数不限制，去除页脚广告等功能 </span>'+
+                                            '<a href="http://hd.fkw.com/product.html" style="color: #666;text-decoration: underline">详情</a>'+
+                                        '</div>';
+                $(this).append(tipHtml);
+                
+            }else{
+                timer = setTimeout(function(){$(".g_tipBox").remove()},100);
+            }
+        })
+
+        $(".g_tipBox").live("hover",function(e){
+            if( e.type == 'mouseleave'){
+                timer = setTimeout(function(){$(".g_tipBox").remove()},100);
+            }else{
+                clearTimeout(timer);
+            }
+        })*/
+        /*var dt=0;
+        function showInfo(objT,strContent){
+                var p = $(objT);
+                var offset = p.offset();
+                var  tipHtml =  '<div id="box_k"></div>';
+                $("#tableContent").append(tipHtml);
+                var objBox = $('#box_k');
+                var objText = $('.box');
+                if(dt == 0){
+                        objBox.show("fast",function (){dt=0});
+                        objBox.css("left", p.attr("width") + offset.left + 5);
+                        objBox.css("top",offset.top);
+                        objText.html(strContent);
+                        dt = 1;
+                }
+        }
+        function closeInfo(){
+                var objBox = $('#box_k');
+                objBox.hide("fast");
+        }*/
+ 
+    });
+
+    function init(){
+        $('#hidePrizeBar').hide();
+        $('#showPrizeList').hide();
+        $('#hideActBar').hide();
+        $('#editActive').hide();
+        $('#showGameData').hide();
+    }
+    function getGameTypeName(gameType){
+        switch(gameType){
+            case 0:
+                return "按几率派奖游戏";
+            case 1:
+                return "报名后派奖游戏";
+            case 2:
+                return "按几率派奖游戏";
+            case 3:
+                return "按排名派奖游戏";
+            case 4:
+                return "参与送券派奖游戏";
+            case 5:
+                return "砍价后派奖游戏";
+            default:
+                return "";
+        }
+    }
+    // function returnYuanMoney(money){
+    //     var yuan = HdPortal.Num.div(money,100);
+    //     var lessPar = money % 100;
+
+    // }
+    function turnNumToDouble(num){
+        num += '';
+        var theNum = num.split(".");
+        if(theNum.length < 2){
+            theNum.push("00");
+        }else{
+            var theSecondPart = theNum[1];
+            if(theSecondPart.length < 2){
+                theSecondPart = parseInt(theSecondPart);
+                theSecondPart *= 10;
+            }
+            theNum[1] = theSecondPart + "";
+        }
+        num = theNum[0] +"."+ theNum[1] + "";
+        return num;
+    }
+    function showMyActiveTable(){
+        $("#showRecycleTable").hide();
+        var options = {
+            tableColumn :
+            {
+                columns : [
+                    {
+                        key     : "name",
+                        name    : "活动名称",
+                        colClass: "column1 textLeft ",
+                        rowClass: "textLeft active_activeName",
+                        noShowHovreTips : true,
+                        onsort  : false,
+                        extData : function(back,data){
+                            
+                            var id = data["id"];
+                            var img = "";
+                            if(hdFai.checkBit(data["flag"],65536)){
+                                img = data["img"];
+                            }else{
+                                img = "//hd.faisys.com"+data["img"];
+                            }
+                            return '<div>'+
+                                '<div class="qrcodeIcon" _index="'+data["_index"]+'"></div>'+
+                                '<div class="imgBox">'+
+                                    
+                                    '<img src="'+hdFai.encodeHtmlAttr(img)+'?v=1" style="width:100%;"/>'+
+                                '</div>'+
+                                '<div class="textBox">'+
+                                    '<div onclick="editActive('+ id +','+data["_index"]+')">'+hdFai.encodeHtml(back)+'</div>'+
+                                '</div>'+
+                            '</div>';
+                        }
+                    },
+					
+					{
+                        key     : "id",
+                        name    : "活动编号",
+                        sortAs  : "desc",
+                        onsort  : false,
+                        colClass: "column2 textCenter",
+                        rowClass: "textCenter",
+                        
+                        extData:function(back,data){
+                            var actNum='HD'+data["id"];
+                            var joinGame = data["joinGame"];
+                            //直销平台下，增值服务标注，暂时只有去广告服务
+                            //20180108 下掉大赛参赛logo
+                            
+                                if(hdFai.checkBit(data["flagB"],8192)){
+                                    return "<div class='textCenter'>"+actNum+"<img class='incrementImg' src='//hd.faisys.com/image/increment.png' style='margin: 0 0 -3px 5px;'>"+
+                                    (joinGame.status && joinGame.type == 4 && (isActTime || m_debug || aid == 936152) ? "&nbsp;<img class='activeLogo'/>" : "")+
+                                    "</div>";
+                                }
+                                else{
+                                    return "<div class='textCenter'>"+actNum+(joinGame.status && joinGame.type == 4 && (isActTime || m_debug || aid == 936152) ? "&nbsp;<img class='activeLogo'/>" : "")+"</div>";
+                                }
+                            
+                            return "<div class='textCenter'>"+actNum+"</div>";
+                        }
+                    },
+                    
+                  
+                    {
+                        key     : "startTime",
+                        name    : "活动时间",
+                        onsort  : false,
+                        colClass: "column3 textCenter",
+                        rowClass: "textCenter",
+                        extData : function(back,data){
+                            var startDateTime = new Date(back);
+                            var startDate = $.format.date(startDateTime, "yyyy-MM-dd");
+                            var startTime = $.format.date(startDateTime, "HH:mm:ss");
+                            var endDateTime = new Date(data["endTime"]);
+                            var endDate = $.format.date(endDateTime, "yyyy-MM-dd");
+                            var endTime = $.format.date(endDateTime, "HH:mm:ss");
+                            return startDate + " " + startTime+'<br/>'+endDate + " " + endTime;
+                        }
+                    },
+                    {
+                        key     : "status",
+                        name    : "全部状态<span class='icon'></span>",
+                        colClass: "column4 textCenter",
+                        rowClass: "textCenter",
+                        onsort  : false,
+                        onDropDownList : [['全部状态',-1],['未发布',0],['未开始',1],['进行中',2],['已结束',3],['违规关闭',4]],
+                        onDropDownCallBack : selectActByStatus,
+                        extData : function(back,data){
+                            var status = '';
+//                            var isDefault = false ? data["appid"] === 'wx7953611d4b208753' : data["appid"] === 'wx25367438c8ce0799';
+							var isDefault = HdPortal.isDefaultAppId(false,  data["appid"]);
+                          //  var appid = false ? 'wx25367438c8ce0799' : 'wx25367438c8ce0799';
+							var isValidAppid = true;   //该活动的appid是否可用
+                            var tmpAppid = data["appid"];   
+                            var openFaiWxUserThisGame = hdFai.checkBit(data["flagC"],2);
+                            var closeId = data["sub_closeid"]; //互动游戏违规关闭原因id
+							if( false && !openFaiWxUserThisGame ){     //如果该账号已经开通微信授权， 则判断活动appid和prof的appid是否一致
+								if( tmpAppid !=  'wx25367438c8ce0799' ){
+									isValidAppid = false;
+								}
+							}else{									// 判断活动appid是否默认appid
+								if( !HdPortal.isDefaultAppId(false, tmpAppid) && !openFaiWxUserThisGame ){
+									isValidAppid = false;
+								}
+							}
+                         //   if( data["createTime"] >=1486517400000 && !isDefault && hdFai.checkBit(data["flag"],8) && typeof data["appid"] != 'undefined' && data["appid"] != appid){
+							if(hdFai.checkBit(data["flagB"],131072)){
+								status = '<div style="color:#fe896a">违规关闭<span class="closeIcon"></span></div>';
+							}else if(hdFai.checkBit(data["flag"],32768)){
+								
+								status = '<div style="color:#fe896a">违规关闭'+(closeId == 0 ? '' : '<span class="closeIcon" onmouseover="showCloseReason($(this).parent(),\''+closeId+'\');" onmouseout="HdPortal.hoverTipsBox.hide()"></span>')+'<a  target="_blank" href="http://hd.fkw.com/news/8167" class="breakingAndReport" style="color:#74b7e6;margin-left:5px">申诉</a></div>';
+							    
+							}
+							// else if( hdFai.checkBit(data["flag"],32768) ){
+                                // status = '<div style="color:#fe896a">已结束</div>';
+                            // }
+							else if(back == 0){
+                                var playerNum = data.player;
+                                if(playerNum >= 30){
+                                    status = '<div class="statusDisabled" style="width: 75px; margin: 0 auto;" onmouseover="HdPortal.hoverTipsBox.show($(this).find(\'.icon\'),\'up\',\'未发布活动的数据不稳定，建议您尽快发布\',null,\'center\');" onmouseout="HdPortal.hoverTipsBox.hide()">'+
+                                            '未发布<span class="icon"></span>'+
+                                         '</div>';
+                                }else{
+                                    status = '<div style="color:#999;">未发布</div>';
+                                }
+                            }else if(back == 1){
+                                status = '未开始';
+                            }else if(back == 2){
+                                status = '<div style="color:#64cea6;">进行中</div>';
+                            }else if(back == 3){
+                                status = '<div style="color:#fe896a">已结束</div>';
+                            }
+                            if(!isDefault && hdFai.checkBit(data["flag"],8)){
+                                var msg = "";
+                                if(data["createTime"] >=1486517400000 && typeof data["appid"] != 'undefined' && !isValidAppid ){
+                                    var adapt = typeof data["nickName"] == 'undefined';
+                                    var msg = adapt ? '该活动因解除或替换了授权公众号导致不可用，请到个人中心重新授权' : '该活动授权单位为' + data["nickName"] + ',因解除或替换了授权公众号导致不可用，请到个人中心重新授权并开通微信授权功能';
+                                }else if(data["createTime"] >=1515027600000){
+                                    if( !hdFai.checkBit(data["flagC"],32) && 'wx25367438c8ce0799' != data["appid"]){
+                                        msg = adapt ? '该活动中存在微信优惠券，现因解除了公众号授权导致活动不可用，请到个人中心重新授权并开通微信卡券功能' : '该活动中存在微信优惠券，且发布时授权单位为'+ data["nickName"] +'，现因解除了公众号授权导致活动不可用，请到个人中心重新授权并开通微信卡券功能';
+                                    }
+                                    if(!hdFai.checkBit(data["flagC"],32) && ((typeof data["appid"] != 'undefined' && !isValidAppid) || true)){
+                                        msg = adapt ? '该活动中存在微信优惠券，现因解除了公众号授权导致活动不可用，请到个人中心重新授权并开通微信卡券功能' : '该活动中存在微信优惠券，且发布时授权单位为'+ data["nickName"] +'，现因解除了公众号授权导致活动不可用，请到个人中心重新授权并开通微信卡券功能';
+                                    }
+                                }
+                                if(msg != ""){
+                                    status = '<div class="statusDisabled" style="width: 75px; margin: 0 auto;" onmouseover="HdPortal.hoverTipsBox.show($(this).find(\'.icon\'),\'up\',\''+msg+'\',null,\'center\');" onmouseout="HdPortal.hoverTipsBox.hide()">'+
+                                                '不可用<span class="icon"></span>'+
+                                             '</div>';
+                                }
+                            }
+                            return status;
+                        }
+                    },
+                    {
+                        key     : "setting",
+                        name    : "参与人数/最大限制",
+                        colClass: "column3  textCenter",
+                        rowClass: "textCenter",
+                        onsort  : false,
+                        extData : function(back,data){
+                            var gameType = data['gameType'];
+                            var isReg = gameType == 1;
+                            var style = data['style'];
+                            var isLimt = hdFai.checkBit(data["flag"],isReg && data["createTime"] < '1520265601000'? 8192 : 4096);
+                            var ptchl = style == 71;
+                            var player = data['player'];
+                            var realPlayer = ptchl ? data['ptTotalPlayer'] : player;
+                            var msg = "";
+                            if(!isLimt){
+                                msg = player+'/不限';
+                            }else{
+                                var limitNum = data._setting[isReg && data["createTime"] < '1520265601000'? 'lrn' : 'ljn'];
+                                //console.log(data["createTime"] < '1520265601000');
+                                //var limitNum = data._setting['ljn'];
+                                msg = (player >= limitNum ? '<span style="color:red;">'+player+'</span>' : player) +'/'+limitNum;
+                            }
+                            if(ptchl){ // 拼团抽豪礼
+                                msg = msg + '<div style="color: #787878; display: inline-block;" class="statusDisabled" onmouseover="HdPortal.hoverTipsBox.show($(this).find(\'.icon\'),\'up\',\'拼团活动为：建团数量/最大限制\',null,\'center\');" onmouseout="HdPortal.hoverTipsBox.hide()"><span class="icon fixIcon"></span></div>'
+                            }
+                            
+                                if (data.status === 2) {
+                                    
+                                        var tipsText = "人数已到达上限，影响玩家继续参与，升级后可将此活动设为不限人数";
+                                        var tipsStyle = "{ width:'290px', marginRight: 85 }";
+                                        if (80 <= realPlayer && realPlayer <= 99) {
+                                            tipsText = "人数即将到达上限，升级后可将此活动设为不限人数";
+                                            tipsStyle = "{ width: '290px', marginRight: 32 }";
+                                        }
+                                        if (80 <= realPlayer && realPlayer <= 100) {
+                                            if (!hdFai.checkBit(data["flagC"], 4194304)) {
+                                                $.ajax({
+                                                    type: "post",
+                                                    url: HdPortal.versionURL + "/ajax/hdportal_h.jsp",
+                                                    data: {
+                                                        cmd: "setExposureUpgrade",
+                                                        id: data["id"]
+                                                    },
+                                                    success: function (data) {
+                                                        data = $.parseJSON(data);
+                                                        if (!data.rt) {
+                                                            HdPortal.logDog(1000257, 2);
+                                                        }
+                                                    }
+                                                });
+                                            }
+                                            msg = msg + 
+                                            '<span' +
+                                                ' class="textRight guideTipsBoxBtn guideUpdateBtn"' +
+                                                ' data-type="upgrade"' +
+                                                ' onmouseover="HdPortal.hoverTipsBox.show($(this), \'up\', \'' + tipsText + '\', ' + tipsStyle + ', \'center\');"' +
+                                                ' onmouseout="HdPortal.hoverTipsBox.hide()"' +
+                                            '>' +
+                                                '<a href="#" onclick="openQuickPay(1000144, 28);">升级</a>' +
+                                            '</span>';
+                                        }
+                                    
+
+                                    if (realPlayer < 60) {
+                                        if (1536052012784 > data._setting['publishTime'] + 4 * 60 * 60 * 1000) {
+                                            HdPortal.logDog(1000239, 5);
+                                            msg = msg +
+                                            '<span' +
+                                                ' class="textRight guideTipsBoxBtn guideShareBtn"' +
+                                                ' data-type="share"' +
+                                                ' onmouseover="HdPortal.hoverTipsBox.show($(this), \'up\', \'活动参与人数较少，建议分享给好友及朋友圈\', { width: \'220px\' }, \'center\');"' +
+                                                ' onmouseout="HdPortal.hoverTipsBox.hide()"' +
+                                            '>' +
+                                                '<a href="#">分享</a>' +
+                                            '</span>';
+                                        }
+                                    }
+                                }
+                            
+                            return msg;
+                        }
+                    },
+                    {
+                        key     : "lessHBPrice",
+                        name    : '<div class="hongbaoLessNumPrice"><span>活动剩余资产</span><span class="icon"></span></div>',
+                        colClass: "column9  textCenter",
+                        rowClass: "textCenter",
+                        onsort  : false,
+                        extData : function(back,data){
+                            //新游戏的这个flag为true。旧游戏的为false.
+                            var isCalculateRedPacakge = hdFai.checkBit(data['flagB'],65536);
+                            var isOpenRedPackage = false;
+                            if(isCalculateRedPacakge){
+                                var awardList = $.parseJSON(data['awardList']);
+                                if(!awardList){              
+                                    awardList = $.parseJSON(data._setting['ad']);
+                                }
+                                $.each(awardList,function(index,award){
+                                    if(award.awardtype == 5){
+                                        isOpenRedPackage = true;
+                                        return false;
+                                    }
+                               })
+                            }
+                            var hasGift = false;
+                            var hasRestGift = false;
+                            var giftStr = "";
+                            var redPackageStr = "";
+                            var totalAssetStr = "";
+                            var assetList = data['assetList'];
+                            var gameId = data["id"];
+                            var theHongBaoLessMoney = parseFloat(data['remainMoney']);
+                            if(assetList){
+                                hasGift = true;
+                                $.each(assetList,function(index,award){
+                                    giftStr += assetList[index].assetName + "：" + assetList[index].amount + "个</br>";
+                                    if(assetList[index].amount != 0){
+                                        hasRestGift = true;
+                                    }
+                                });
+                            }else{
+                                hasGift = false;
+                            }
+
+                            if(data['status'] == 0 || ((typeof data['remainMoney'] === "undefined" || !isOpenRedPackage) && !hasGift)){
+                                return "";
+                            }else{
+                                var redPackageLess =  parseFloat(data['remainMoney']);
+                                if(!redPackageLess){redPackageLess = 0;}
+                                var totalAssetStr = "<div>"+(hasRestGift || redPackageLess!=0 ? "有" : "无")+"</div><div class='assetShow'>查看资产</div>";
+                                redPackageLess = HdPortal.Num.div(redPackageLess,100);
+                                var theDoubleNum = turnNumToDouble(redPackageLess);
+                                var theStatus = (data['status'] == 3)||hdFai.checkBit(data["flag"],32768)||hdFai.checkBit(data["flagB"],131072);
+                                if(!isOpenRedPackage){
+                                    redPackageStr = "";
+                                }else{
+                                    redPackageStr = '<div  class="showTheLessHongbaoSize">'+
+                                                '<div class="theShowRedPackageNum">红包金额：'+
+                                                   theDoubleNum + '&nbsp;元'+
+                                                '</div>'+
+                                            '</div>';
+                                }
+                                var theStr = '';
+                                if( (redPackageLess > 0 || hasRestGift) && theStatus){
+                                    
+                                        theStr = "<div class='assetBack' onclick='returnAssets("+gameId+","+theHongBaoLessMoney+")'>退回资产</div>";
+                                    
+                                }
+                                totalAssetStr += "<div class='showDetailBox'>"+
+                                    "<div class='giftDetail'>"+redPackageStr+"</div>"+
+                                    "<div class='giftDetail'>"+giftStr+"</div>"+
+                                theStr+
+                                "</div>";
+                                return totalAssetStr;
+                                // 
+                                //     return totalAssetStr;
+                                //  
+                            }
+                        }
+                    },  
+                    {
+                        key     : "operate",
+                        name    : "操作",
+                        colClass: "column7 textRight",
+                        rowClass: "textRight",
+                        noShowHovreTips: true,
+                        extData : function(back,data){
+                            var verInfo = data["verInfo"];
+                            var publishBtn = "display:none";
+                            var endBtn = "display:none";
+                            var id = data["id"];
+                            var name = data["name"];
+                            var style = data["style"];
+                            var createTime = data["createTime"];
+                            var setting = data._setting;
+                            var edit_tplId = parseInt(data["templateId"]);
+                            var joinGame = data["joinGame"];
+                            var isNewVoteGame = data["style"] == 69;
+                            var isPayGame = data["style"] == 77;
+                            //兼容旧数据
+                            var old_edit_tplId = setting["tplId"];
+                            if(old_edit_tplId != undefined){
+                                edit_tplId = parseInt(old_edit_tplId);
+                            }
+                            if( hdFai.checkBit(data["flag"],32768)||hdFai.checkBit(data["flagB"],131072) ){
+								endBtn = "display:none";
+								//违规关闭
+                            }else if(data["status"] === 0){
+                                publishBtn = "";
+                            }else if(data["status"] === 2){
+                                endBtn = "";
+                            }
+                            var publishBtnHtml = 'showPublishBox('+data['_index']+');return false;';
+                            //var isShowSubmit = verInfo.authVer == ((verInfo.authVer == HdVerDef.BJ) || (verInfo.authVer == HdVerDef.BY)) ? true : false;
+                            if(false && verInfo.authVer == 0){
+                                publishBtnHtml = 'HdPortal.hdShowMsg("error","试用版无法发布活动，请先升级版本",false);';
+                            }
+                            //是否白银版、铂金版
+                            var verReq = (verInfo.authVer == 1) || (verInfo.authVer == 2) || (verInfo.authVer == 0)? true : false;
+                            
+                            var timeReq = createTime > 1518969600000 ? true : false;//第四次主题大赛开始时间
+
+                            var prize;
+                            if(style == 71){
+                                prize = '<a href="#" onclick="showGameData('+ id +',5);return false;">获奖名单</a>';
+                            }else if(style == 69){
+                                prize = '<a href="#" onclick="showGameData('+ id +',3);return false;">作品管理</a>';
+                            }else if(isPayGame){
+                                prize = '<a href="#" onclick="showGameData('+ id +',7);return false;">订单管理</a>';
+                            }else{
+                                prize = '<a href="#" onclick="showGameData('+ id +',2);return false;">获奖名单</a>';
+                            }
+                            var optDiv = '<div class="textRight" >'+
+                                
+                                '<span style="'+ publishBtn +'"><a href="#" class="publishStyle" id="publishBtn" onclick=\''+publishBtnHtml+'\'>发布</a></span>'+
+                                
+                                '<span  style="'+ endBtn +'"><a href="#" onclick="endActive('+ id +');return false;">结束</a></span>'+
+                                '<a href="#" onclick="editActive('+ id +','+data["_index"]+','+edit_tplId+','+style+'); return false;" >编辑</a>'+
+                                
+                                // '<a href="#" class="actLink hide" onclick="showActLink(this,'+data['_index']+');return false;">链接</a>'+
+                                '<a href="#" class="actLink" onclick="fromLink('+ id +','+data["_index"]+'); return false;">预览</a>'+
+                                '<a class="moreMenuBtn" onclick="showMoreMenuBtn($(this))">更多<span class="icon"></span></a>'+
+                                '<div class="moreOptionBox hide">'+
+                                '<div class="tipsBoxArrow"></div>'+
+                                
+                                '<a href="#" class="copyActiveBtn" rstyle='+style+' onclick="copyActive('+ id +', this)">复制</a>'+
+
+                                //大赛宣传只在直销显示
+                                //20180108 下掉大赛报名入口
+                                
+                                (joinGame.status ? 
+                                  ((verReq && timeReq) || aid == 936152 ? '<a href="#" onclick="joinGameInfo(\''+ escape(id) +'\',\''+ escape(name) +'\',\''+ escape(joinGame.name) +'\',\''+escape(joinGame.phone)+'\',\''+escape(joinGame.status)+'\')">参赛信息</a>' : '') :
+                                  ((verReq && timeReq && isActTime) || aid == 936152 ? '<a href="#" onclick="gameSubmit(\''+ escape(id) +'\',\''+escape(name)+'\')">提交作品</a>' : '')   
+                                )+
+                                
+
+                                '<a href="#" onclick="showCanal('+ id +','+data["_index"]+'); return false;" >渠道管理</a>'+
+                                
+                                // '<a href="#" onclick="moveToRecycleBin('+id+','+data["_index"]+','+verInfo.authVer+',\''+verInfo.verName+'\');return false;">删除</a><br>'+
+                                '<a href="#" onclick="moveToRecycleBin('+id+','+data["_index"]+');return false;">删除</a>'+
+                                
+                                '<a href="#" onclick="showGameData('+ id +',1);return false;">传播数据</a>'+
+                                prize+
+                                
+                                ( !isNewVoteGame && !isPayGame ? '<a href="#" class="hd_set_vertifiers">配置核销员</a>' : '' )+
+                                
+                                '</div>'
+                            '</div>';
+                            return optDiv;
+                        }
+                    },
+                ]
+            },
+            noDataMsg   : "暂无活动 <a href='#' onclick='goNow(); return false;' style='margin-left:8px;'>马上新增</a>",
+            bottom          :
+            {
+                show            : true,                     // 显示表单底部内容
+                showTotal       : true,                     // 显示左下角当前页统计,
+                showAllTotal    : true,                     // 显示左下角所有页统计
+                showPage        : true,                     // 显示底部分页按钮
+                showPageJump    : true,                     // 示左下角页面转跳
+                showPageNumSelect : true,
+            },
+			ajaxPage:{
+				url             : HdPortal.versionURL+'/ajax/hpFaiTabel_h.jsp?cmd=getActiveListPage&isOem=false&storeId=0&areaId=0',
+				cache			: false,
+                regroup : function(rt){
+                    if(rt.success && rt.dataList){
+                        $.each(rt.dataList,function(index,data) {
+                            data._setting = $.parseJSON(data.setting) || {};
+                        });
+
+                    }
+                }
+            },
+            page            :
+            {
+                startPage       : 1,                       // 从第x页开始显示
+            },
+            itemHover       : true,                         // 鼠标移过效果
+            after           : afterGenTable
+        };
+        $('#showActiveTable').faiTable(options);
+        function selectActByStatus(value){
+            var searchObj;
+            var curTime = new Date().getTime() + g_timeDeviation;
+            $('#showActiveTable').faiTable("rmSearchByName",'selectByStatus');
+            if(value == -1) return;
+            if(value == 0){
+                searchObj = [{
+                    uid:0,
+                    cmd:"land_ne",
+                    searchKeyList:["flag"],
+                    searchString:8,
+                }];
+            }else if(value == 1){
+                searchObj = [{
+                    uid:0,
+                    cmd:"land",
+                    searchKeyList:["flag"],
+                    searchString:8,
+                },{
+                    uid:1,
+                    cmd:"ge",
+                    searchKeyList:["startTime"],
+                    searchString:curTime,
+                    specialType: 'calender',
+                }];
+            }else if(value == 2){
+                searchObj = [{
+                    uid:0,
+                    cmd:"land",
+                    searchKeyList:["flag"],
+                    searchString:8,
+                },{
+                    uid:1,
+                    cmd:"ge",
+                    searchKeyList:["endTime"],
+                    searchString:curTime,
+                    specialType: 'calender',
+                },{
+                    uid:2,
+                    cmd:"lt",
+                    searchKeyList:["startTime"],
+                    searchString:curTime,
+                    specialType: 'calender',
+                }];
+            }else if(value == 3){
+                searchObj = [{
+                    uid:0,
+                    cmd:"land",
+                    searchKeyList:["flag"],
+                    searchString:8,
+                },{
+                    uid:1,
+                    cmd:"lt",
+                    searchKeyList:["endTime"],
+                    searchString:curTime,
+                    specialType: 'calender',
+                }];
+            }else if(value == 4){
+                searchObj = [{
+                    uid:0,
+                    cmd:"land",
+                    searchKeyList:["flag"],
+                    searchString:32768,
+					type:'and',
+                },{
+                    uid:1,
+                    cmd:"land",
+                    searchKeyList:["flagB"],
+                    searchString:131072,
+					type:'or',
+                }
+				];
+            }
+            searchObj && $('#showActiveTable').faiTable("searchString", 'selectByStatus', searchObj);
+        }
+    }
+
+    function returnAssets(gameId,theHongBaoLessMoney){
+        popReturnTipsBox(gameId,theHongBaoLessMoney); 
+        // $.ajax({
+        //     type    : "post",
+        //     url     : HdPortal.versionURL+"/ajax/hdportal_h.jsp?cmd=returnAssets&gameId=" + hdFai.encodeUrl(gameId)+"&money="+theHongBaoLessMoney,
+        //     success : function(data){
+        //         var result = $.parseJSON(data);
+        //         console.log(result);
+        //         if(result.rt == 0){
+        //             //popReturnTipsBox();
+        //             HdPortal.hdShowMsg("right",result.msg,true);
+        //             // setTimeout(function(){
+        //             //     window.location.reload();
+        //             // },2000)
+        //         }else{
+        //             HdPortal.hdShowMsg("error",result.msg,false);
+        //         }
+        //     }
+        // });
+    }
+
+    function popReturnTipsBox(gameId,theHongBaoLessMoney){
+        var options = {
+            name: 'confirmToPay',
+            content: '<div style="height:89px; text-align:center; line-height:38px; margin-top:32px;"><p>确认把所有资产退回吗？确认后资产将退回到账户余额中</p></div>',
+            title: '退回资产',
+            width: 656,
+            confirmBtnName:'确认',
+            cancelBtnName:'取消',
+            hasBottom: true,
+            confirmFun: function () {
+                $.ajax({
+                    type    : "post",
+                    url     : HdPortal.versionURL+"/ajax/hdportal_h.jsp",
+                    data    : "cmd=returnAssets&gameId=" + hdFai.encodeUrl(gameId)+"&money="+theHongBaoLessMoney,
+                    success : function(data){
+                        var result = $.parseJSON(data);
+                        if(result.rt == 0){
+                            //popReturnTipsBox();
+                            HdPortal.hdShowMsg("right",result.msg,true);
+                            setTimeout(function(){
+                                window.location.reload();
+                            },2000)
+                        }else{
+                            HdPortal.hdShowMsg("error",result.msg,false);
+                        }
+                    }
+                });
+            }
+        };           
+        HdPortal.popup(options);
+    }
+
+    function showTab(flag){
+        if(flag == 1){
+            $("#showActiveTable,#recycleBinTitle").hide();
+            $("#closeTip").hide();
+            $("#showRecycleTable,#clearRecycleBox").show();
+            $(".recycleBox").show();//显示回收站
+            showTopTitleCol('活动回收站',true);
+            $('.myActContainTitle .tableTitleName').text('活动回收站');
+            HdPortal.logDog(1000156,9);
+        }else{
+            $("#tableContent,#showActiveTable,#recycleBinTitle").show();
+            $("#closeTip").show();
+            $("#showRecycleTable,#showGameData,#clearRecycleBox").hide();
+            $(".recycleBox").hide();
+            showTopTitleCol();
+            $('.myActContainTitle .tableTitleName').text('我的活动');
+        }
+    }
+
+    function showTopTitleCol(msg,flag){
+        if(flag){
+            $('#activityListTitle .name').text(msg);
+            $('#activityListTitle').show();
+        }else{
+            $('#activityListTitle').hide();
+        }
+    }
+    
+    //展示回收站函数
+    function showRecycleTable(){
+
+        var options = {
+            tableColumn :
+            {
+                columns : [
+                    {
+                        key     : "name",
+                        name    : "活动名称",
+                        colClass: "column1 textLeft",
+                        rowClass: "textLeft",
+                        noShowHovreTips : true,
+                        onsort  : false,
+                        extData : function(back,data){
+                            var id = data["id"];
+                            var style = data["style"];
+                            var createTime = data["createTime"];
+                            var img = "";
+                            if(hdFai.checkBit(data["flag"],65536)){
+                                img = data["img"];
+                            }else{
+                                img = "//hd.faisys.com"+data["img"];
+                            }
+                            var verClass=data["buy"]?'ver_hasBuy':'ver_notBuy';
+                            // var actNum='HD'+data["id"];
+                            var tmp_tplId = parseInt(data["templateId"]);
+                            //兼容旧数据
+                            var gameType = parseInt(data["gameType"]);
+
+                            var setting=$.parseJSON(data["setting"]);
+                            var old_tmp_tplId = setting["tplId"];
+                            if(old_tmp_tplId != undefined){
+                                tmp_tplId = parseInt(old_tmp_tplId);
+                            }
+                            var gameTypeName = getGameTypeName(gameType);
+
+                            var actNameDiv ='<div style="padding-left: 16px;">'+
+                                                '<div class="imgBox">'+
+                                                    
+                                                    '<img src="'+hdFai.encodeHtmlAttr(img)+'?v=1" style="width:100%;"/>'+
+                                                    // '<div class="actNum">'+actNum+'</div>'+
+                                                '</div>'+
+                                                '<div class="textBox">'+
+                                                    '<div style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">'+hdFai.encodeHtml(back)+'</div>'+
+                                                    '<div style="color:#777;">'+gameTypeName+'</div>'+
+                                                '</div>'+
+                                            '</div>';
+                            return  actNameDiv;
+                        }
+                    },
+                   
+                       {
+                        key     : "id",
+                        name    : "活动编号",
+                        // sortAs  : "desc",
+                        onsort  : false,
+                        colClass: "column2 textCenter",
+                        rowClass: "textCenter",
+                        extData:function(back,data){
+                            var actNum='HD'+data["id"];
+                            //return actNum;
+                            //直销平台下，增值服务标注，暂时只有去广告服务
+                            
+                            if(hdFai.checkBit(data["flagB"],8192)){
+                                return "<div class='textCenter'>"+actNum+"<img src='//hd.faisys.com/image/increment.png' class='incrementImg' style='margin: 0 0 -3px 5px;'></div>";
+                            }
+                            
+                            return "<div class='textCenter'>"+actNum+"</div>";
+                        }
+                    },
+                       {
+                        key     : "recyleTime",
+                        name    : "移入回收站时间",
+                        sortAs  : "desc",
+                        onsort  : false,
+                        colClass: "column4 textCenter",
+                        rowClass: "textCenter",
+                        extData : function(back,data){
+                            var startDateTime = new Date(back);
+                            var startDate = $.format.date(startDateTime, "yyyy-MM-dd HH:mm:ss");
+                            return startDate;
+                        }
+                    },
+                    {
+                        key     : "deadTime",
+                        name    : '<div class="autoCleanTimer"><span class="icon"></span><span>自动清除时间</span><span id="clearDetailImg" onmouseover="showTip()" onmouseout="hideTip()"></span></div>',
+                        onsort  : false,
+                        colClass: "column5 textCenter",
+                        rowClass: "textCenter",
+                        extData : function(back,data){
+                            var recycleTime = new Date(data["recyleTime"]);
+                            var localTime =1536052012785;
+                            var deadTime = (14 - Math.floor((localTime-recycleTime)/1000/60/60/24));
+                            if(deadTime>=14){
+                                deadTime=14;
+                            }
+                            if(deadTime<=0){
+                                deadTime=1;
+                            }
+                            return   deadTime+"天后"+'<br/>';
+                        }
+                    },
+                   
+                  
+                    {
+                        key     : "player",
+                        name    : "参与人数/最大限制",
+                        colClass: "column3  textCenter",
+                        rowClass: "textCenter",
+                        onsort  : false,
+                        extData : function(back,data){
+                            var setting = $.parseJSON(data["setting"]);
+                            var ljn = setting['ljn'];
+                            var lrn = setting['lrn'];
+                            var regPlayer = data["prop0"];
+                            var gameType = data['gameType'];
+                            var style = data["style"];
+                            var maxLimitNum = data['ljn'];
+                            var theHtml = '';
+                            if( gameType == 1 ){
+                                var isLimtReg = hdFai.checkBit(data["flag"],8192);
+                                if(regPlayer >= lrn && isLimtReg){
+                                    theHtml = '<div>'+
+                                                    '<span style="color:#e52a2a;">'+
+                                                        regPlayer+
+                                                    '</span>/'+
+                                                    lrn+
+                                                '</div>';
+                                }else{
+                                    theHtml = '<div>'+
+                                                    '<span>'+
+                                                        regPlayer+
+                                                    '</span>/'+
+                                                    lrn+
+                                                '</div>';
+                                }
+                            }else{
+                                var isLimtJoin = hdFai.checkBit(data["flag"],4096);
+                                if(back >= ljn && isLimtJoin){
+                                    theHtml = '<div>'+
+                                                    '<span style="color:#e52a2a;">'+
+                                                        back+
+                                                    '</span>/'+
+                                                    ljn+
+                                                '</div>';
+                                }else{
+                                    theHtml = '<div>'+
+                                                    '<span>'+
+                                                        back+
+                                                    '</span>/'+
+                                                    ljn+
+                                                '</div>';
+								}
+                            }
+                            return theHtml;
+                        }
+                    },
+                    {
+                        key     : "thelessHBPrice",
+                        name    : '<div class="hongbaoLessNumPrice"><span>活动剩余资产</span><span class="icon recycleIcon"></span></div>',
+                        colClass: "column9  textCenter",
+                        rowClass: "textCenter",
+                        onsort  : false,
+                        extData : function(back,data){
+                            //新游戏的这个flag为true。旧游戏的为false.
+                            var isCalculateRedPacakge = hdFai.checkBit(data['flagB'],65536);
+                            var isOpenRedPackage = false;
+                            if(isCalculateRedPacakge){
+                                var awardList = $.parseJSON(data['awardList']);
+                                $.each(awardList,function(index,award){
+                                    if(award.awardtype == 5){
+                                        isOpenRedPackage = true;
+                                        return false;
+                                    }
+                               })
+                            }
+
+                            var hasGift = false;
+                            var hasRestGift = false;
+                            var giftStr = "";
+                            var redPackageStr = "";
+                            var totalAssetStr = "";
+                            var assetList = data['assetList'];
+                            if(assetList){
+                                hasGift = true;
+                                $.each(assetList,function(index,award){
+                                    giftStr += assetList[index].assetName + "：" + assetList[index].amount + "个</br>";
+                                    if(assetList[index].amount != 0){
+                                        hasRestGift = true;
+                                    }
+                                });
+                            }else{
+                                hasGift = false;
+                            }
+                            if(data['status'] == 0 || ((typeof data['remainMoney'] === "undefined" || !isOpenRedPackage) && !hasGift)){
+                                return "";
+                            }else{
+                                var redPackageLess =  parseFloat(data['remainMoney']);
+                                var totalAssetStr = "<div>"+(hasRestGift || redPackageLess!=0 ? "有" : "无")+"</div><div class='assetShow'>查看资产</div>";
+                                redPackageLess = HdPortal.Num.div(redPackageLess,100);
+                                redPackageLess = turnNumToDouble(redPackageLess);
+                                var theStatus = (data['status'] == 3);
+                                if(!isOpenRedPackage){
+                                    redPackageStr = "";
+                                }else{
+                                    redPackageStr = '<div  class="showTheLessHongbaoSize">'+
+                                                    '<div>红包金额：'+
+                                                       redPackageLess + '&nbsp;元' +
+                                                    '</div>'+
+                                                '</div>';
+                                }
+                                totalAssetStr += "<div class='showDetailBox'>"+
+                                "<div class='giftDetail'>"+redPackageStr+"</div>"+
+                                "<div class='giftDetail'>"+giftStr+"</div>"+
+                                "</div>";
+                                return totalAssetStr;
+                                // 
+                                //     return totalAssetStr;
+                                // 
+                            }
+
+                        }
+                    },  
+                    {
+                        key     : "operate",
+                        name    : "操作",
+                        colClass: "column7 textCenter textRight",
+                        rowClass: "textCenter textRight",
+                        extData : function(back,data){
+                            var verInfo = data["verInfo"];
+                            var publishBtn = "display:none";
+                            var endBtn = "display:none";
+                            var id = data["id"];
+                            var style = data["style"];
+                            var imgUrl = data["img"];
+                            var createTime = data["createTime"];
+                            var setting=$.parseJSON(data["setting"]);
+                            var edit_tplId = parseInt(data["templateId"]);
+                            //兼容旧数据
+                            var old_edit_tplId = setting["tplId"];
+                            var buy = data["buy"];
+                            if(old_edit_tplId != undefined){
+                                edit_tplId = parseInt(old_edit_tplId);
+                            }
+                            if( hdFai.checkBit(data["flag"],32768) ){
+                            }else if(data["status"] === 0){
+                                publishBtn = "";
+                            }else if(data["status"] === 2){
+                                endBtn = "";
+                            }
+                            var publishBtnHtml = 'showPublishBox('+data['_index']+');return false;';
+                            if(false && verInfo.authVer == 0){
+                                publishBtnHtml = 'HdPortal.hdShowMsg("error","试用版无法发布活动，请先升级版本",false);';
+                            }
+                            var optDiv = '<div class="textCenter">'+
+                                
+                                // '<span  style="'+ publishBtn +'"><a href="#" id="publishBtn" onclick=\''+publishBtnHtml+'\'>恢复</a> - </span>'+
+                                 // '<a href="#" onclick="delActive('+id+','+data["_index"]+','+verInfo.authVer+',\''+verInfo.verName+'\');return false;">删除</a><br>'+
+                                '<span>  <a href="#" onclick="recoverActivity('+id+','+data["_index"]+')">恢复</a> - </span>'+
+                                
+                                '<a href="#" onclick="clearActivity('+id+','+data["_index"]+','+verInfo.authVer+','+buy+','+ (hdFai.checkBit(data['flagB'],8192))+');return false;">清除</a><br>'+
+                                
+                            '</div>';
+                            return optDiv;
+                        }
+                    },
+                ]
+            },
+            dataList    : recycleList,
+            noDataMsg   : "暂无活动 <a href='#' onclick='goNow(); return false;' style='margin-left:8px;'></a>",
+            bottom          :
+            {
+                show            : true,                     // 显示表单底部内容
+                showTotal       : true,                     // 显示左下角当前页统计,
+                showAllTotal    : true,                     // 显示左下角所有页统计
+                showPage        : true,                     // 显示底部分页按钮
+                showPageNumSelect : true,
+            },
+            page            :
+            {
+                startPage       : 1,                       // 从第x页开始显示
+            },
+            itemHover       : true,                         // 鼠标移过效果
+            after           : afterRecycleGenTable
+        };
+        $('#showRecycleTable').faiTable(options);
+
+        function afterRecycleGenTable(){
+            HdPortal.hoverTipsBox.hover($('.autoCleanTimer .icon'),function(){
+                return $(this).closest('tr').hasClass('headTrFixed') ? 'down':'up';
+            },'系统将自动删除移入回收站超过14天的活动',{marginRight : -20,});
+
+            HdPortal.hoverTipsBox.hover($('.recycleHBMoneyTips'),function(){
+                return $(this).closest('tr').hasClass('headTrFixed') ? 'down':'up';
+            },'活动发布后将扣除对应红包余额，活动结束后可将未派发的红包金额返还到余额。',{marginRight : 100,},'right');
+
+            HdPortal.hoverTipsBox.hover($('.icon.recycleIcon'),function(){
+                return $(this).closest('tr').hasClass('headTrFixed') ? 'down':'up';
+            },'活动剩余资产为发布后冻结在该活动下的资产。活动结束后，您可手动退回，彻底清除活动后也会自动退回全部资产。',{marginRight : 100,},'right');
+        }
+    }
+    function afterGenTable(){
+        var timer1 = null;
+        var qrcodeDiv = $('<div class="qrcodeBox"><div class="inIcon"></div><img /><p class="weixinerweima">微信扫二维码预览</p></div>');
+        HdPortal.link([$('#showActiveTable'),'.qrcodeIcon'],qrcodeDiv,{
+            enter : function(e,e1,e2){
+                if($(this).offset().top > ($(window).height()/1.5)){
+                    e2.find('.inIcon').removeClass('up').addClass('down');
+                    e2.css('margin-top','-252px');
+                }else{
+                    e2.find('.inIcon').removeClass('down').addClass('up');
+                    e2.css('margin-top','-5px');
+                }
+                $(this).addClass('qrcodeIconHover');
+                if(e2.data('qrcodeIcon') === this){
+                    return;
+                }
+                var data = $('#showActiveTable').faiTable("getPrimaryKeyData", parseInt($(this).attr('_index')) , true);
+                var url = getGameUrl(data);
+                e2.children('img').attr('src','https://i.hd.fkw.com/qrCode.jsp?cmd=qrurl&siteUrl='+hdFai.encodeUrl(url+"&fromQrcode=true"));
+                e2.data('qrcodeIcon',this);
+                $(this).parent().append(e2);
+                e2.removeClass('transition').addClass('transition');
+            },
+            leave : function(e,e1,e2){
+                var qrcodeIcon = e2.data('qrcodeIcon');
+                qrcodeIcon && $(qrcodeIcon).removeClass('qrcodeIconHover');
+            }
+        });
+        
+        $("#showActiveTable").on("click", ".guideShareBtn", function (e) {
+            var target = $(e.target);
+            var editIndex = $(this).parents("tr").attr("_index");
+            var data = $('#showActiveTable').faiTable("getPrimaryKeyData", editIndex);
+            HdPortal.logDog(1000239, 6);
+            top.HdPortal.showGuideShare(data, 0);
+            return;
+        });
+
+        $("#showActiveTable").on("faiTableAfterPageAjax", function () {
+            HdPortal.hoverTipsBox.hide();
+            $(".guideTipsBoxBtn").each(function () {
+                var $self = $(this);
+                var type = $self.data("type");
+                var data = $("#showActiveTable").faiTable("getPrimaryKeyData", $self.parents("tr").attr("_index"));
+                var id = data["id"];
+                if (type === "upgrade") {
+                    var realPlayer = data['style'] == 71 ? data['ptTotalPlayer'] : data['player'];
+                    var setExposure = false;
+                    var hadFull = false;
+
+                    if (!hdFai.checkBit(data["flagC"], 1048576)
+                        && realPlayer === 100) {
+                        setExposure = true;
+                        hadFull = true;
+                    } else if (!hdFai.checkBit(data["flagC"], 2097152)
+                        && 80 <= realPlayer && realPlayer <= 99) {
+                        setExposure = true;
+                    }
+
+                    if (setExposure) {
+                        $.ajax({
+                            type: "post",
+                            url: HdPortal.versionURL + "/ajax/hdportal_h.jsp",
+                            data: {
+                                cmd: "setExposureUpgradeTips",
+                                id: id,
+                                hadFull: hadFull
+                            },
+                            success: function (data) {
+                                data = $.parseJSON(data);
+                                if (!data.rt) {
+                                    HdPortal.logDog(1000257, 1);
+                                    $self.mouseover();
+                                }
+                            }
+                        });
+                        return false;
+                    }
+                } else {
+                    var guideTipsBox = hadShowGuideTipsBox(id, type);
+                    if (!guideTipsBox.hadShow) {
+                        $self.mouseover();
+                        guideTipsBox();
+                        return false;
+                    }
+                }
+            });
+        });
+        
+
+        HdPortal.hoverTipsBox.hover($('.activeHBMoneyTips'),function(){
+            return $(this).closest('tr').hasClass('headTrFixed') ? 'down':'up';
+        },'活动发布后将扣除对应红包余额，活动结束后可将未派发的红包金额返还到余额。',{marginRight : 100,},'right');
+        
+        HdPortal.hoverTipsBox.link($('.hongbaoLessNumPrice .icon'),function(){
+            return $(this).closest('tr').hasClass('headTrFixed') ? 'down':'up';
+        },'活动剩余资产为发布后冻结在该活动下的资产。活动结束后，您可手动退回，彻底清除活动后也会自动退回全部资产。',{marginRight : 100,},'right');
+        
+        
+        //显示新手引导
+        var afterClicker = function(){
+            $("#showActiveTable .linkBox").eq(0).hide();
+            $("#showActiveTable .moreMenuBtn").eq(0).click();
+        }
+        $('#showActiveTable').one("faiTableAfterPageAjax",function(){
+            if( top.HdPortal.newRegisterStep == 9 ){
+                top.HdPortal.newRegisterStep++;
+            }
+            var poupArray = [
+                {
+                    target : $("#showActiveTable .publishStyle:visible").eq(0),
+                    transLateX : -160,
+                    translateY : 0,
+                    step       : 10,
+                    tipsUrl    : "step10.png",
+                    buttonUrl  : "nextStep.png",
+                    afterClick : function(){
+                        afterClicker();
+                    }
+                },{
+                    target : $("#showActiveTable .moreOptionBox").eq(0),
+                    transLateX : -300,
+                    translateY : -100,
+                    step       : 11,
+                    tipsUrl    : "step11.png",
+                    buttonUrl  : "nextStep.png"
+                },{
+                    target : top.$("#cavIndexTab"),
+                    transLateX : 480,
+                    translateY : -30,
+                    step       : 12,
+                    isOuter    : true,
+                    tipsUrl    : "step12.png",
+                    buttonUrl  : "nextStep.png",
+                    afterClick : function(){
+                        top.location.reload(true);
+                    }
+                }
+            ];
+            if( top.HdPortal.newRegisterStep == 11 ){
+                afterClicker();
+            }
+            HdPortal.newRegistPoup({
+                page        :   "myActive",
+                poupArray   :   poupArray,
+                cssSrc      :'//hd.faisys.com/version2/css/newRegister.min.css?v=201808211749'
+            });
+        });
+        
+        var _timer = null;
+    }
+    function hadShowGuideTipsBox (id, type) {
+        var localStorageName = "guideTipsBox";
+        var guideTipsBox = $.parseJSON(HdPortal.getLocalStorage(localStorageName));
+        if (!guideTipsBox) guideTipsBox = {};
+        if (!guideTipsBox[type]) guideTipsBox[type] = {};
+        var sharelocalStorageName = "guideShareBtn" + id;
+        if (type === "share" && !!HdPortal.getLocalStorage(sharelocalStorageName)) { // 兼容旧数据
+            HdPortal.removeLocalStorage(sharelocalStorageName);
+            result();
+            return {
+                hadShow: true
+            };
+        }
+
+        function result () {
+            guideTipsBox[type]["HD" + id] = true;
+            HdPortal.setLocalStorage(localStorageName, JSON.stringify(guideTipsBox));
+        }
+        result.hadShow = guideTipsBox[type]["HD" + id];
+
+        return result;
+    }
+
+    function goNow(){
+        parent.changePage('newActive');
+    }
+
+    var target ;
+    function showActLink(obj,index){
+
+        HdPortal.logDog(1000156,4);
+        if($('.linkBox').length > 0 && obj == target){
+            $('.linkBox').remove();
+        }else{
+            var data = $('#showActiveTable').faiTable("getPrimaryKeyData", index , true);
+            target = obj;
+            $('.linkBox').remove();
+            var url = getGameUrl(data);
+            var optDiv = $(obj).parent();
+            var strongAttentionStr = '';
+            var strongAttentionGuide = '您可以将活动链接复制到您的公众号菜单中';
+            var theSpecialYangshi = '';
+            var theStatus = data["status"];
+            var hasPublish = theStatus != 0;//游戏是否已经发布
+            var isObjBottom = $(window).height() - $(obj).offset().top > 290;
+            var arrowClassName =  isObjBottom ? 'tipsBoxArrowDown' : 'tipsBoxArrowUp';
+            var isFansOnly = hdFai.checkBit(data.flagB,512);
+            // 如果是已经发布的游戏，那么它的数据不能修改。
+            // 如果是未发布的游戏，但是又开启了强关注，那么就恢复到原来的状态。
+            if(false && hdFai.checkBit(data.flagB,512) && true){
+                theSpecialYangshi = 'width:270px;word-wrap: break-word;word-break: break-all;white-space: normal;';
+                strongAttentionGuide = '<img style="vertical-align: middle;" src="//hd.faisys.com/image/tishi.png"><span style="display: inline-block;vertical-align: middle;margin-left: 8px; color:red;">请勿把二维码或链接直接发给</span><span style="vertical-align: middle;">非公众号粉丝，否则将达不到强制关注的效果！</span><a href="http://hd.fkw.com/news/5249" target="_blank" style="color:#777;text-decoration:underline;" class="thexiagnxiINfo">详细</a>';
+                strongAttentionStr = '<div style="color:#777;margin-top: 15px;">已开启强制关注功能，请将活动链接放于公众号菜单或回复中 <a href="http://hd.fkw.com/news/5249" target="_blank" style="color:#777;text-decoration:underline;" class="theXiangXiInroduce">详细教程</a></div>'
+            }
+            var linkDiv =   '<div class="linkBox" style="margin-top: '+(isObjBottom ? '9px': (isFansOnly ? (hdFai.isIE() ? '-366px' : '-343px') : '-306px'))+'">'+
+                '<div class="tipsBoxArrow '+arrowClassName+'"></div>'+
+                '<div class="headLine">'+
+                    '<div class="title">活动链接</div>'+
+                    '<div class="colseIcon" onclick="closeLinkBox();"></div>'+
+                '</div>'+
+                '<div class="tabContent">'+
+                    '<div id="spreadLink" style="text-align: left;">'+
+                        strongAttentionStr+
+                        '<div class="linkPicBox">'+
+                            '<div class="linkPic">'+
+                                '<img class="qrcodeImage" src="https://i.hd.fkw.com/qrCode.jsp?cmd=qrurl&siteUrl='+hdFai.encodeUrl(url+"&fromQrcode=true")+'" >'+
+                            '</div>'+
+                            '<div class="wxFont">微信扫一扫</div>'+
+                            '<div class="wxFont downCode" onclick="downQrCode(\''+hdFai.encodeUrl(url+"&fromQrcode=true")+'\');" >下载二维码</div>'+
+                        '</div>'+
+                        
+                        '<div class="linkInfo">'+
+                            '<div class="linkTitle">活动链接：</div>'+
+                            '<div class="linkSiteBox">'+
+                                '<input class="linkSite" readonly="" type="text" value="'+url+'" />'+
+                                '<div class="main-Button copyButton" >复制</div>'+
+                            '</div>'+
+                            '<div style="color:#969696;margin-top:8px;line-height: 14px;'+theSpecialYangshi+'">'+strongAttentionGuide+'</div>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>'+
+            '</div>';
+            optDiv.append(linkDiv);
+
+            var $copyButton = $('#spreadLink .copyButton');
+            HdPortal.copyText({
+                btn : $('#spreadLink .copyButton'),
+                input : $('#spreadLink .linkSite')
+            });
+        }
+    }
+
+    function getGameUrl(game){
+	    return HdPortal.getGameUrl(game.id,game.style,game.createTime,hdFai.checkBit(game.flagB,512),game.uriToken, false,false);
+    }
+
+    function downCoverImg(imgUrl,fileName){
+        if(/^https?:\/\/d1\./.test(imgUrl)){//设计上传的封面图
+            if(/^https:/.test(imgUrl)){
+                window.location.href = imgUrl.replace('/2/','/0/').replace('/4/','/0/');
+            }else{
+                window.open(imgUrl.replace('/2/','/0/').replace('/4/','/0/'));
+            }
+        }else{
+            window.location.href = '//hd.faisys.com'+imgUrl+'?f='+fileName;
+        }
+        return false;
+    }
+    
+    function closeLinkBox(){
+        $('.linkBox').remove();
+        $('tr').removeClass('hover');
+    }
+
+    function getGameUrlName(style){
+		var fileNames = {"10000":"game","0":"zhuanpan","1":"guaguale","2":"zajindan","3":"zgnpy","4":"knyds","5":"xmsjm","6":"qmzxt","7":"fknhb","8":"jrdpd","9":"chailihe","10":"tdhx","11":"ptdzz","12":"wymmz","13":"ryzyb","14":"bhmn","15":"csyx","16":"bpb","17":"zxg","18":"tgcm","19":"ljynw","20":"xjtx","21":"mcaxc","22":"bbtzw","23":"jskb","24":"yaoyiyao","25":"ayscl","26":"hxdzz","27":"ddsnklcf","28":"zjdsg","29":"fkxlshy","30":"prmbshl","31":"cdzfyqdj","32":"ymskqdj","33":"lctj","34":"trsx","35":"dbdzz","36":"jxtyqdj","37":"ftxbj","38":"dqgryhl","39":"msxbkdj","40":"gcldtz","41":"skltz","42":"wzytzs","43":"dqdz","44":"tcdzz","45":"jfyhl","46":"ccndrm","47":"aynlssgj","48":"hykj","49":"mbtp","50":"qdydj","51":"yhyqzs","52":"jjhyzcyx","53":"jyltzs","54":"hspfzhlwy","55":"dqdcb","56":"ktdtydj","57":"hlcbt","58":"chailihe_new","59":"ccndrm_new","61":"jjhyzcyx_new","62":"yhyqzs_new","60":"jfyhl_new","63":"cdzfyqdj_new","64":"hyzl","65":"xyndj","66":"ygqj","67":"dspkj","68":"lhjcj","69":"mbtp_new","70":"zqbbdlt","71":"ptchl","72":"xzdsg","73":"ccdbp","74":"fkxxl","75":"xydzp","76":"fkdyt","77":"qmkj_zf","78":"jlptzs","79":"xykj","80":"fkct","81":"fkttt","82":"qmdfj","83":"dadishu","84":"ptchl_zf"};
+		var fileName = fileNames[style];
+		if(fileName !== undefined){
+			return fileName + '.html';
+		}
+	}
+    function fromLink(id,_index){
+        showCanal(id,_index,true);
+    }
+    top.HdPortal.asyncCss
+        .load('popup_previewBox','//hd.faisys.com/version2/css/poupBox/previewBox.min.css?v=201808061808')
+        .load('popup_canalBox','//hd.faisys.com/version2/css/poupBox/canalBox.min.css?v=201808201753');
+    function showCanal(id,_index,from){
+        var game = $('#showActiveTable').faiTable("getPrimaryKeyData", _index , true);
+        var setting = JSON.parse(game.setting);
+        var url = "//" + "yx.hd.fkw.com" + '/' + getGameUrlName(game.style).replace("html","jsp") + "?_preview=1&aid="+"17485030"+"&_manage=d&style="+game.style+"&tplId="+setting.tplId+"&gameType="+game.gameType+"&id="+game.id;
+        var previewBox = HdPortal.showPreviewBox({
+            game : game,
+            iframeUrl : url,
+            myActive: true,
+            hasWXAuth : 'false',
+            editActiveAuth: true,
+            pubActiveAuth: true,
+            downLoadToken : $("#_TOKEN").attr("value"),
+			fromCanal:!(from===true),
+            isClose: false,
+            opts : {
+                hasAnimate : false,
+            },
+            hasPublish: (game.status != 0),
+            onEditButtonClick: function () {
+                editActive(id, _index);
+            }
+        });
+        HdPortal.showCanalView({
+            game : game,
+			fromCanal:!(from===true),
+			iframeUrl : url,
+            downLoadToken : $("#_TOKEN").attr("value"),
+            previewBox : previewBox,
+        });
+    }
+    function editActive(id,_index){
+        HdPortal.logDog(1000156,3);
+        var gameUrl = 'editActive.jsp?id='+id+'&_index='+_index;
+        
+        $('.linkBox').remove();
+        HdPortal.hoverTipsBox.hide();
+        //加背景层防止动画过程中被用户点击
+        HdPortal.loading.show(null,true);
+        $('#editActive').html('<iframe id="editActFramePage" class="editActFramePage" name="framePage" frameborder="0" scrolling="auto" src="'+gameUrl+'" style="width:100%;height:100%;display:block;"></iframe>');
+        $(window).scrollTop(0);
+        HdPortal.safeReady($('#editActFramePage'),function(){
+            HdPortal.loading.hide();
+            $('#editActive').show();
+            $('#myActContainer').hide();
+            $('#closeTip').hide();
+        },1000);
+        
+    }
+	function editNewActive(id,_index){//内部账号点击
+        $('.linkBox').remove();
+        //加背景层防止动画过程中被用户点击
+        HdPortal.loading.show(null,true);
+        $('#editActive').html('<iframe id="editActFramePage" class="editActFramePage" name="framePage" frameborder="0" scrolling="auto" src="'+(g_isVersion3?"new3/":"")+'editActive.jsp?id='+id+'&modelGameEdit=modelGameEdit&_index='+_index+'" style="width:100%;height:100%;display:block;"></iframe>');
+        $(window).scrollTop(0);
+        HdPortal.safeReady($('#editActFramePage'),function(){
+            HdPortal.loading.hide();
+            $('#editActive').show();
+            $('#myActContainer').hide();
+            $('#closeTip').hide();
+        },1000);
+        window.aaaa = $('#editActFramePage')[0].contentWindow;
+        window.aaaa.bbbb = 1;
+        HdPortal.logDog(1000156,3);
+    }
+    function getIndexById(id) {
+        var _index = -1;
+        id && $.each($('#showActiveTable').faiTable("returnDataList",true),function(index, val) {
+            if(val && val.id === id){
+                _index = val._index;
+                return false;
+            }
+        });
+        return _index;
+    }
+    var change = 0;
+    function updateGameInfo(id,callback) {
+        var _index = getIndexById(id);
+        if(!isNaN(_index) && _index != -1){
+            HdPortal.getGameInfo(id,function(result){
+                if(result.data){
+                    $('#showActiveTable').faiTable("editData", _index , result.data);
+                }
+                callback && callback(result)
+            });
+        }
+    }
+    function hideEditAct(id){ //version3
+        if(change > 0){
+            HdPortal.poupUpBox("离开页面内容将会消失",1,'','',true,'beforeunload',hide);
+        }else{
+            hide();
+        }
+        function hide(argument) {
+            top.window.$(top.window).data("beforeunload", false);
+            $('#myActContainer').show();
+            $('#closeTip').show();
+            $('#editActive').hide();
+            HdPortal.clearIframe($('#editActFramePage'));
+        }
+    }
+
+    function showGameData(id,type){
+        HdPortal.logDog(1000156,type == 1 ? 7 : 8);
+        $(window).scrollTop(0);
+        HdPortal.loading.show(null,true);
+        $('.linkBox').remove();
+        var gameDataFramePage = $('#gameDataFramePage');
+        var helpListFramePage = $('#helpListFramePage');
+        $('#closeTip').fadeOut(600);
+        $('#myActContainer').fadeOut(600);
+        var showGameData = $("#showGameData");
+        showGameData.show();
+        gameDataFramePage.hide();
+        helpListFramePage.hide();
+        //加背景层防止动画过程中被用户点击
+        $('#showBg').show();
+        
+        //动画完成后取消背景层
+        setTimeout(function(){
+            $('#showBg').hide();
+            gameDataFramePage.load(function(){
+                HdPortal.loading.hide();
+                gameDataFramePage.show();
+            });
+            var showTopSideBarTxtIndx = 8;
+            if(type == 1){
+                gameDataFramePage.attr('src','gameData.jsp?id='+id +'&type='+type);
+                showTopSideBarTxtIndx = 7;
+            }else if(type == 2){
+                gameDataFramePage.attr('src','prizeList.jsp?id='+id +'&type='+type);
+            }else if(type == 3){
+                gameDataFramePage.attr('src','workManage.jsp?id='+id +'&type='+type);
+            }else if(type == 5){
+                gameDataFramePage.attr('src','prizeList.jsp?id='+id +'&type='+type);
+            }else if(type == 7){
+                gameDataFramePage.attr('src','payOrderList.jsp?id='+id +'&type='+type);
+            }
+            top.showTopSideBarTxt && top.showTopSideBarTxt(showTopSideBarTxtIndx);
+        },600);
+    }
+
+    function showPublishBoxById(id){
+        var _index = getIndexById(id);
+        if(!isNaN(_index) || _index != -1){
+            return showPublishBox(_index);
+        }
+    }
+	
+    function showPublishBox(_index){
+        if(showPublishBox._lock) return;
+        showPublishBox._lock = true;
+        setTimeout(function(){
+            showPublishBox._lock = false;
+        },300);
+        var data = $('#showActiveTable').faiTable("getPrimaryKeyData", _index , true);
+        HdPortal.showPublishBox(data,data.verInfo);
+        HdPortal.logDog(1000156,1);
+        HdPortal.logDog(1000022, 1);
+    }
+
+    function showHelpList(gameId,playerId,subTitle){
+        var gameDataFramePage = $('#gameDataFramePage');
+        var helpListFramePage = $('#helpListFramePage');
+        
+        HdPortal.loading.show(null,true);
+        helpListFramePage.off("load").on("load",function(){
+            HdPortal.loading.hide();
+            helpListFramePage.show();
+            gameDataFramePage.hide();
+        });
+        var url = 'helpList.jsp?id='+gameId +'&playerId='+playerId+'&type=4';
+        if(subTitle){
+            url += '&subTitle='+hdFai.encodeUrl(subTitle);
+        }
+        helpListFramePage.attr('src',url);
+    }
+
+    function showMemberList(gameId,typeId){
+        var gameDataFramePage = $('#gameDataFramePage');
+        var memberListFramePage = $('#memberListFramePage');
+        
+        HdPortal.loading.show(null,true);
+        memberListFramePage.off("load").on("load",function(){
+            HdPortal.loading.hide();
+            memberListFramePage.show();
+            gameDataFramePage.hide();
+        });
+        memberListFramePage.attr('src','showMemberList.jsp?id='+gameId +'&typeId='+typeId+'&type=6');
+    }
+
+    function endActive(id){
+        HdPortal.logDog(1000156,1);
+        HdPortal.poupUpBox('您确定要结束活动吗？活动结束后，活动数据会保留，访客进入活动页面将无法参与该活动。',1,'','',true,'myActive_delAct',function(){
+            $.ajax({
+                type    : "post",
+                url     : HdPortal.versionURL+"/ajax/hdportal_h.jsp",
+                data    : "cmd=end&id=" + hdFai.encodeUrl(id),
+                success : function(data){
+                    var result = $.parseJSON(data);
+                    if(result.rt == 0){
+                        HdPortal.hdShowMsg("right",result.msg,true);
+                        // 此处可以调用此方法重新获取数据，不用重新进入该页面
+                        $('#showActiveTable').faiTable("loadAjaxPage");
+                        // setTimeout(function(){
+                        //     afterTheAddActive();
+                        // },2000)
+                    }else{
+                        HdPortal.hdShowMsg("error",result.msg,false);
+                    }
+                }
+            });
+        },true);
+    }
+    function addCartItem( gameId ){
+        if(isFaier){
+            HdPortal.hdShowMsg("error","请重新登录。",true);
+            return;
+        }
+        var options = {
+            name : "surePayIsSuccess",
+            content : "<p style=\"margin-top:30px;\">请您在新打开的页面完成支付</p><pstyle=\"margin-top:10px;\">如充值有疑难请咨询客服</p>",
+            confirmBtnName : "升级成功",
+            cancelBtnName : "关闭窗口",
+            hasTitle : true,
+            title : "升级活动( HD"+gameId+" )",
+            contentStyles :"text-align: center;height:160px;",
+            confirmFun : function(){
+                window.location.reload();
+            },
+            cancelFun : function(){
+                window.location.reload();
+            },
+        };
+        
+            var newWindow = window.open();
+            $.ajax({
+                type    : "post",
+                url     : HdPortal.versionURL+"/ajax/hdportal_h.jsp",
+                data    : "cmd=getVersion",
+                success : function(data){
+                    var result = $.parseJSON(data);
+                    if(result.success){
+                        if(result.verInfo.authVer != 0){
+                            newWindow.close();
+                            HdPortal.hdShowMsg("error","以为互动"+result.verInfo.verName+"，无需单独升级游戏",false);
+                            return;
+                        }
+                        if(false){
+                            var href="http://i.fkw.com/portal.jsp?#appId=shopCart&iParams=" + hdFai.encodeUrl("gameId=" + gameId) +"&iParams="+Math.random();
+                        }else{
+                            var href="http://i.fkw.com/portal.jsp?#appId=shop&tab=3";
+                        }
+                        HdPortal.popup(options);
+                        newWindow.location = href;
+                    }else{
+                        newWindow.close();
+                        HdPortal.hdShowMsg("error",result.msg,false);
+                    }
+                }
+            });
+        
+    }
+
+    function downQrCode(url){
+        window.location.href = "//i.hd.fkw.com/qrCode.jsp?type=1&cmd=qrurl&siteUrl="+url;
+    }
+    $(function(){
+    
+            if($.cookie('_hasClosePlatinum_') == 'true'){
+                $("#hdBanneContainer").hide();
+                $("#hotHdActive").show();
+            }else{
+                $("#hdBanneContainer").show();
+                $("#hotHdActive").hide();
+            }
+      
+    });
+
+    function closeBanner(event){
+        $("#hdBanneContainer").hide();
+        $("#hotHdActive").show();
+        $.cookie('_hasClosePlatinum_',"true",{expires: 1, path: '/',domain:'fkw.com'});//改变cookie的vuale
+        cancelBubble();
+    }
+
+    function toBuyPlatinum(event){
+        window.open('http://i.fkw.com/jump.jsp?t=42');
+        cancelBubble();
+    }
+
+    //得到事件
+    function getEvent(){
+         if(window.event){
+            return window.event;
+         }
+         func=getEvent.caller;
+         while(func!=null){
+             var arg0=func.arguments[0];
+             if(arg0){
+                 if((arg0.constructor==Event || arg0.constructor ==MouseEvent
+                    || arg0.constructor==KeyboardEvent)
+                    ||(typeof(arg0)=="object" && arg0.preventDefault
+                    && arg0.stopPropagation)){
+                     return arg0;
+                 }
+             }
+             func=func.caller;
+         }
+         return null;
+    }
+    //阻止冒泡
+    function cancelBubble(){
+        var e=getEvent();
+        if(window.event){              
+            e.cancelBubble=true;//阻止冒泡
+         }else if(e.preventDefault){
+            e.stopPropagation();//阻止冒泡
+         }
+    }
+    /**
+    * 
+    * 清空回收站功能，区分直销分销
+    */
+    function clearRecycleBin(){
+        var recycleData = $("#showRecycleTable").faiTable("returnDataList",true);
+        if(recycleData==null||recycleData==""){
+            return;
+        }
+        HdPortal.logDog(1000156,10);
+        if(!true){
+            HdPortal.hdShowMsg("error","你没有操作权限！",false);
+            return;
+        }
+        if(isFaier){
+            HdPortal.hdShowMsg("error","请重新登录。",true);
+            return false;
+        }
+        var free = 0;
+        var by = 0;
+        var bj = 0;
+        var isInc = 0;
+        $.each(recycleData,function(index,item){
+            if(item.verInfo.maxAuthVer==0){
+                free++;
+            }
+            if(item.verInfo.maxAuthVer==1){
+                by++;
+            }
+            if(item.verInfo.maxAuthVer==2){
+                bj++;
+            }
+            
+                if(hdFai.checkBit(item["flagB"],8192)){
+                    isInc++;
+                }
+            
+        });
+        var actName = '';
+        // if(!false){
+        //     if((by>0)&&(bj>0)){
+        //         actName = '白银版活动和铂金版活动';
+        //     }else if(bj>0){
+        //         if("免费版" == "门店版") {
+        //             actName = "门店版活动";
+        //         }
+        //         else if("免费版" == "铂金版"){
+        //             actName = '铂金版活动';
+        //         }
+        //         else {
+        //             actName = '钻石版活动';
+        //         }
+        //     }else if(by>0){
+        //         actName = '白银版活动';
+        //     }
+        // }else{
+        //     if(bj>0){
+        //         actName = '高级版活动';
+        //     }
+        // }
+
+        if((by>0)&&(bj>0)){
+            actName = !false ? '白银版活动和铂金版活动' : '标准版活动和营销版活动';
+        }else{
+            actName = ("免费版" == "免费版" || "免费版" == "试用版") ? "" : ("免费版" + "活动");
+        }
+
+        if(isInc > 0){
+            HdPortal.poupUpBox('确定清空回收站吗？清空后不会保留活动数据。',1,'','',true,'myActive_delActComfirm',function(){
+                setTimeout(function(){
+                    HdPortal.poupUpBox('您真的要清除'+actName+'吗？清除后不会保留活动数据。',1,'','',true,'myActive_delAllAct',function(){
+                        setTimeout(function(){
+                            HdPortal.poupUpBox('你确定要清除该活动？该活动已购买去广告服务，清除不会保留去广告服务。',1,'','',true,'myActive_delAllInc',[delActive,0,0,recycleData],true);
+                        },302); 
+                    },true);
+                },302); 
+            },true);
+        }else{
+            HdPortal.poupUpBox('确定清空回收站吗？清空后不会保留活动数据。',1,'','',true,'myActive_delActComfirm',function(){
+                setTimeout(function(){
+                    HdPortal.poupUpBox('您真的要清除'+actName+'吗？清除后不会保留活动数据。',1,'','',true,'myActive_delAllAct',[delActive,0,0,recycleData],true);
+                },302) 
+            },true);
+        }
+    }
+    
+     //删除前的检验
+    function delActiveCheck(rt){
+        var js_isDelete = false;
+        var href = "";
+        var msg = "网络错误！";
+        
+            if(rt == 'inOrder'){
+                href="http://i.fkw.com/portal.jsp#appId=order";
+            }else if(rt == 'inCart'){
+                href="http://i.fkw.com/portal.jsp#appId=shopCart";
+            }else if(rt == 'no'){
+                js_isDelete = true;
+            }
+        
+
+        if(!js_isDelete){
+            if(rt == 'inOrder'){
+                msg = "活动已经生成订单，无法删除，请先到<a style='text-decoration:underline; color:rgb(113, 113, 113);' target='_blank' href='"+href+"'>订单列表</a>中取消对应的订单";
+            }else if(rt == 'inCart'){
+                msg = "活动已经添加到购物车，无法删除，请先到<a style='text-decoration:underline; color:rgb(113, 113, 113);' target='_blank' href='"+href+"'>购物车</a>中删除该活动";
+            }
+            HdPortal.hdShowMsg("error",msg,false);
+        }
+
+        return js_isDelete;
+    }
+	function delCallBack(){
+		$("#div_window").hide();
+		HdPortal.removeHdShowMsg();
+		HdPortal.setLocalStorage('delGameInRecycle',$.toJSON({
+			flag : "nodel",
+		}));
+		window.location.reload();
+	}
+	function retry(){
+		//刷新操作
+		HdPortal.setLocalStorage('delGameInRecycle',$.toJSON({
+			flag : "delGameInRecycle",
+		}));
+		window.location.reload();
+	}
+	var global_one;
+    //执行删除
+	
+	function delActiveExcute(){
+		var ok = true;
+		var isEnd = false;
+		var recycleData = $("#showRecycleTable").faiTable("returnDataList",true);
+		var delIndex = [];
+		if(recycleData.length == 0){
+			HdPortal.wxCardProgress.end(function(){
+				HdPortal.hdShowMsg("right","清空回收站成功！",true);
+                $('#recycleBinTitle .actNum').text(0);
+                $("#div_window").hide();
+	        });
+            return;
+		}
+		if(recycleData.length==1){
+			isEnd = true;
+		}
+		$("#div_window").show();
+		delIndex.push(recycleData[0].id);
+		HdPortal.wxCardProgress.init(false);
+			$.ajax({
+            type    : "post",
+            url     : HdPortal.versionURL+"/ajax/hdportal_h.jsp",
+            data    : {cmd:"del",idList:$.toJSON(delIndex),oneOrClear:global_one,isEnd:isEnd},
+            success : function(data){
+                var result = $.parseJSON(data);
+				if(result.rt == 0){
+					$("#showRecycleTable").faiTable("rmPrimaryKeyData",recycleData[0]._index);
+					setTimeout(function(){
+						delActiveExcute();
+					},500);
+                }else{
+					HdPortal.wxCardProgress.end(function(){
+					HdPortal.hdShowMsg("error","清除失败，请<a onclick='retry()' style='color:blue;cursor:pointer;'>重试</a>！",false,delCallBack);
+					});
+                }
+            },
+            error : function(data){
+				HdPortal.wxCardProgress.end(function(){
+				HdPortal.hdShowMsg("error","清除失败，请<a onclick='retry()' style='color:blue;cursor:pointer;'>重试</a>！",false,delCallBack);
+				});
+            }
+        });
+	
+	}
+	
+	function ajaxDelGameForOne(idList,index){
+		
+		var ok = false;
+		$.ajax({
+            type    : "post",
+            url     : HdPortal.versionURL+"/ajax/hdportal_h.jsp",
+            data    : {"cmd":"del","idList":($.toJSON(idList)),"oneOrClear":global_one},
+            success : function(data){
+                var result = $.parseJSON(data);
+				if(result.rt == 0){
+                    var num = parseInt($('#recycleBinTitle .actNum').text());
+                    $('#recycleBinTitle .actNum').text(num - 1);
+					$("#showRecycleTable").faiTable("rmPrimaryKeyData",index);
+					HdPortal.hdShowMsg("right","清除成功！",true);
+                }else{
+					HdPortal.hdShowMsg("error","删除失败！",true);	
+                }
+            },
+            error : function(data){
+				HdPortal.hdShowMsg("error","删除失败！",true);	
+            }
+        });
+	}
+
+    function delActive(id,index,delList){
+        if(isFaier){
+            HdPortal.hdShowMsg("error","请重新登录。",true);
+            return false;
+        }
+        if(!true){
+            HdPortal.hdShowMsg("error","你没有操作权限！",false);
+            return false;
+        }
+        var idList = [];
+        var indexList = [];
+        global_one = true;
+        if(delList!=null&&delList!=undefined){
+            global_one = false;
+        } else{
+            idList.push(id);
+            indexList.push(index);
+        }
+		$.ajax({
+			type    : "post",
+			url     : HdPortal.versionURL+"/ajax/order_h.jsp",
+			data    : {"cmd":"check","idList": ($.toJSON(idList))},
+			success : function(data){
+				var result = $.parseJSON(data);
+				var js_isDelete = delActiveCheck(result.rt);
+				if(js_isDelete&&global_one){
+					ajaxDelGameForOne(idList,index);
+				}else if(js_isDelete&&!global_one){
+					delActiveExcute();
+				}else{
+					HdPortal.hdShowMsg("error","删除失败，请检查是否有活动在购物车或订单中！",true);	
+				}
+				
+			}
+		}); 
+    }
+    
+    
+    function clearActivity(id,index,maxAuthVer,buy,isIncrement){
+        HdPortal.logDog(1000156,12);
+        // var oen_VerName = (maxAuthVer == 2) ? ("免费版" == "营销版" ? "营销版" : "至尊版") : "标准版";
+        // var verName = false ? oen_VerName : (maxAuthVer == 2) ? ("免费版" == "门店版" ? "门店版" : "免费版" == "铂金版" ? "铂金版" : "钻石版") : "白银版";
+        var verName = ("免费版" == "免费版" || "免费版" == "试用版") ? "" : "免费版";
+        HdPortal.poupUpBox('您确定清除该活动吗？清除后不会保留活动数据。',1,'','',true,'myActive_delAct',function(){
+            setTimeout(function(){
+                if(false){
+                    //分销处理
+                    // if(buy){
+                    //     HdPortal.poupUpBox('您真的要清除'+verName+'活动吗？清除后不会保留活动数据。',1,'','',true,'myActive_delAct',[delActive,id,index],true);
+                    // }else {
+                    //     delActive(id,index);
+                    // } 
+                    if(maxAuthVer== 0){
+                        delActive(id,index);
+                    }else{
+                        HdPortal.poupUpBox('您真的要清除'+verName+'活动吗？清除后不会保留活动数据。',1,'','',true,'myActive_delAct',[delActive,id,index],true);
+                    }
+                }else{
+                    if(isIncrement){
+                        if(maxAuthVer== 0){
+                            HdPortal.poupUpBox('你确定要清除该活动？该活动已购买去广告服务，清除不会保留去广告服务。',1,'','',true,'myActive_delInc',[delActive,id,index],true);
+                        }else{
+                            HdPortal.poupUpBox('您真的要清除'+verName+'活动吗？清除后不会保留活动数据。',1,'','',true,'myActive_delAct',function(){
+                                setTimeout(function(){
+                                    HdPortal.poupUpBox('你确定要清除该活动？该活动已购买去广告服务，清除不会保留去广告服务。',1,'','',true,'myActive_delInc',[delActive,id,index],true);
+                                },302);
+                            },true);
+                        }
+                    }else{
+                        if(maxAuthVer== 0){
+                            delActive(id,index);
+                        }else{
+                            HdPortal.poupUpBox('您真的要清除'+verName+'活动吗？清除后不会保留活动数据。',1,'','',true,'myActive_delAct',[delActive,id,index],true);
+                        }
+                    }
+                }
+            },302); 
+        },true)
+        
+    }
+   /**
+    *恢复活动
+    *@param gameId,index
+    *@author jasen  
+    *@Date 2016.12.12   
+    */
+    function recoverActivity(gameId,index){
+        HdPortal.logDog(1000156,11);
+        if(true){
+			var recoverData = $('#showRecycleTable').faiTable("getPrimaryKeyData", index , true);
+            $.ajax({
+                type :"post",
+                url  :HdPortal.versionURL+"/ajax/hdportal_h.jsp",
+                data :"cmd=recoverActivity&gameId=" + hdFai.encodeUrl(gameId),
+                success:function(data){
+                    data = $.parseJSON(data);
+                    if(data.success){
+                        HdPortal.hdShowMsg("right","恢复成功！",true);
+                        $("#showRecycleTable").faiTable("rmPrimaryKeyData", index);
+                        //$("#showActiveTable").faiTable("addData",recoverData,1,0);
+                        $('#showActiveTable').faiTable("loadAjaxPage");
+                        var num = parseInt($('#recycleBinTitle .actNum').text());
+                        $('#recycleBinTitle .actNum').text(num-1);
+                    }else{
+                        HdPortal.hdShowMsg("error", data.msg, false);
+                    }
+                },
+                error:function(data){
+                    HdPortal.hdShowMsg("error","操作失败！",false);
+                },
+            });
+        }else{
+            HdPortal.hdShowMsg("error","你没有操作权限！",false);
+        }
+         
+      
+    }
+    function showTip(){
+		$("div .helpTip").css("margin-left",($('#clearDetailImg').offset().left - 39)+"px");
+		$("div .helpTip").show();
+    }
+    function hideTip(){
+        $("div .helpTip").hide();
+    }
+    //展示违规原因
+    function showCloseReason(thisDom,closeId){
+        $.ajax({
+            type    : "post",
+            url     : HdPortal.versionURL+"/ajax/hdportal_h.jsp",
+            data    : "cmd=getCloseReason&closeId="+closeId,
+            success : function(data){
+                var result = JSON.parse(data);
+                HdPortal.hoverTipsBox.show(thisDom.find('.closeIcon'),"up",result.closeReason,{
+                        width : 260,marginRight : -100
+                },'left');
+            }
+        });
+        
+    }
+    /**
+    *列入回收站
+    *@param gameId index
+    *@author jasen
+    *@Date 2016.12.9
+    */
+	var deleting = false;
+    function moveToRecycleBin(gameId,index){
+        if(deleting){
+			return;
+		}
+        HdPortal.logDog(1000156,6);
+        //删除前检查用户是否有删除权限
+        if(true){
+            // if(confirm("您确定要删除活动？删除后活动将变为已关闭状态，建议您选择提前结束活动。")){
+            
+            var data = $('#showActiveTable').faiTable("getPrimaryKeyData", index , true);
+            function sendAjax(data){
+                var gameStatus = data["status"];
+                if(gameStatus != 3 && gameStatus != 0&&!(hdFai.checkBit(data["flag"],32768)||hdFai.checkBit(data["flagB"],131072))){
+                    HdPortal.hdShowMsg("error","活动尚未结束，无法移入回收站，请先提前结束活动",false);
+                    return;
+                }
+				deleting = true;
+                $.ajax({
+                    type    : "post",
+                    url     : HdPortal.versionURL+"/ajax/hdportal_h.jsp",
+                    data    : "cmd=moveToRecycleBin&gameId=" + hdFai.encodeUrl(gameId),
+                    success : function(data){
+						deleting = false;
+                        var result = JSON.parse(data);
+                        HdPortal.hdShowMsg("right",result.msg,true);
+                        var delData = $('#showActiveTable').faiTable("getPrimaryKeyData", index , true);
+                        delData.recyleTime = new Date().getTime();
+                        //$("#showActiveTable").faiTable("rmPrimaryKeyData",index);
+						$('#showActiveTable').faiTable("loadAjaxPage");
+                        $("#showRecycleTable").faiTable("addData",delData,1,0);
+                        var num = parseInt($('#recycleBinTitle .actNum').text());
+                        $('#recycleBinTitle .actNum').text(num+1);
+                    },
+                    error:function(data){
+						deleting = false;
+                        var result = JSON.parse(data);
+                        HdPortal.hdShowMsg("error",result.msg,false);
+                    }
+                });
+            }
+            if(hdFai.checkBit(data['flagB'],8192)){
+                HdPortal.poupUpBox('你确定要清除该活动？该活动已购买去广告服务，清除不会保留去广告服务。',1,'','',true,'myActive_delAllInc',[sendAjax,data],true);
+            }else{
+                sendAjax(data);
+            }
+            // }
+        }else{
+            HdPortal.hdShowMsg("error","你没有操作权限！",false);
+        }
+        
+        
+    }
+
+    function showTipBox(obj, index){
+        $(obj).children(".tipBox").css({'position':'absolute', 'top': 100 + (index * 60) + 'px'});
+    }
+
+    function showMoreMenuBtn(obj){
+        $('.moreOptionBox').hide();
+        var isNotObjBottom = $(window).height() - $(obj).offset().top > 200;
+        var arrowClassName =  isNotObjBottom ? 'tipsBoxArrowDown' : 'tipsBoxArrowUp';
+        obj.next('.moreOptionBox').find('.tipsBoxArrow').addClass(arrowClassName);
+        var left = obj.offset().left - 49;
+        var top = obj.offset().top + 28;
+        if(!isNotObjBottom){
+            top = obj.offset().top - obj.next('.moreOptionBox').height()-26;
+            obj.next('.moreOptionBox').find('.tipsBoxArrow').css('top', obj.next('.moreOptionBox').outerHeight(true) - 5);
+        }
+        obj.next('.moreOptionBox').show().css({
+            'top': top,
+            'left': left
+        });
+    }
+
+    $(document).on("click",function(e){
+        var clickDomClass = $(e.target).attr("class");//点击事件对象的类
+        var parentDomIndex = $(e.target).parents("tr").attr("_index") % 10;//点击对应的活动index
+        var recordLength = $(e.target).parents("tbody").children('tr').length;//活动列表的长度
+        var isActiveTable = $(e.target).parents("#showActiveTable").hasClass('showActiveTable') ? "#showActiveTable" : "#showRecycleTable";//是否“我的活动”列表
+        var showDetailDom;
+        for(var i=0;i<recordLength;i++){
+            if(parentDomIndex == $(isActiveTable).find("tbody").find("tr").eq(i).attr("_index") % 10){
+                showDetailDom = $(isActiveTable).find("tbody").find("tr").eq(i).find(".showDetailBox");//需要显示的节点
+            }
+        }
+        $(".showDetailBox").hide();
+        if(showDetailDom){
+            showDetailDom.removeClass('scrollClass');
+            if(clickDomClass == "giftDetail" || clickDomClass == "theShowRedPackageNum" || clickDomClass =="showDetailBox" || clickDomClass == "assetShow" || clickDomClass == "assetBack"){
+                if(showDetailDom.height() > 96){
+                    showDetailDom.addClass('scrollClass');
+                }
+                if(recordLength == 1){
+                    $(".showDetailBox").show();
+                }else{
+                    showDetailDom.show();
+                }
+            }
+        }
+        
+    });
+	function updateActiveTime(id,game){
+			console.info(id);
+			console.info(game);
+		    HdPortal.poupUpBox('确定更新创建时间为当前时间吗？',1,'','',true,'myActive_updateActiveTime',function(){
+			console.info("updateR");
+			$.ajax({
+				type    : "post",
+				url     : HdPortal.versionURL+"/ajax/hdportal_h.jsp",
+				data    : "cmd=updateActiveTime&gameId="+id,
+				error   : function(){  
+					returnMoneyProtect = true;
+				},
+				success : function(theData){
+					var result = $.parseJSON(theData);
+					if(result.rt == 0){    
+						HdPortal.hdShowMsg("right",result.msg,true);
+					
+					}else{
+						HdPortal.hdShowMsg("error",theMsg,true);
+						return;
+					}
+				}
+			}); 
+        },true)
+	}
+    
+    function refreshPublishStatus(){ //发布之后更新状态
+        $('#showActiveTable').faiTable("loadAjaxPage");
+    }
+</script>
+
+<div id="newRegistWin" class="hd-theSiganUp-Bclass-UserGuide hide" style="display: none;"><div class="hd-NewSiganUp-boxer"><div class="hd-NewSiganUp-boxer-first hd_hg_grey theLittleBaby"><div id="special1" class="hd-NewSiganUp-boxer-special1 hide hd_hg_grey theLittleBaby"></div><div id="special2" class="hd-NewSiganUp-boxer-special2 hide hd_hg_grey theLittleBaby"></div><div id="special3" class="hd-NewSiganUp-boxer-special3 hide hd_hg_grey theLittleBaby"></div></div><div class="hd-NewSiganUp-boxer-second theLittleBaby clearFix"><div class="hd-NewSiganUp-shower-maskOne hd_hg_grey floatLeft"></div><div class="hd-NewSiganUp-shower-detail floatLeft"></div><div class="hd-NewSiganUp-shower-maskTwo hd_hg_grey floatLeft"></div></div><div class="hd-NewSiganUp-boxer-third hd_hg_grey theLittleBaby"></div></div><div class="hd-NewSiganUp-EventBox"><div class="theShowerImgerBoxer"><img class="theShowerImger"><div class="eventBox"><img class="theNormalImg"></div></div></div></div></body></html>

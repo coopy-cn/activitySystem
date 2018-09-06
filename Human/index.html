@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>凡科互动</title>
+		<link href="css/comm/fai.min.css?v=201803051046" rel="stylesheet" type="text/css">
+		<link href="css/base.min.css?v=201808201753" rel="stylesheet" type="text/css">
+		<link href="css/index.min.css?v=201808291004" rel="stylesheet" type="text/css">
+		<link href="css/storeManage.min.css?v=201808061808" rel="stylesheet" type="text/css">
+		<link href="css/index.css" rel="stylesheet" type="text/css" />
+		<meta id="_TOKEN" value="08d6fadb30e21d57116e78a72a68d878" type="hidden">
+		<meta content="always" name="referrer">
+
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="bookmark" href="/favicon.ico" type="image/x-icon" 　="">
+		<script src="js/hawkEye.min.js?v=201807231924"></script>
+		<script type="text/javascript">
+			document.domain = 'fkw.com';
+			var g_timeDeviation = 1535959152630 - new Date().getTime(); //服务器时间与系统时间偏差
+			var g_isVersion3 = false;
+		</script>
+		<script type="text/javascript" src="js/jquery-core.min.js?v=201808061808"></script>
+		<script type="text/javascript" src="js/fai_hd.min.js?v=201808061808"></script>
+		<script type="text/javascript" src="js/jquery-ui-core.min.js?v=201808061808"></script>
+		<script type="text/javascript" src="js/faiui.min.js?v=201808061808"></script>
+		<script type="text/javascript" src="js/hdportal.min.js?v=201808231413"></script>
+		<script type="text/javascript">
+			try {
+				hdFai.top = parent.hdFai.top;
+			} catch(e) {}
+			$.extend(HdPortal, {
+				"m_debug": false,
+				"isOem": false,
+				"isStoreVer": false,
+				"_isInnerAccount": true,
+				"storeId": 0,
+				"areaId": 0,
+				"HdPortalHost": "i.fkw.com",
+				"HomeHost": "fkw.com",
+				"OemPortalHost": "adm.webportal.top",
+				"isYKY": false,
+				"noSupportTipA": "<a onclick='openQuickPay()' href='javascript:;'>前往升级<\/a>",
+				"buyProductAuth": true,
+				"canRecharge": true,
+				"closeRecharge": false,
+				"accreditRecharge": true,
+				"isMainstore": true,
+				"isStaff": false,
+				"hdOpenTime": 1535939094129,
+				"feePercent": 0.02,
+				"resRoot": "//hd.faisys.com",
+				"hdVer": {
+					"FREE": 0,
+					"BY": 1,
+					"BJ": 2,
+					"MD": 4,
+					"ZS": 3
+				},
+				"_cssUrlInfo": {
+					"editPoupBox": "//hd.faisys.com/version2/css/poupBox/editPoupBox.min.css?v=201808061808",
+					"js_ZeroClipboard": "//hd.faisys.com/version2/js/comm/ZeroClipboard/ZeroClipboard.swf?v=201704111734"
+				},
+				"timeLimit": {
+					"quickPay": 0
+				},
+				"$data": {
+					"gameHost": "hd.faisco.cn",
+					"hpHost": "i.hd.fkw.com",
+					"hdhomeHost": "hd.fkw.com",
+					"aid": 17485030,
+					"httpStr": "https",
+					"comfortToAward": {
+						"comoptx": "optx",
+						"comattentionimg": "attentionimg",
+						"comimgw": "aimgw",
+						"comimg": "aimg",
+						"ctlmt": "tlmt",
+						"comimgh": "aimgh",
+						"comiscuscode": "iscuscode",
+						"cttype": "t_type",
+						"comfbt": "cfbt",
+						"comoci": "ocimg",
+						"comstl": "stl",
+						"comoct": "oct",
+						"comopti": "opti",
+						"conlinect": "onlinect",
+						"comcashtype": "cashtype",
+						"comiscancelver": "iscancelver",
+						"conlinewxnum": "onlinewxnum",
+						"comOpqrc": "opqrc",
+						"comStoreType": "storeType",
+						"comservicephone": "servicepho",
+						"comcashinfo": "cashinfo",
+						"comcet": "cet",
+						"combtn": "btn",
+						"cas": "style",
+						"comtxn": "txn",
+						"combtl": "btl",
+						"ca": "name",
+						"comcontinfo": "continfo",
+						"comNeedLessConsume": "needlessconsume",
+						"comStoresIds": "storesIds",
+						"comattention": "attention",
+						"comcbt": "cbt",
+						"comtxc": "txc",
+						"comAwardtype": "awardtype",
+						"comft": "cft",
+						"comOplink": "oplink",
+						"comcashsite": "cashsite",
+						"cc": "",
+						"ccc": ""
+					},
+					"isFaier": false,
+					"portalVer": 0,
+					"hblimit": 50000,
+					"isOpenABTest": false,
+					"isOpenOem": false
+				}
+			});
+
+			function openQuickPay(logId, srcId) {
+				if($.type(logId) == 'array') {
+					HdPortal.logDogList(logId);
+				} else {
+					logId && srcId && HdPortal.logDog(logId, srcId);
+				}
+				// m_aid % 2 == 0
+				if((true || HdPortal.hdOpenTime <= HdPortal.timeLimit.quickPay) && true) {
+					if(true) {
+						window.open("http://i.fkw.com/jump.jsp?t=42");
+					} else {
+						window.open("http://adm.webportal.top/portal.jsp#appId=shop&tab=4");
+					}
+
+				} else {
+					var verInfo = 1;
+					if(true) {
+						verInfo = 1;
+					} else if(false) {
+						verInfo = 2;
+					} else if(false) {
+						verInfo = 3;
+					}
+					HdPortal.quickPayMent({
+						verInfo: verInfo,
+						type: 2
+					});
+				}
+			}
+			var limitGameFor19 = ["47", "69"];
+			if(hdFai.top.indexTest || HdPortal.m_debug) {
+				$(function() {
+					$('body').append('<a id="oneself_link" href="' + document.URL + '" target="_blank">self</a>');
+				})
+			}
+		</script>
+		<script type="text/javascript">
+			(function() {
+				var fs = document.createElement("script");
+				fs.src = "//fe.faisys.com/jssdk_1_0/js/hawkEye.min.js?v=201807231924";
+				window.FAI_HAWK_EYE = {};
+				window.FAI_HAWK_EYE.jssdk_report_url = "//report.fkw.com/js/report";
+				window.FAI_HAWK_EYE.jssdk_appid = 5004;
+				window.FAI_HAWK_EYE.fai_aid = 0;
+				window.FAI_HAWK_EYE.fai_bs_aid = 17485030;
+				window.FAI_HAWK_EYE.fai_bs_id = 0;
+				window.FAI_HAWK_EYE.fai_bs_wid = 0;
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(fs, s);
+			})();
+		</script>
+
+		<script type="text/javascript">
+			$.extend(HdPortal.$data, {
+				"discountsText": "买二送二促销中",
+				"isBindOpenId": false,
+				"isOpenBindwx": true,
+				"setBindWXAuth": true,
+				"profFlag": 8322
+			});
+
+			HdPortal.Res.setGroup({
+				bindWXpoup: {
+					css_bindWXpoup: '//hd.faisys.com/version2/css/poupBox/bindWxPoup.min.css?v=201808201753'
+				},
+				popBoxForBuy: {
+					css_popBoxForBuy: '//hd.faisys.com/version2/css/poupBox/popBoxForBuy.min.css?v=201808201753'
+				},
+				publishGame: {
+					css_publishGame: '//hd.faisys.com/version2/css/poupBox/publishGamePoupBox.min.css?v=201808221718',
+					js_publishGame: '//hd.faisys.com/version2/js/publish.min.js?v=201808271509',
+				},
+			}).setGroup({
+				"guideShare": {
+					"js_guideShare": "//hd.faisys.com/version2/js/poupBox/guideShare.min.js?v=201807101125",
+					"css_guideShare": "//hd.faisys.com/version2/css/poupBox/guideShare.min.css?v=201807101125"
+				}
+			});
+		</script>
+
+		<script type="text/javascript" src="//hd.faisys.com/version2/js/comm/ZeroClipboard/ZeroClipboard.min.js?v=201803201523"></script>
+		<link href="//hd.faisys.com/version2/css/poupBox/previewBox.min.css?v=201808061808" rel="stylesheet">
+		<link href="//hd.faisys.com/version2/css/poupBox/canalBox.min.css?v=201808201753" rel="stylesheet">
+		<link href="//hd.faisys.com/version2/css/newRegister.min.css?v=201808211749" rel="stylesheet">
+		<link href="//hd.faisys.com/version2/css/poupBox/adviceBoxPoup.min.css?v=201808061808" rel="stylesheet">
+		<link href="//hd.faisys.com/version2/css/poupBox/activePreView.min.css?v=201808061808" rel="stylesheet">
+	</head>
+
+	<body>
+		<!--<iframe id="guideLowBrowser" src style="display:none;position:absolute;z-index:10000;width:100%;height:100%;"></iframe>-->
+		<script type="text/javascript" src="//hd.faisys.com/version2/js/comm/testBrowser.min.js?v=201704111734"></script>
+		<div id="hdContainer" class="container">
+
+			<!--<div class="mask" style="position: absolute; left: 0; top: 0;width: 100%; height: 68px; display: none; background:rgba(0,0,0,0.7); z-index: 100;"></div>-->
+			<div id="hdManageTop">
+
+				<a href="http://hd.fkw.com" target="_blank">
+
+					<div class="logo">
+						<img src="//hd.faisys.com/version2/image/hdNewLogo.png?v=555" style="width:200px;height:60px; margin:3px 0 0 12px" />
+					</div>
+
+				</a>
+
+				<div id="" class="manageInfoBox new_manageInfoBox">
+
+					<!-- <div class='manageInfo'><a id="strategyIn" href="http://hd.fkw.com/strategy.jsp" target="_blank" _ossFlag=15>互动攻略</a></div> -->
+
+					<!-- <div class='manageInfo hoverShadow'>
+                <div class='lineCashWrap'>
+                    <a id="operateSkill" _ossFlag=16 >运营技巧</a>
+                </div>
+                <div id="operateSkillBox" _mouseIn='0' class="hide"  >
+                    <img src="//hd.faisys.com/image/headDongNow.jpg?v=201611071036" style="width:100%;display:block;"/>
+                    <p>扫一扫</p>
+                    <p>获取最新运营技巧</p>
+                </div>
+            </div> -->
+					<div class="manageInfo hoverShadow coupLister" style="width:69px">
+						<div class="coupIconBtn">
+							<div class='headerRedDot hide'></div>
+						</div>
+						<div class="coupListBox">
+							<div class="faiCoupBoxer">
+
+								<div class="faiCoupInfo notCoupInfo">
+									<div class="notCoupShow">
+										<span class="lineDecore"></span><span class="middle">目前还未有可用现金券</span><span class="lineDecore"></span>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+					<div class="manageInfo manageInfoMin topBarBulletin hoverShadow" style="width:69px">
+						<div class="topBarIcon1"></div>
+						<!------------- 功能信息列表 ------------------>
+						<div class="topBarBulletinContent topBarContent topBarContent_new">
+							<div id="leftAside_new">
+								<div class="leftAsideTab active left_myMessage">
+									<a style="color:white;" href="###">我的消息</a>
+								</div>
+								<div class="leftAsideTab right_updateFunction">
+									<a href="###">功能更新</a>
+								</div>
+							</div>
+
+							<div id="message" class="listDiv">
+								<div class="promImgBox">
+									<div class="promImgBoxInner">
+										<a target="_blank" href="http://i.fkw.com/count/agentCount.jsp?s=9&_ta=3673" class="promImgBoxInnerTwo" _ossFlag=11>
+											<img class="promImg sitekc" src="//hd.faisys.com/version2/image/makeWebSite.png?v=201710102200" onclick="HdPortal.logDog(4000023, 304);">
+										</a>
+										<a href="javascript:;" onclick="HdPortal.logDog(1000143, 3); window.open('http://i.cd.fkw.com/manage/flyerManage.jsp?fromLogin&fromPageId=5');" _ossFlag=8 class="promImgBoxInnerOne">
+											<img class="promImg" src="//hdh.faisys.com/image/pro/20160301/promImg_05.jpg">
+										</a>
+									</div>
+									<div class="littleBtn">
+										<span class="showNow"></span>
+										<span class="notShow"></span>
+									</div>
+								</div>
+							</div>
+
+							<!-- 
+                        <div id="update" class="listDiv">
+                     -->
+							<div id="update" class="listDiv hide">
+								<div class="promUpdateBox">
+									<div class="promUpdateBoxInner" style="width:24rem">
+										<div class='list' style='height:30px'>
+											<a class='updateText' style='color:#585858' hidefocus='true' _ossFlag=4 href="https://hd.fkw.com/news/11966" target='_blank' onclick='HdPortal.logDog(100038, 102);HdPortal.logDog(1000143, 4);'><span class='iconPoint'>&nbsp;</span>08月22日更新：新增抽奖游戏-疯狂老虎机（上线内测，敬请期待）</a>
+										</div>
+										<div class='list' style='height:30px'>
+											<a class='updateText' style='color:#585858' hidefocus='true' _ossFlag=4 href="https://hd.fkw.com/news/11776" target='_blank' onclick='HdPortal.logDog(100038, 102);HdPortal.logDog(1000143, 4);'><span class='iconPoint'>&nbsp;</span>08月08日更新：新增游戏-疯狂跳跳跳</a>
+										</div>
+										<div class='list' style='height:30px'>
+											<a class='updateText' style='color:#585858' hidefocus='true' _ossFlag=4 href="http://hd.fkw.com/news/11690" target='_blank' onclick='HdPortal.logDog(100038, 102);HdPortal.logDog(1000143, 4);'><span class='iconPoint'>&nbsp;</span>08月01日更新：广告页可自定义秒数</a>
+										</div>
+										<div class='list' style='height:30px'>
+											<a class='updateText' style='color:#585858' hidefocus='true' _ossFlag=4 href="http://hd.fkw.com/news/11526" target='_blank' onclick='HdPortal.logDog(100038, 102);HdPortal.logDog(1000143, 4);'><span class='iconPoint'>&nbsp;</span>07月18日更新：助力活动增加轮播获奖信息</a>
+										</div>
+										<div class='list' style='height:30px'>
+											<a class='updateText' style='color:#585858' hidefocus='true' _ossFlag=4 href="http://hd.fkw.com/news/11408" target='_blank' onclick='HdPortal.logDog(100038, 102);HdPortal.logDog(1000143, 4);'><span class='iconPoint'>&nbsp;</span>07月03日更新：新增游戏营销-答题类-疯狂猜图</a>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="manageInfo manageInfoMin hoverShadow moreBarContentBox" style="width:69px;">
+						<div class="moreBarIcon"><span class="headerRedDot hide" style="top:3px;right:9px;"></span></div>
+
+						<!--<div id="slideRightBar" class='hide moreBarContent hideslideRightBar'>-->
+							<!--为了统一边框的粗细，九宫格最下面一行的几个div需要设置border-bottom为none;-->
+							<div class="moreBarTextBox rgzx_Class defaultPointer" _ossFlag=5 style="border-bottom:none">
+								<!--<div class="moreBarTextBoxIcon moreBarTextBox_rgzx"></div>-->
+								<!--<div class="moreBarName">人工咨询</div>-->
+								<div class="hdQuestions defaultPointer hide" style="position: absolute;">
+									<!--<div class="questionBtn">
+										<div class="questionIcon"></div>
+										<div class="questionText">人工咨询</div>
+									</div>-->
+									<div class="questionLine"></div>
+									<div class="questionTitle">常见问题
+										<a class="moreQuestions">更多>></a>
+									</div>
+									<!--<div class="questionLink listBox newsListBox">
+										<div class="list">
+											<a target="_blank" onclick="HdPortal.logDog(1000163,4);" href="http://hd.fkw.com/questionView.jsp?id=7267">&nbsp;我想找一个游戏，你们有吗？</a>
+										</div>
+										<div class="list">
+											<a target="_blank" onclick="HdPortal.logDog(1000163,4);" href="http://hd.fkw.com/questionView.jsp?id=7243">&nbsp;能设置关注后才能玩游戏吗</a>
+										</div>
+										<div class="list">
+											<a target="_blank" onclick="HdPortal.logDog(1000163,4);" href="http://hd.fkw.com/questionView.jsp?id=7262">&nbsp;我设置了开始时间，还没到这个时间能参与游戏吗？</a>
+										</div>
+									</div>-->
+								</div>
+							</div>
+							<!--
+                        -->
+							<!--<div id="detectActive" _ossFlag=6 class="moreBarTextBox">
+								<div class="moreBarTextBoxIcon moreBarTextBox_fxhd"></div>
+								<div class="moreBarName">发现活动</div>
+							</div>-->
+							<!--
+                        -->
+							<!--<div class="moreBarTextBox dlzx_Class">
+								<div class="moreBarTextBoxIcon moreBarTextBox_dlzx"></div>
+								<div class="moreBarName">代理咨询</div>
+							</div>-->
+							<!--
+                        -->
+							<!--<div class="moreBarTextBox gzhd_Class defaultPointer">
+								<div class="moreBarTextBoxIcon moreBarTextBox_gzhd"></div>
+								<div class="moreBarName">关注互动</div>
+								<div class="hdQrCode defaultPointer hide" style="position: absolute;">
+
+									<div class="hdQrCodeImg1"></div>
+
+									<div class="hdQrCodeText">微信扫描二维码</br>了解互动资讯</div>
+								</div>
+							</div>-->
+							<!--
+                        -->
+							<!--<div class="moreBarTextBox hdgl_Class">
+								<div class="moreBarTextBoxIcon moreBarTextBox_hdgl"></div>
+								<div class="moreBarName">互动攻略</div>
+							</div>-->
+							<!--
+                        -->
+							<!--<div class="moreBarTextBox gnjy_Class">
+								<div class="moreBarTextBoxIcon moreBarTextBox_gnjy"></div>
+								<div class="moreBarName">功能建议</div>
+							</div>-->
+							<!--
+                        -->
+							<!--<div class="moreBarTextBox yyxz_Class" style="border-bottom:none;">
+								<div class="headerRedDot hide" style="top:25px;right:29px;"></div>
+								<div class="headerTips hide"><span class="icon"></span>报表正在生成中，请过几分钟后在此处下载</div>
+								<div class="moreBarTextBoxIcon moreBarTextBox_yyxz"></div>
+								<div class="moreBarName">预约下载</div>
+							</div>-->
+							<!--
+                        -->
+
+							<!--
+                        <div class="sliderBlock contacLine">
+                            <a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4006822826&f=1&ty=1&aty=0&a=&from=5" target="_blank" onclick="HdPortal.logDog(4000021,6);HdPortal.logDog(1000195,7);" _ossflag="4"><div class="item kefu"><span class="icon"></span>客服</div></a>
+                            
+                            <a href="http://www.faisco.cn/edm.jsp?d=4000060&s=15&a=17485030&k=f4f80112&l=aHR0cDovL3d3dy5ma3cuY29tL3RzLmh0bWw-JnA9Mg" onclick="HdPortal.logDog(1000195,8);" target="_blank"><div class="item jy"><span class="icon"></span>建议</div></a>
+                        </div>
+                        -->
+							<div class="sliderBlock helpCenter">
+								<!--
+                            <div class="blockTitle">
+                                <span class="columnTitle">互动攻略</span>
+                                <a target="_blank" onclick="HdPortal.logDog(1000195,5);" href="http://hd.fkw.com/strategy.html">进入</a>
+                            </div>
+                            -->
+								<!--<div class="listBox newsListBox">
+
+									<div class="list">
+										<a target="_blank" _id="7535" onclick="HdPortal.logDog(1000163,8);" href="http://hd.fkw.com/strategyView.jsp?id=7535">&nbsp;【攻略】如何通过凡科互动实现粉丝增加</a>
+									</div>
+
+									<div class="list">
+										<a target="_blank" _id="7497" onclick="HdPortal.logDog(1000163,8);" href="http://hd.fkw.com/strategyView.jsp?id=7497">&nbsp;【攻略】做好分享易涨粉</a>
+									</div>
+
+									<div class="list">
+										<a target="_blank" _id="7499" onclick="HdPortal.logDog(1000163,8);" href="http://hd.fkw.com/strategyView.jsp?id=7499">&nbsp;【攻略】如何给线下门店引流？</a>
+									</div>
+
+								</div>-->
+							</div>
+
+							<div class="sliderBlock functionBlock">
+								<!--
+                            <div class="blockTitle">
+                                <span class="columnTitle">常见问题</span>
+                                <a target="_blank" onclick="HdPortal.logDog(1000195,3);" href="http://hd.fkw.com/helpCenter.html">进入</a>
+                            </div>
+
+                            <div class="listBox newsListBox">
+                                <div class="list"><a target="_blank" onclick="HdPortal.logDog(1000163,4);" href="http://hd.fkw.com/questionView.jsp?id=7267">&nbsp;【问题】我想找一个游戏，你们有吗？</a></div>
+                                <div class="list"><a target="_blank" onclick="HdPortal.logDog(1000163,4);" href="http://hd.fkw.com/questionView.jsp?id=7243">&nbsp;【问题】能设置关注后才能玩游戏吗</a></div>
+                                <div class="list"><a target="_blank" onclick="HdPortal.logDog(1000163,4);" href="http://hd.fkw.com/questionView.jsp?id=7262">&nbsp;【问题】我设置了开始时间，还没到这个时间能参与游戏吗？</a></div>
+                                <div class="list"><a target="_blank" onclick="HdPortal.logDog(1000195,4);" href="http://hd.fkw.com/questionView.jsp?id=7238">这几个派奖方式什么意思？？</a></div>
+                                <div class="list"><a target="_blank" onclick="HdPortal.logDog(1000195,4);" href="http://hd.fkw.com/questionView.jsp?id=7239">分享奖励与邀请奖励有什么不同？</a></div>
+                            </div>
+                        -->
+							</div>
+							<!--
+                        <div id="slideBar_qrCode" class="qrCodeBlock">
+                            <img src="//hd.faisys.com/version2/image/wxImg.gif">
+                            <div class="txt">微信扫描二维码了解互动咨询</div>
+                        </div>
+                        -->
+						<!--</div>-->
+					</div>
+
+					<div class="manageInfo manageInfoMin hoverShadow topBarVer new_topBarVer" onmouseenter='HdPortal.logDog(1000193, 12);'>
+
+						<div class="versionIcon ver_free_head" _ossFlag=10>免费版
+
+						</div>
+						<div class="topBarVerContent topBarContent">
+							<div class="verBg">
+								<div class="flag verIconImg ver_free"></div>
+								<div class="verTime">
+									<p class="title ver_free_bg">免费版</p>
+									<p class="overTime">到期时间：无</p>
+								</div>
+								<!--一卡易特殊处理-->
+
+								<a class="main-Button op_btn" onclick="openQuickPay(1000144,1); HdPortal.logDog(1000144, 27);" href="###">升级</a>
+
+							</div>
+							<div class="linkBtnRow">
+								<a class="portalLink" target="_blank" onclick="HdPortal.logDog(1000193, 6)" href="http://i.fkw.com"><span class="icon"></span>企业中心</a>
+
+								<a class="detailLink" target="_blank" onclick="HdPortal.logDog(1000193, 7)" href="http://hd.fkw.com/product.html"><span class="icon"></span>版本详情</a>
+
+							</div>
+							<div class="userInfo">
+								<div class="userName">boss，<span id="greetings"></span>！
+									<a href="javascript:HdPortal.logout();" onclick="HdPortal.logDog(1000193, 8)"><span class="icon"></span>退出</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--
+            
+            <div id="nav_helpAddServer" class="manageInfo181"><div onclick="showRightSlide()"><span class="icon"></span>帮助与服务</div><div id="index_closeSlideBar_btn" class="icon" onclick="hideRightSlide()"></div></div>
+            
+            -->
+
+				</div>
+			</div>
+			<!-- 发现活动弹出层 -->
+			<div id="detectActiveMask" class="activePoupMask">
+				<div id="detectActiveBox" class="activePoupBox">
+					<div id="detectActiveClose" class="activeClose"></div>
+					<div id="detectActiveTableHead">
+						<table cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th class='column1'>活动名称</th>
+									<th class='column2'>主办单位</th>
+									<th class='column3'>参与人数</th>
+									<th class='column4'>开始日期</th>
+									<th class='column5'>二维码</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div id="detectActiveTableBody" class="scrollBox">
+						<table cellspacing="0" cellpadding="0">
+							<tbody></tbody>
+						</table>
+					</div>
+					<div class="qrcodeBox">
+						<div class=inIcon></div><img /></div>
+				</div>
+			</div>
+
+			<script>
+				(function() {
+					var sevenDayCookieName = "hd_fkw_sevenDay_tips_" + 17485030;
+					$(function() {
+						var e = false ? "click" : "mouseover";
+						var h1 = false ? "116px" : "3.3rem";
+						var h2 = false ? "132px" : "3.3rem";
+						var d = false ? "#leftAside" : "#leftAside_new";
+						$(d + " .leftAsideTab").on(e, function() {
+							$(this).addClass("active").siblings().removeClass("active");
+
+							$(this).children().css("color", "white").parent().siblings().children().css("color", "black");
+
+							$(".topBarContent .listDiv").eq($(this).index()).removeClass("hide").siblings(".listDiv").addClass("hide");
+							if($(this).index() == 0) {
+								$(d).css("height", h1);
+							} else if($(this).index() == 1) {
+								$(d).css("height", h2);
+							} else if($(this).index() == 2) {
+								$(d).css("height", "212px");
+							}
+						});
+
+					})
+					var canClickRightHelpMenu = false;
+					$(window).on("load", function() {
+						if($(this).width() < $('.logo').outerWidth(true) + $("#nav_switchStoreBox").outerWidth(true) + $('.userInfoBox').outerWidth(true) + $('.manageInfoBox').outerWidth(true)) {
+							$("#nav_switchStoreBox").find("span").css({
+								width: $(this).width() - $('.logo').outerWidth(true) - $('.userInfoBox').outerWidth(true) - $('.manageInfoBox').outerWidth(true) - $("#switchStoreBtn").outerWidth(true) - parseInt($("#nav_switchStoreBox").css("marginLeft")) - parseInt($("#nav_switchStoreBox").css("paddingLeft")) - 10,
+								overflow: "hidden",
+								whiteSpace: "nowrap",
+								textOverflow: "ellipsis"
+							});
+							$("#nav_switchStoreBox").find("#switchStoreBtn").css("vertical-align", "inherit");
+						}
+					})
+					$.cookie("noNewVersion2", null, {
+						path: '/'
+					});
+					HdPortal.link($('#hdManageTop .manageInfo112'), $('.topBarServeMenuBox'), {
+						enter: function(e, e1, e2) {
+							$('.topBarServeIcon').css('background-position', '-63px -95px');
+						},
+						leave: function(e, e1, e2) {
+							$('.topBarServeIcon').css('background-position', '-39px -95px');
+							$('#hdManageTop .manageInfo112').removeClass('hoverChecked');
+							$('#hdManageTop .manageInfo112 .headerTips').hide();
+						}
+					});
+					// 使用轮播
+					$('.promImgBoxInnerTwo').clone().insertAfter('.promImgBoxInnerOne');
+					var timer = {
+						t1: null,
+						index: 0,
+						durationTime: 500,
+						teriod: 4000,
+						imgWidth: 285
+					};
+
+					if($('.topBarContent .menuDiv').is(':visible')) {
+						$('#update').css('padding-top', '4px');
+					}
+					//检查是否显示切换门店按钮
+					if(false) {
+						HdPortal.checkSwitchBtnShow();
+					}
+
+					function showRightSlide() {
+						if(!canClickRightHelpMenu) return;
+						$('#slideRightBar').removeClass('hideslideRightBar');
+						$('#index_closeSlideBar_btn').show();
+						HdPortal.logDog(1000195, 1);
+					}
+
+					function autoGo() {
+						timer.index++;
+						var theLeft = -(timer.imgWidth * timer.index);
+						$('.promImgBoxInner').animate({
+							left: theLeft + "px"
+						}, timer.durationTime, function() {
+							if(timer.index == 1) {
+								$('.showNow').css("background-position", "0px 0px");
+								$('.notShow').css("background-position", "0px -13px");
+							} else if(timer.index == 2) {
+								$('.showNow').css("background-position", "0px -13px");
+								$('.notShow').css("background-position", "0px 0px");
+								//                  console.log($('.showNow').length);
+								timer.index = 0;
+								$('.promImgBoxInner').css("left", "0px");
+							}
+						});
+					}
+
+					$('.showNow,.notShow').on("click", function() {
+						clearInterval(timer.t1);
+						timer.t1 = null;
+						autoGo();
+						timer.t1 = setInterval(autoGo, timer.teriod);
+					})
+					//hover到用户名时显示出具体的信息
+					$('#greetings').text(function() {
+						var hours = (new Date()).getHours();
+						if(hours > 4 && hours <= 10) {
+							return '早上好';
+						} else if(hours > 10 && hours <= 13) {
+							return '中午好';
+						} else if(hours > 13 && hours <= 18) {
+							return '下午好';
+						} else if(hours > 18 && hours <= 23) {
+							return '晚上好';
+						} else if(hours > 0 && hours <= 4) {
+							return '晚上好';
+						}
+					});
+					if(hdFai && (hdFai.isIE10() || hdFai.isIE9())) { //在ie10ie9下进行服务支持hover时，manageInfoBox最右边节点会掉下去
+						$('.manageInfoBox').width($('.manageInfoBox').width());
+					}
+					HdPortal.link([$('#hdManageTop .coupLister')], $('#hdManageTop .coupListBox'), {
+						enter: function(e, e1, e2) {
+							e1.addClass("hoverChecked");
+							HdPortal.logDog(1000142, 24);
+							var hasGetCoupList = [];
+							var alMostPassList = [];
+							var hasGetArray = hasGetCoupList.join("-");
+							var alMostPass = alMostPassList.join("-");
+							var cookieArray_1 = $.cookie("fkwHd-17485030-false-redPointerInfo-1");
+							var cookieArray_2 = $.cookie("fkwHd-17485030-false-redPointerInfo-2");
+							if(cookieArray_1) {
+								cookieArray_1 = cookieArray_1.split("-");
+							} else {
+								cookieArray_1 = [];
+							}
+							if(cookieArray_2) {
+								cookieArray_2 = cookieArray_2.split("-");
+							} else {
+								cookieArray_2 = [];
+							}
+
+							var matchLenth = 0;
+							if(hasGetCoupList.length != cookieArray_1.length) {
+								$.each(hasGetCoupList, function(index, data) {
+									$.each(cookieArray_1, function(i, d) {
+										if(data == d) {
+											matchLenth++;
+											return false;
+										}
+									})
+								})
+							}
+							if(hasGetCoupList.length != 0 && matchLenth != hasGetCoupList.length) {
+								$.cookie("fkwHd-17485030-false-redPointerInfo-1", hasGetArray, {
+									expires: 365,
+									path: '/',
+									domain: 'fkw.com'
+								});
+							}
+
+							matchLenth = 0;
+							if(alMostPassList.length != cookieArray_2.length) {
+								$.each(alMostPassList, function(index, data) {
+									$.each(cookieArray_2, function(i, d) {
+										if(data == d) {
+											matchLenth++;
+											return false;
+										}
+									})
+								})
+							}
+							if(alMostPassList.length != 0 && matchLenth != alMostPassList.length) {
+								$.cookie("fkwHd-17485030-false-redPointerInfo-2", alMostPass, {
+									expires: 365,
+									path: '/',
+									domain: 'fkw.com'
+								});
+							}
+							e1.find(".headerRedDot").addClass("hide");
+						},
+						leave: function(e, e1, e2) {
+							e1.removeClass("hoverChecked");
+						}
+					});
+					$("#hdManageTop .faiCoupBoxer").on("mouseover", ".hasCoupLister", function() {
+						$(this).find(".getToKnowInfo").show();
+					}).on("mouseleave", ".hasCoupLister", function() {
+						$(this).find(".getToKnowInfo").hide();
+					}).on("click.gosee", ".getToKnowInfo", function() {
+						HdPortal.logDog(1000142, 25);
+					})
+
+					$('#hdManageTop').css('min-width', $('.logo').outerWidth(true) + $('.userInfoBox').outerWidth(true) + $('.manageInfoBox').outerWidth(true));
+					HdPortal.link([$('#detectActiveTableBody'), '.qrcodeIcon'], $('#detectActiveBox .qrcodeBox'), {
+						enter: function(e, e1, e2) {
+							e.preventDefault();
+							if(e2.data('qrcodeIcon') && e2.data('qrcodeIcon') === this) {
+								return;
+							}
+							var style = $(this).attr('_style'),
+								id = $(this).attr('_id'),
+								aid = $(this).attr('_aid'),
+								host = $(this).attr('_host'),
+								url = 'https://' + host + '/' + aid + '/' + id + '/load.html?style=' + style,
+								position = $(this).position();
+							e2.children('img').attr('src', 'https://i.hd.fkw.com/qrCode.jsp?cmd=qrurl&siteUrl=' + hdFai.encodeUrl(url + "&fromQrcode=true"));
+							e2.data('qrcodeIcon', this);
+							e2.css({
+								'left': position.left - 128,
+								'top': position.top + 5
+							});
+							e2.removeClass('transition').addClass('transition');
+						}
+					});
+					$('#detectActiveClose').on('click', function(event) {
+						event.preventDefault();
+						event.stopPropagation();
+						$('#detectActiveMask').hide();
+					});
+					var detectActiveFlag = false;
+					$('#detectActive').on('click', function() {
+						if(detectActiveFlag) {
+							return;
+						}
+
+						HdPortal.logDog(1000193, 1);
+						detectActiveFlag = true;
+						var loadingImg = $('.loadingImg');
+						loadingImg.show();
+						$.ajax({
+							url: HdPortal.versionURL + "/ajax/hdportal_h.jsp?cmd=getFxGameList",
+							type: "get",
+							success: function(data) {
+								detectActiveFlag = false;
+								loadingImg.hide();
+								var result = $.parseJSON(data);
+								if(result.success) {
+									showDetectActiveTable(result.dataList);
+									$('#detectActiveMask').show();
+								} else {
+									alert('获取数据失败，请刷新后重试');
+								}
+							}
+						});
+					});
+
+					function showDetectActiveTable(list) {
+						var html = '';
+						for(var i = 0; i < list.length; i++) {
+							var data = list[i];
+							setting = $.parseJSON(data["setting"]),
+								id = data.uriToken,
+								style = data["style"],
+								aid = data["aid"],
+								host = data.host,
+								createTime = $.format.date(new Date(data["createTime"]), "yyyy-MM-dd"),
+								startTime = $.format.date(new Date(data["startTime"]), "yyyy-MM-dd"),
+								endTime = $.format.date(new Date(data["endTime"]), "yyyy-MM-dd"),
+								img = "",
+								flag = data["flag"],
+								name = data["name"];
+							if(hdFai.checkBit(flag, 32768) || hdFai.checkBit(flag, 67108864)) {
+								continue;
+							}
+							if(hdFai.checkBit(flag, 65536)) {
+								img = data["img"];
+							} else {
+								img = "//hd.faisys.com" + data["img"]
+							}
+							var tr = '<tr>' +
+								'<td class="column1"><div>' +
+								'<div class="imgBox">' +
+								'<img src="' + hdFai.encodeHtmlAttr(img) + '"/>' + (i < 3 ? '<div class="fxtop fxtop' + i + '"></div>' : '') +
+								'<div class="actNum">' + aid + '</div>' +
+								'</div>' +
+								'<div class="textBox">' + hdFai.encodeHtml(name) + '</div>' +
+								'</div></td>' +
+								'<td><div class="column2">' + hdFai.encodeHtml(hdFai.decodeHtml(setting["hn"])) + '</div></td>' +
+								'<td><div class="column3">' + data["player"] + '</div></td>' +
+								'<td><div class="column4">' + startTime + '</div></td>' +
+								'<td><div class="column5">' +
+								'<div class="qrcodeIcon" _host="' + host + '" _id="' + id + '" _style="' + style + '" _aid="' + aid + '"></div>' +
+								'</div></td>' +
+								'</tr>';
+							html += tr;
+						}
+						$('#detectActiveTableBody tbody').html(html);
+					}
+
+					//oss统计
+					$('.manageInfoBox .manageInfo,.manageInfoBox .manageInfoMin').each(function(index, e) {
+						$(this).find('a').click(function() {
+							var _ossFlag = Number($(this).attr("_ossFlag"));
+							if(isNaN(_ossFlag) || _ossFlag == 16 || _ossFlag == 1) {
+								return;
+							}
+							HdPortal.logDog(1000142, _ossFlag);
+						});
+					});
+
+					var topBarMyNewsDog = parseInt($('.topBarBulletinContent .newsList').attr('_showdog')); //有“我的消息”时，获取需要log的src，没有则是NaN
+					HdPortal.link($('.topBarBulletin'), $('.topBarBulletinContent'), {
+						enter: function(e, e1, e2) {
+							HdPortal.logDog(1000142, 9);
+							HdPortal.logDog(1000143, 1);
+							e1.closest('.manageInfo').addClass('hoverChecked');
+							if($('.topBarBulletinContent #message').is(':visible')) {
+								if(!isNaN(topBarMyNewsDog)) {
+									HdPortal.logDog(1000143, topBarMyNewsDog);
+								}
+							} else if($('.topBarBulletinContent #update').is(':visible')) {
+								HdPortal.logDog(1000143, 8);
+							}
+							timer.t1 = setInterval(autoGo, timer.teriod);
+							//互动-加盟广告图曝光
+							if($('.promImg.sitekc').is(':visible')) {
+								HdPortal.logDog(4000023, 303);
+							}
+						},
+						leave: function(e, e1, e2) {
+							e1.closest('.manageInfo').removeClass('hoverChecked');
+							clearInterval(timer.t1);
+							timer.t1 = null;
+							$('.promImgBoxInner').css("left", "0px");
+							timer.index = 0;
+							$('.showNow').css("background-position", "0px -13px");
+							$('.notShow').css("background-position", "0px 0px");
+							e2.find("#leftAside .leftAsideTab").eq(0).click();
+						}
+					});
+
+					$('.topBarBulletinContent .menu').click(function() {
+						if($(this).attr("id") == "menuMessage") {
+							$('.topBarBulletinContent #message').show();
+							$('.topBarBulletinContent #update').hide();
+							//先根据menu-check判断是否是由另一边切换过来的，发生切换时才logDog
+							if(!$(this).hasClass('menu-check')) {
+								if(!isNaN(topBarMyNewsDog)) {
+									HdPortal.logDog(1000143, topBarMyNewsDog);
+								}
+							}
+						} else {
+							if(!$(this).hasClass('menu-check')) {
+								HdPortal.logDog(1000143, 8);
+							}
+							$('.topBarBulletinContent #message').hide();
+							$('.topBarBulletinContent #update').show();
+							$('.topBarBulletinContent .redPoint').hide();
+						}
+						$('.topBarBulletinContent .menu').removeClass("menu-check");
+						$(this).addClass("menu-check");
+					});
+					var topBarBulletinTimer = null;
+					//判断是否有互动会员到期消息
+					if($.cookie("hdVipExpireDays") != null) {
+						$.cookie("hdVipExpireDays", null, {
+							domain: document.domain,
+							path: "/"
+						});
+					} //删除没用的cookie
+					var _topBarMyNewsVersion = "-";
+					//判断是否有新功能消息
+					var _topBarUpdateVersion = "93c99fb3593414cc86bd29fee0fd87f1";
+					if($.cookie("hdTopBarMyNewsVer") != _topBarMyNewsVersion) {
+						if(true) {
+							$('.topBarBulletin').addClass('topBarBulletin-hasNew');
+							$('.topBarBulletin').mouseenter(); //直接执行提示框的鼠标移过事件
+							$('#menuMessage').click();
+							topBarBulletinTimer = setTimeout(function() {
+								$('.topBarBulletin').mouseleave(); //直接执行提示框的鼠标离开事件
+							}, 3000);
+						}
+					} else if($.cookie("hdTopBarUpdateVer") != null && $.cookie("hdTopBarUpdateVer") != _topBarUpdateVersion) {
+						if(true) {
+							$('.topBarBulletin').addClass('topBarBulletin-hasNew');
+							$('.topBarBulletin').mouseenter(); //直接执行提示框的鼠标移过事件
+							$('#menuUpdate').click();
+							topBarBulletinTimer = setTimeout(function() {
+								$('.topBarBulletin').mouseleave(); //直接执行提示框的鼠标离开事件
+							}, 3000);
+						}
+					}
+					if($.cookie("hdTopBarUpdateVer") == null) {
+						$.cookie("hdTopBarUpdateVer", "-", {
+							expires: 365,
+							domain: document.domain,
+							path: "/"
+						});
+					}
+					if($.cookie("hdTopBarMyNewsVer") == null) {
+						$.cookie("hdTopBarMyNewsVer", "-", {
+							expires: 365,
+							domain: document.domain,
+							path: "/"
+						});
+					}
+					$('.topBarBulletin,.topBarBulletinContent').on('mouseover', function() {
+						$('.topBarBulletin').removeClass('topBarBulletin-hasNew');
+						$.cookie("hdTopBarUpdateVer", _topBarUpdateVersion, {
+							expires: 365,
+							domain: document.domain,
+							path: "/"
+						});
+						$.cookie("hdTopBarMyNewsVer", _topBarMyNewsVersion, {
+							expires: 365,
+							domain: document.domain,
+							path: "/"
+						});
+					})
+					HdPortal.link($('#lineCash').parent('.lineCashWrap'), $('#lineCashInfoBox'), {
+						enter: function() {
+							var ossFlag = Number($("#lineCash").attr("_ossFlag"));
+							!isNaN(ossFlag) && HdPortal.logDog(1000142, ossFlag);
+						}
+					});
+					HdPortal.link($('#operateSkill').parent('.lineCashWrap'), $('#operateSkillBox'), {
+						enter: function() {
+							HdPortal.logDog(1000142, Number($("#operateSkill").attr("_ossFlag")));
+						}
+					});
+
+					HdPortal.link($('.topBarVer'), $('.topBarVerContent'), {
+						enter: function(e, e1, e2) {
+							e1.addClass('topBarIcon_hover');
+						},
+						leave: function(e, e1, e2) {
+							e1.removeClass('topBarIcon_hover');
+						}
+					});
+
+					//显示/隐藏更多栏目菜单
+					$(".moreBarContentBox").on("mouseover", function() {
+						$(".moreBarContent").show();
+					});
+					$(".moreBarContentBox").on("mouseout", function() {
+						$(".moreBarContent").hide();
+						$(this).removeClass('hoverChecked');
+						$(".moreBarContent .headerTips ").hide();
+					});
+					//版本图标border边框占据1px，over时margin也做1px的增减来保持不变
+					$('.topBarVer').on("mouseover", function() {
+						$('.versionIcon').css("margin", "16% 19px 11px 18px");
+					});
+					$('.topBarVer').on("mouseout", function() {
+						$('.versionIcon').css("margin", "16% 20px 6px 19px");
+					});
+					$("#slideRightBar").css("right", $(".versionIcon").width() * -1.49);
+					//"我的消息"，"功能更新"div宽度自适应缩放比例，动态要取外框架的一半
+					$(".left_myMessage").width($(".topBarContent_new").width() * 0.418);
+					$(".right_updateFunction").width($(".topBarContent_new").width() * 0.418);
+
+					// $(window).on('resize',function(){
+					//     $("#slideRightBar").width($(".moreBarTextBox").width()*3.07);
+					// });
+					// $("#slideRightBar").width($(".moreBarTextBox").width()*3.07);
+					$("#update .promUpdateBoxInner .updateText").on("mouseover", function() {
+						$(this).css('color', '#74b7e6');
+					});
+					$("#update .promUpdateBoxInner .updateText").on("mouseout", function() {
+						$(this).css('color', '#585858');
+					});
+
+					$(".operateSkillText").on("mouseover", function() {
+						$(this).css('color', '#74b7e6');
+						//console.log("15");
+					});
+					$(".operateSkillText").on("mouseout", function() {
+						$(this).css('color', '#949494');
+					});
+
+					//常见问题
+					// $(".cjwt_Class").on('click',function(){
+					//     window.open("http://hd.fkw.com/helpCenter.html");
+					//     HdPortal.logDog(1000193,2);
+					// });
+					//人工咨询
+					$(".rgzx_Class").on('mouseover', function() {
+						$(this).find(".hdQuestions").show();
+					}).on('mouseout', function() {
+						$(this).find(".hdQuestions").hide();
+					});
+					$(".rgzx_Class .questionBtn").on('click', function() {
+						window.open("http://i.fkw.com/qqQiyukf.jsp?type=hd&srcId=4");
+						HdPortal.logDog(1000193, 710);
+					});
+					$(".rgzx_Class .moreQuestions").on('click', function() {
+						window.open("http://hd.fkw.com/helpCenter.html");
+						HdPortal.logDog(1000193, 2);
+					});
+					//运营技巧
+					// $(".yxjq_Class").on('mouseover',function(){
+					//     $("#operateSkill").show();
+					// });
+					// $(".yxjq_Class").on('mouseout',function(){
+					//     $("#operateSkill").hide();
+					// });
+					//代理咨询
+					$(".dlzx_Class").on('click', function() {
+						window.open("http://jz.fkw.com/alliance.html");
+						HdPortal.logDog(1000193, 4);
+					});
+					//功能建议
+					$(".gnjy_Class").on('click', function() {
+						window.open("http://www.fkw.com/feedback/feedback.html?t=1&p=1");
+						HdPortal.logDog(1000193, 9);
+					});
+					//关注互动
+					$(".gzhd_Class").on('mouseover', function() {
+						$(this).find(".hdQrCode").show();
+						//官网二维码曝光log
+						if(!bindWx && canbindWx) {
+							HdPortal.logDog(1000269, 2);
+						}
+					}).on('mouseout', function() {
+						$(this).find(".hdQrCode").hide();
+					});
+					//互动攻略
+					$(".hdgl_Class").on('click', function() {
+						window.open("http://hd.fkw.com/strategy.jsp");
+						HdPortal.logDog(1000193, 10);
+					});
+					//解封作弊
+					$(".wjjf_Class").on('click', function() {
+						window.open("http://i.hd.fkw.com/version2/lifted.jsp");
+					});
+
+					//预约下载
+					$(".yyxz_Class").on('click', function() {
+						$('.moreBarIcon .headerRedDot').hide();
+						$('.moreBarTextBox_yyxz .headerRedDot').hide();
+						var options = {
+							name: 'exportTaskCenter',
+							content: '<iframe class="exportTaskCenterFramePage" name="exportTaskCenterFramePage" src="manage/exportTaskList.jsp" style="width: 100%;height: 412px;"></iframe>',
+							title: '预约下载中心',
+							width: 744,
+							hasBottom: false
+						};
+						HdPortal.popup(options);
+					});
+					//分享预约下载入口
+					$(".oemExportCenterBtn").on('click', function() {
+						$('.manageInfo112>.headerRedDot').hide();
+						$('.manageInfo112 .oemExportCenterBtn .headerRedDot').hide();
+						var options = {
+							name: 'exportTaskCenter',
+							content: '<iframe class="exportTaskCenterFramePage" name="exportTaskCenterFramePage" src="manage/exportTaskList.jsp" style="width: 100%;height: 412px;"></iframe>',
+							title: '预约下载中心',
+							width: 744,
+							hasBottom: false
+						};
+						HdPortal.popup(options);
+					});
+
+					//检查是否有新处理完的导出任务
+					checkTaskFinish();
+					setInterval(checkTaskFinish, 30000);
+				})();
+
+				function hideRightSlide() {
+					$('#slideRightBar').addClass('hideslideRightBar');
+					$('#index_closeSlideBar_btn').hide();
+					HdPortal.logDog(1000195, 2);
+				}
+
+				function checkTaskFinish() {
+					var countKey = "hdFinishExportTask_17485030_count";
+					var hasNewKey = "hdFinishExportTask_17485030_hasNew";
+					$.ajax({
+						url: HdPortal.versionURL + "/ajax/hdexport_h.jsp?cmd=getFinishTaskCount",
+						type: "get",
+						success: function(data) {
+							var result = $.parseJSON(data);
+							if(result && result.success) {
+								var finishCount = parseInt($.cookie(countKey));
+								var hasNewFinishTask = $.cookie(hasNewKey);
+								if(!finishCount) {
+									finishCount = 0;
+								}
+								if(!hasNewFinishTask) {
+									hasNewFinishTask = 'false';
+								}
+								if(result.count > finishCount) {
+									finishCount = result.count;
+									hasNewFinishTask = 'true';
+									$.cookie(countKey, finishCount, {
+										expires: 365,
+										domain: document.domain,
+										path: "/"
+									});
+									$.cookie(hasNewKey, hasNewFinishTask, {
+										expires: 365,
+										domain: document.domain,
+										path: "/"
+									});
+								}
+								if(hasNewFinishTask == 'true') {
+									$('.moreBarIcon .headerRedDot').show();
+									$('.moreBarTextBox_yyxz .headerRedDot').show();
+
+									$('.manageInfo112>.headerRedDot').show();
+									$('.manageInfo112 .oemExportCenterBtn .headerRedDot').show();
+								}
+							}
+						}
+					});
+				}
+
+				var token = "08d6fadb30e21d57116e78a72a68d878";
+				var canbindWx = true
+				var bindWx = false
+				if(!bindWx && canbindWx) {
+					var isnew = 1
+					var storeId = 0
+					var areaId = 0
+					var param = {
+						isnew: isnew,
+						storeId: storeId,
+						areaId: areaId
+					}
+					var sa = storeId + "_" + areaId;
+					var QRCode = localStorage.getItem("QRCode");
+					var QRCodeSaveTime = localStorage.getItem("QRCodeSaveTime");
+					var QRToken = localStorage.getItem("QRToken");
+					var QRSA = localStorage.getItem("sa"); //标识不同门店区域
+					var now = Date.parse(new Date()) / 1000;
+					//临时二维码有效期为24小时，23小时cookie过期
+					if(QRCode == null || (QRCode != null && QRCode.length == 0) || (QRCodeSaveTime != null && now - QRCodeSaveTime > (60 * 60 * 23)) || (QRToken != null && QRToken != token) || sa != QRSA) {
+						$.ajax({
+							type: 'post',
+							url: '/ajax/hdportal_h.jsp?cmd=needCode',
+							data: param,
+							success: function(data) {
+								var obj = $.parseJSON(data);
+								HdPortal.loading.hide();
+								if(obj.needCode) {
+									QRCode = obj.wxQRCodeUrl.split("=")[1];
+									now = Date.parse(new Date()) / 1000;
+									localStorage.setItem("QRCode", QRCode);
+									localStorage.setItem("QRCodeSaveTime", now);
+									localStorage.setItem("QRToken", token);
+									localStorage.setItem("sa", sa); //标识不同门店区域
+									$('.hdQrCodeImg1').css("background-image", "url(https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=" + QRCode + ")");
+								}
+							},
+							error: function(data) {
+								localStorage.removeItem("QRCode");
+								localStorage.removeItem("QRCodeSaveTime");
+								localStorage.removeItem("QRToken");
+							}
+						});
+					} else {
+						$('.hdQrCodeImg1').css("background-image", "url(https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=" + QRCode + ")");
+					}
+				}
+			</script>
+			<div id="content" style="overflow: hidden;">
+				<div class="hd-shoTheActBar" style="position:absolute;top:68px;bottom:0px;left:0px;right:0px;">
+					<div id="hdManageLeft" class="hdleft">
+						<div id="newActiveTab" class="leftUtil  hoverChecked checked" data-page="newActive" data-index="0">
+							<div class="iconHolder"></div>
+							<div class="leftUtildescr" onclick="HdPortal.logDog(1000194,1);">创建活动</div>
+						</div>
+
+						<div id="myActiveTab" class="leftUtil" data-page="myActive" data-index="1">
+							<div class="iconHolder iconActList"></div>
+							<div class="leftUtildescr" onclick="HdPortal.logDog(1000194,2);">我的活动</div>
+						</div>
+
+						<div id="cavIndexTab" class="leftUtil" data-page="cavIndex" data-index="2">
+							<div class="iconHolder iconHexiao"></div>
+							<div class="leftUtildescr" onclick="HdPortal.logDog(1000194,3);">核销管理</div>
+						</div>
+
+						<div id="authStaffTab" class="leftUtil" data-page="myInfo" data-index="3">
+							<div class="iconHolder iconMyinfo"></div>
+							<div class="leftUtildescr" onclick="HdPortal.logDog(1000194,4);">个人中心</div>
+						</div>
+
+						<div id="giftCenterTab" class="leftUtil giftCenterUtil" data-page="giftCenter" data-index="6">
+							<div class="iconHolder iconGiftCenter"></div>
+							<div class="leftUtildescr" onclick="HdPortal.logDog(1000194,7);">礼品中心</div>
+							<div class="new_Icon hide" style="display: block;"></div>
+						</div>
+
+						<div id="employeeAuthTab" class="leftUtil" data-page="employee" data-index="4">
+							<div class="iconHolder iconPermis"></div>
+							<div class="leftUtildescr" onclick="HdPortal.logDog(1000194,5);">员工权限</div>
+						</div>
+
+						<div id="staffLog" class="leftUtil" data-page="staffLog" data-index="5">
+							<div class="iconHolder iconDaris"></div>
+							<div class="leftUtildescr" onclick="HdPortal.logDog(1000194,6);">操作日志</div>
+						</div>
+
+						<div id="payService" class="leftUtil" data-index="7" data-page="payService">
+							<div class="iconHolder iconPayService"></div>
+							<div class="leftUtildescr" onclick="HdPortal.logDog(1000194,8);">付费服务</div>
+						</div>
+
+					</div>
+					<!--<div class="setion">
+						
+					</div>-->
+					<div id="manageFrame" class="scrollBox" style="width: 751px;">
+						<iframe src="html/newActive.html" id="iframe" scrolling="yes"></iframe>
+					</div>
+					<div id="leftBarBg" class="absBg hide" style="right:470px;"></div>
+				</div>
+			</div>
+			<div id="setAwardPageBox"></div>
+		</div>
+
+		<div class="bg-mask" style="display: none;"></div>
+
+		<!--提交作品窗口-->
+		<div class="submitBox poupBox confirmPoupBox canalBox poup-box-animate">
+			<div class="submitBox_head"><span class="title">提交作品信息</span>
+				<div class="closeBtn"></div>
+			</div>
+			<div class="submitBox_body">
+				<div>
+					<img class="banner" style="display:none;" src="//hd.faisys.com/version2/image/hdThemeBanner_4.jpg?v=201701171145">
+				</div>
+				<div>
+					<div class="textBox"></div>
+				</div>
+				<div class="submitBox_foot">
+					<input class="tijiao" type="button" value="提交">
+					<input style="display:none;" class="queren" type="button" value="确认报名">
+					<input style="display:none;" class="fangqi" type="button" value="放弃参赛">
+					<input style="display:none;" class="giveUpBtn" type="button" value="确认">
+					<input class="quxiao" type="button" value="取消">
+				</div>
+			</div>
+		</div>
+		<div class="example" style="display:none;">
+			<div class="exampleClose"></div>
+			<div>
+				<img style="position:fixed; z-index:7000; left:50%; top:50%; margin-left:-276px; margin-top:-225px;" src="//hd.faisys.com/version2/image/exampleImg.png">
+			</div>
+		</div>
+		<div class="popBoxBgMask" style="display:none;"></div>
+		<script>
+			(function() {
+				HdPortal.newRegisterStep = 13;
+			})()
+		</script>
+		<script type="text/javascript" src="js/poupBox.min.js?v=201808291625"></script>
+		<script type="text/javascript" src="js/index.min.js?v=201808211922"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript">
+			(function() {
+				$('#hdManageLeft div').click(function() {
+					var id = $(this).attr('id');
+					if(!$(this).hasClass('checked')) {
+						var iframe = $('#iframe');
+						if(id == 'newActiveTab') {
+							iframe.attr('src', 'html/newActive.html')
+						} else if(id == "myActiveTab") {
+							iframe.attr('src', 'html/myActive.html')
+						};
+						$(this).addClass('checked').siblings().removeClass("checked");
+					};
+				})
+				var poupParam = $.extend(true, {
+					"css_key": "//hd.faisys.com/version2/css/poupBox/versionDead.min.css?v=201808290953",
+					appendBox: top.$(".versionIcon"),
+				}, {
+					"isBUser": false,
+					"verName": "免费版",
+					"isNeedCoup": false
+				});
+				HdPortal.initVersionDead(poupParam);
+				if(!false && false) {
+					HdPortal.popWin = true;
+					HdPortal.poupPurpose({
+						popWin: false,
+						isOem: false,
+						aid: 17485030,
+						selectArray: [{
+							"value": 101,
+							"name": "门店引流"
+						}, {
+							"value": 104,
+							"name": "品牌传播"
+						}, {
+							"value": 100,
+							"name": "公众号吸粉"
+						}, {
+							"value": 102,
+							"name": "电商引流"
+						}, {
+							"value": 107,
+							"name": "学生"
+						}, {
+							"value": 105,
+							"name": "其他"
+						}],
+						fromPageId: "null",
+						_fromMail: "null",
+						openFlag: "flag2",
+						openSourceId: 0,
+					});
+				} else {
+					if(HdPortal.newRegisterStep < 5) {
+						$('.topBarBulletin').trigger("mouseleave");
+					}
+				}
+
+				HdPortal.addBottomAdd({
+					addType: 0,
+					cssAddress: '//hd.faisys.com/version2/css/sendCoup.min.css?v=201807311445'
+				});
+
+				console.log("showNum: ", 0);
+				var poupTimeNum = 0;
+				if(poupTimeNum == 1 || poupTimeNum == 3) {
+					//红包弹窗
+					var poupOutOption = {
+						key: poupTimeNum,
+						src: "//hd.faisys.com/version2/image/newPoup/"
+					};
+					var poupWin = HdPortal.initFloaer.$new(1535946204000);
+					if(poupTimeNum == 1) {
+						poupOutOption.src += "redPack2.png";
+						poupOutOption.addClass = "redPacket";
+						poupOutOption.caller = function() {
+							HdPortal.initPoupWindow(poupTimeNum, 17485030, 0, "http://i.fkw.com");
+						}
+						if(false && HdPortal.newRegisterStep > 12) {
+							HdPortal.initPoupWindow(poupTimeNum, 17485030, 0, "http://i.fkw.com");
+						}
+					} else {
+						poupOutOption.src += "almostPass.png";
+						poupOutOption.addClass = "endActive";
+						poupOutOption.caller = function() {
+							// window.open("http://i.fkw.com/portal.jsp#appId=shop&tab=3");
+							window.open("http://i.fkw.com/jump.jsp?t=42");
+						}
+						poupOutOption.layOut = function(option) {
+							var box = option.box.find(".hd-floer-inner");
+							if(box) {
+								var imgSrc = "//hd.faisys.com/version2/image/newPoup/almostPass_18.png?v=201806011604";
+								var appendImg = $('<img class="countDown" src=' + imgSrc + '>');
+								box.append(appendImg);
+							}
+						}
+					}
+					poupWin.show(poupOutOption);
+				} else if(poupTimeNum == 4) {
+					HdPortal.initFKWMessage({
+						poupOtion: {},
+						cookieKey: "fkw-hd-17485030raisePriceNotice",
+						cssAddress: "//hd.faisys.com/version2/css/poupBox/fkwMessage.min.css?v=201808061808",
+					});
+				} else if(poupTimeNum == 5) {
+					var option = $.extend(true, {
+						"poupType": 6,
+						"cookieKey": "hd_fkw_Raise_key_17485030_6",
+						"risePricePoup": true
+					}, {
+						cssAddress: "//hd.faisys.com/version2/css/guideRaise.min.css?v=201808211749",
+						cssAddress_2: "//hd.faisys.com/version2/css/updateTips.min.css?v=201808211749",
+					});
+					HdPortal.initRaiseMoney(option);
+				}
+			})()
+			var appQRCode = false;
+			var _helpListData = [
+				[{
+					'title': '&nbsp;我想找一个游戏，你们有吗？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7267'
+				}, {
+					'title': '&nbsp;能设置关注后才能玩游戏吗？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7243'
+				}, {
+					'title': '&nbsp;我设置了开始时间，还没到这个时间能参与游戏吗？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7262'
+				} /*,{'title':'这几个派奖方式什么意思？？','link':'http://hd.fkw.com/questionView.jsp?id=7238'},{'title':'分享奖励与邀请奖励有什么不同？','link':'http://hd.fkw.com/questionView.jsp?id=7239'}*/ ],
+				[{
+					'title': '&nbsp;我设置了开始时间，还没到这个时间能参与游戏吗？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7262'
+				}, {
+					'title': '&nbsp;我设置了结束时间，到结束时间后还能继续参与游戏吗？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7263'
+				}, {
+					'title': '&nbsp;发布后活动链接会变吗？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7265'
+				} /*,{'title':'不小心删除了游戏，怎么办？','link':'http://hd.fkw.com/questionView.jsp?id=7268'},{'title':'有什么设置是发布后不能修改的？','link':'http://hd.fkw.com/questionView.jsp?id=7244'}*/ ],
+				[{
+					'title': '&nbsp;核销奖品如何操作？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7283'
+				}, {
+					'title': '&nbsp;我想让我的员工核销，又不想让他们操作我的活动，该怎么设置？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7284'
+				}, {
+					'title': '&nbsp;如何给一个活动配置核销员？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7285'
+				} /*,{'title':'请问配置核销员是什么意思？','link':'http://hd.fkw.com/questionView.jsp?id=7286'},{'title':'员工帐号怎么登录？','link':'http://hd.fkw.com/questionView.jsp?id=7234'}*/ ],
+				[{
+					'title': '&nbsp;如何进行微信公众号服务授权？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7287'
+				}, {
+					'title': '&nbsp;如何开通微信授权功能？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7289'
+				}, {
+					'title': '&nbsp;已认证服务号怎么使用强制关注功能？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7290'
+				} /*,{'title':'我的公众号不是已认证服务号，我能用强制关注功能吗？','link':'http://hd.fkw.com/questionView.jsp?id=7291'},{'title':'游戏内剩余的红包怎么才能退还到红包余额？','link':'http://hd.fkw.com/questionView.jsp?id=7768'}*/ ],
+				[{
+					'title': '&nbsp;员工帐号怎么登录？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7234'
+				}, {
+					'title': '&nbsp;核销奖品如何操作？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7283'
+				}, {
+					'title': '&nbsp;我想让我的员工核销，又不想让他们操作我的活动，该怎么设置？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7284'
+				} /*,{'title':'如何给一个活动配置核销员？','link':'http://hd.fkw.com/questionView.jsp?id=7285'},{'title':'请问配置核销员是什么意思？','link':'http://hd.fkw.com/questionView.jsp?id=7286'}*/ ],
+				[{
+					'title': '&nbsp;我想找一个游戏，你们有吗？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7267'
+				}, {
+					'title': '&nbsp;能设置关注后才能玩游戏吗？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7243'
+				}, {
+					'title': '&nbsp;我设置了开始时间，还没到这个时间能参与游戏吗？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7262'
+				} /*,{'title':'这几个派奖方式什么意思？？','link':'http://hd.fkw.com/questionView.jsp?id=7238'},{'title':'分享奖励与邀请奖励有什么不同？','link':'http://hd.fkw.com/questionView.jsp?id=7239'}*/ ],
+				[{
+					'title': '&nbsp;参与人数限制是什么意思？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7235'
+				}, {
+					'title': '&nbsp;这几个派奖方式什么意思？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7238'
+				}, {
+					'title': '&nbsp;游戏底部的广告能隐藏吗？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7241'
+				} /*,{'title':'什么情况下会中安慰奖？','link':'http://hd.fkw.com/questionView.jsp?id=7257'},{'title':'中奖率发布以后可以修改吗？','link':'http://hd.fkw.com/questionView.jsp?id=7250'}*/ ],
+				[{
+					'title': '&nbsp;传播分析里面，明明有客户参与了，为什么没有数据？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7273'
+				}, {
+					'title': '&nbsp;怎么导出获奖名单？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7271'
+				}, {
+					'title': '&nbsp;怎么导出玩家列表？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7272'
+				} /*,{'title':'按排名派发的活动怎么给客户派奖？','link':'http://hd.fkw.com/questionView.jsp?id=7275'},{'title':'报名后派发的活动怎么给客户派奖？','link':'http://hd.fkw.com/questionView.jsp?id=7276'}*/ ],
+				[{
+					'title': '&nbsp;怎么导出获奖名单？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7271'
+				}, {
+					'title': '&nbsp;怎么导出玩家列表？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7272'
+				}, {
+					'title': '&nbsp;我用自己的几个微信帐号测试了游戏，要怎么清空玩家数据？',
+					'link': 'http://hd.fkw.com/questionView.jsp?id=7279'
+				} /*,{'title':'怎么把玩家添加到黑名单？','link':'http://hd.fkw.com/questionView.jsp?id=7278'},{'title':'活动结束后 如何查看兑奖码？','link':'http://hd.fkw.com/questionView.jsp?id=7281'}*/ ]
+			];
+			var indexTest = false;
+
+			//派发奖项弹出窗的关闭事件
+			function openSetAwardbox() {
+				$('#poup_setAwardContent').removeClass('poup-box-animate');
+				$('.bg-mask').removeClass('bg-mask-animate');
+				setTimeout(function() {
+					$('#poup_setAwardContent').remove();
+					$('.bg-mask').hide();
+				}, 300)
+			}
+
+			function getImgName(imgSrc) {
+				var name = imgSrc.match(/\/([^\.\/]+?\.\w+)($|\?)/i);
+				if(name === null) {
+					return false;
+				}
+				return name[1];
+			}
+
+			function getTheAdrress(modAid, modleId, callback) {
+				$.ajax({
+					type: "post",
+					url: HdPortal.versionURL + "/ajax/hdportal_h.jsp",
+					data: "cmd=getUrlNow&modleAid=" + hdFai.encodeUrl(modAid) + "&modleId=" + hdFai.encodeUrl(modleId),
+					success: function(data) {
+						var result = $.parseJSON(data);
+						callback && callback(result);
+					}
+				});
+			}
+
+			function refreshPublishStatus() {
+				var frame = top.frames["framePage"];
+				if(!frame) return;
+				frame.refreshPublishStatus && frame.refreshPublishStatus();
+				var frame2 = frame.frames["framePage"];
+				if(!frame2) return;
+				frame2.refreshPublishStatus && frame2.refreshPublishStatus();
+			}
+
+			$(function() {
+				var manageFrameWidth, _loadEditIframe;
+				setIframeWidth();
+				$(window).on('resize', function() {
+					setIframeWidth();
+				});
+				$('#manageFramePage').load(function() {
+					HdPortal.loading.hide($('#manageFrame'));
+					var _index = parseInt($('.leftUtil.checked').data('index'));
+					if(isNaN(_index)) return;
+					showTopSideBarTxt(_index);
+				});
+
+				function setIframeWidth() {
+					var winWidth = $(window).width();
+					var leftBarWidth = $("#hdManageLeft").width();
+					var tipsWidth = $("#slideRightBar").outerWidth();
+					if(winWidth > 1400) {
+						manageFrameWidth = false ? (winWidth - leftBarWidth) : (winWidth - leftBarWidth - 181);
+						$('#slideRightBar').removeClass('hideslideRightBar');
+						$('#nav_helpAddServer').css('cursor', 'default');
+						$('#index_closeSlideBar_btn').hide();
+						canClickRightHelpMenu = false;
+					} else {
+						//winWidth = winWidth < 1250 ? 1250 : winWidth;
+						$('#slideRightBar').addClass('hideslideRightBar');
+						manageFrameWidth = winWidth - leftBarWidth;
+						canClickRightHelpMenu = true;
+						$('#nav_helpAddServer').css('cursor', 'pointer');
+					}
+
+					$('#slideRightBar').addClass('hideslideRightBar');
+					manageFrameWidth = winWidth - leftBarWidth;
+					canClickRightHelpMenu = true;
+					$('#nav_helpAddServer').css('cursor', 'pointer');
+
+					$('#manageFrame').css('width', manageFrameWidth);
+				}
+
+				$('.hdTrackApp').change(function() {
+					$('#hdCompanyGoalErr').hide();
+					$('.bottomLine').css('top', '400px');
+				});
+
+				var defaultTab = '';
+				if(defaultTab !== '') {
+					$('#' + defaultTab).click();
+				}
+				$('.leftUtil').each(function(index, el) {
+					$(el).hover(
+						function() {
+							$(this).addClass('hoverChecked');
+						},
+						function() {
+							if(!$(this).hasClass('checked')) {
+								$(this).removeClass('hoverChecked');
+							}
+						}
+					);
+				});
+
+				$('#hdManageLeft').on('click', '.leftUtil', function(e) {
+					changePage($(this).data('page'));
+				});
+
+				$('#hdManageLeft .leftUtil').each(function(index, el) {
+					var page = $(this).data('page');
+					HdPortal.Route.bind(page, gotoPage).setConf(page, {
+						replace: true
+					});
+				});
+				var defPage = $('#hdManageLeft .leftUtil').first().data('page');
+				HdPortal.Route.setDefPath(defPage).init();
+
+				if($.cookie('hasUpHdGame') == 'true') {
+					$.cookie('hasUpHdGame', 'false', {
+						expires: 1,
+						path: '/',
+						domain: 'fkw.com'
+					});
+					changePage('myActive');
+				}
+			});
+
+			function changePage(page, params) {
+				//游戏编辑页
+				var beforeunload = $(window).data("beforeunload");
+				if(beforeunload && !confirm("离开页面内容将会消失")) {
+					return;
+				}
+				//主办方编辑页
+				var hasChangeContain = $(window).data("hasChangeContain");
+				if(hasChangeContain && !confirm("离开页面内容将会消失")) {
+					return;
+				}
+				if(hasChangeContain) {
+					$(window).data("hasChangeContain", false);
+				}
+
+				hideRightSlide();
+
+				if(beforeunload) {
+					$(window).data("sidebarClick", true);
+					$(window).data("beforeunload", false);
+				}
+
+				HdPortal.Route.go(page, params);
+			}
+
+			function gotoPage(params) {
+				HdPortal.clearIframe($('#manageFrame .manageFramePage'));
+				$("#hdContainer").off("click.fromNewActive");
+				var page = this.name;
+				var $leftUtil = $('#hdManageLeft .leftUtil');
+				$('#hdShowMsg').remove();
+				var el = $leftUtil.filter(function() {
+					return $(this).data('page') === page;
+				});
+				if(el.length == 0 && $leftUtil.length > 0) {
+					$leftUtil.eq(0).click();
+					return;
+				}
+				HdPortal.loading.show($('#manageFrame'), true);
+				$leftUtil.filter('.checked').removeClass('checked').removeClass('hoverChecked');
+				el.addClass('checked').addClass('hoverChecked');
+				var src = (el.data('page_url') || page + ".jsp") + (params ? params : '');
+				if(false) {
+					src += "?appQRCode=false";
+				}
+				//只有在创建活动页才显示搜索框
+				$(".searchBoxCont").remove(); //移除搜索活动输入框
+				$("#hdContainer").off("click.newActiveClik");
+				$("#manageFrame .manageFramePage").attr("src", src);
+			}
+			var reviewPageWin = null;
+
+			function getPreviewWin() {
+				if(!reviewPageWin) {
+					var reviewPageFrame = hdFai.top.document.getElementById("manageFramePage");
+					reviewPageWin = !reviewPageFrame ? window : reviewPageFrame.contentWindow;
+				}
+				return reviewPageWin;
+			}
+
+			function $one(selector) {
+				return getPreviewWin().$(selector);
+			}
+
+			function closeFlyerAd() {
+				$("#flyerAdContainer").hide();
+				$.cookie("_hasCloseFlyerAd_", "true", {
+					expires: 1,
+					path: '/',
+					domain: 'fkw.com'
+				}); //关闭传单广告
+			}
+
+			function clickFlyerAd() {
+				window.open("http://i.cd.fkw.com/manage/flyerManage.jsp?fromLogin&fromPageId=12");
+			}
+
+			function showTopSideBarTxt(id) { //首页侧边栏显示内容
+				var listData = top._helpListData[id];
+				var listStr = '';
+				$('.functionBlock .listBox,.hdQuestions .listBox').html('');
+				$.each(listData, function(i, item) {
+					listStr += '<div class="list"><a target="_blank" onclick="HdPortal.logDog(1000163,4);" href="' + item.link + '">' + item.title + '</a></div>';
+				})
+				$('.functionBlock .listBox,.hdQuestions .listBox').append(listStr);
+			}
+
+			$.cookie('_loadedRegStatHdIframe17485030', true, {
+				expires: 2
+			});
+
+			$(document).on('input', '.onlyNum', function() {
+				var val = $(this).val();
+				var newVal = val.replace(/[^0-9]/g, '');
+				if(newVal != val) {
+					$(this).val(newVal);
+				}
+			});
+
+			if(!$.cookie('hideNewIcon17485030')) {
+				initGiftCenterTab();
+			}
+
+			function initGiftCenterTab() {
+				$("#giftCenterTab .new_Icon").show();
+				$("#giftCenterTab").on("click", function() {
+					$("#giftCenterTab .new_Icon").hide();
+					$.cookie('hideNewIcon17485030', "true", {
+						expires: 3,
+						path: '/',
+						domain: 'fkw.com'
+					});
+					$.cookie('hideNewIcon17485030', "true", {
+						expires: 3,
+						path: '/',
+						domain: 'webportal.top'
+					});
+				})
+			}
+		</script>
+
+	</body>
+
+</html>

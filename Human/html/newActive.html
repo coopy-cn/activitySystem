@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>凡科互动</title>
+		<link href="../css/base.min.css?v=201808201753" rel="stylesheet" type="text/css" />
+		<link href="../css/newActive.min.css?v=201808061808" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body ng-app="selectShowApp" ng-controller="gameShowBox" ng-cloak>
+		<img id="defImage" src="//hd.faisys.com/image/defImage.jpg?v=201607251714" class="hide">
+		<div id="newActContainer" class="container">
+			<div id="hdcontent" class="scrollBox">
+				<div class="hdBannerWrap" ng-controller="hdBanner">
+					<div class="swiper-container" ng-cloak ng-if="swiperNumber > 0">
+						<div class="swiper-pagination" ng-show="swiperNumber > 1">
+							<span class="swiper-pagination-item {{ $index === activeIndex ? 'swiper-pagination-active' : '' }}" ng-repeat="i in swiperSlides" ng-if="$index < swiperNumber" ng-click="changeActiveIndex($index)"></span>
+						</div>
+						<div class="swiper-wrap clearfix" ng-style="swiperWrapStyle">
+							<div class="swiper-slide" ng-style="{ 'width': '{{ 1 / swiperNumber * 100 }}%' }" ng-repeat="slide in swiperSlides" ng-if="$index < swiperNumber">
+								<div class="swiper-mask">
+									<img class="swiper-pic" src="{{ ::slide.bannerSrc }}" />
+									<a class="swiper-btn" ng-if="slide.btnSrc" ng-style="{ 'left': '{{ ::slide.btnPositionX }}px', 'top': '{{ ::slide.btnPositionY }}px' }" ng-click="handleBtnClick(slide.clickSrcid, slide.isLink, slide.link, slide.innerLink)">
+										<img class="static" src="{{ ::slide.btnSrc }}" />
+										<img class="hover" src="{{ ::(slide.btnSrcHover ? slide.btnSrcHover : slide.btnSrc) }}" />
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div id="activeScrollBox">
+					<div id="activityTwo" class="staticClass">
+						<div id="activityTwoTitle" class="hide">
+							<span class="titleName">活动分类</span>
+						</div>
+						<div class="activityGroup">
+							<div id="newCategoryBox2" class="clearfix">
+								<div class="newCategoryItem">
+									<div ng-repeat="trade in :: tradeTypeList" index="{{$index}}" class='column other newItemBox' ng-click='changeSelector($index,1)' ng-class="watcher_2?'':trade.clickClass">
+										<span ng-if="trade.id != 999">{{trade.name}}</span>
+										<div class="SelectImg" ng-if="trade.isHaveMore" ng-class="trade.rotateMoving"></div>
+										<a href="#/prototype" class="trade column notPadding" ng-if="trade.id == 999">内部原型</a>
+									</div>
+								</div>
+							</div>
+							<div id="newCategoryBox3" class="clearfix" ng-class="controlHeight_1">
+								<div class="slideBox">
+									<div ng-repeat="trade in :: PlayTypeList" ng-click='changeSelector($index,2)' class="column other gamePlayerSale" index="{{$index}}" ng-class="watcher_2?'':trade.clickClass">
+										<span class="trade">{{trade.name}}</span>
+									</div>
+								</div>
+							</div>
+							<div id="newCategoryBox4" class="newCategoryBox4 clearfix" ng-class="controlHeight_2">
+								<div class="slideBox">
+									<div ng-repeat="trade in :: topListForTwo" ng-click='changeSelector($index,3,$event)' class='column other festivalExample {{trade.id == 888 ? "spanForMoreFestival" : ""}}' ng-class="watcher_2?'':trade.clickClass">
+										<span class="trade">{{trade.name}}</span>
+										<div class="SelectImg" ng-if="trade.id == 888" ng-class='showMoreMenu ? "rotateImg" : ""'></div>
+									</div>
+									<div class="moreFestival new_moreFestivalB moreFestivalcolumn" ng-show="showMoreMenu">
+										<span class="forLine"></span>
+										<div ng-repeat="trade in :: otherListForTwo" ng-click='changeSelector($index,4)' class="festivalcolumn column other hd_festival_more_menu" ng-class="watcher_2?'':trade.clickClass" _themeId="{{trade.id}}">
+											<span class="trade">{{trade.name}}</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="showResultTips" ng-show="isShowResult">
+								<span class="icon"></span>
+								<span class="leftTitle" ng-click="goBackSelect()">全部活动</span>
+								<span class="dispart"></span>
+								<span class="normalFont">共找到与“</span>
+								<span class="blueColorFont">{{watcher_2}}</span>
+								<span class="normalFont">”相关的活动</span>
+								<span class="blueColorFont">{{resultNum}}</span>
+								<span class="normalFont">个</span>
+							</div>
+						</div>
+						<div class="subCategoryBox hide" id="subCategoryBox1">
+						</div>
+					</div>
+					<div id="activityTwo_holder" class="hide"></div>
+					<div id="ActiveBox2" class="ActiveBox new_activeBox">
+						<div class="activeContent new_activeContent not_hd_newActive" ng-show="watcher_1 != 999">
+							<div ng-repeat="hdModel in :: hdModelList track by hdModel.id" ng-hide="hdModel.isShow" index={{$index}} repeat-finish class='active modActive {{ hdModel.isRecom ? "isRecom" : "" }}' rstyle="{{hdModel.rstyle}}">
+								<div class="actPic">
+									<img class="hide showPic" index={{$index}} dataSrc="{{hdModel.photo}}?v=1" />
+								</div>
+								<div ng-if="hdModel.isHot" class="hotScorePic"></div>
+								<div class="actDescripe">
+									<div class="actName">
+										<span>{{hdModel.name}}</span>
+										<img ng-if="hdModel.isguide" class="hd_guide_otherProduct" src="{{hdModel.guidePic}}">
+									</div>
+									<div class="actCreateImg"></div>
+								</div>
+							</div>
+							<div id="gameAdviceBox">
+								<div class="divider"><img class="dividerImg" src="//hd.faisys.com/version2/image/end_icon.png?v=20180409"></div>
+								<div class="text center">
+									<p class="nomore">没有更多了</p>
+									<p class="advice">找不到您想要的？<span class="ctrbtn">告诉我们</span></p>
+								</div>
+							</div>
+						</div>
+						<div class="activeContent new_activeContent not_prototype_HdBoxer" ng-show="watcher_1 == 999" ng-view></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="editActive" class="scrollBox editActBox slidShowBox hide"></div>
+
+		</div>
+
+		<meta id="_TOKEN" value="08d6fadb30e21d57116e78a72a68d878" type="hidden" />
+		<meta content="always" name="referrer">
+
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="bookmark" href="/favicon.ico" type="image/x-icon" 　/>
+		<script type='text/javascript'>
+			document.domain = 'fkw.com';
+			var g_timeDeviation = 1536047959219 - new Date().getTime(); //服务器时间与系统时间偏差
+			var g_isVersion3 = false;
+		</script>
+		<script type="text/javascript" src="../js/jquery-core.min.js?v=201808061808"></script>
+		<script type="text/javascript" src="../js/fai_hd.min.js?v=201808061808"></script>
+		<script type="text/javascript" src="../js/jquery-ui-core.min.js?v=201808061808"></script>
+		<script type="text/javascript" src="../js/faiui.min.js?v=201808061808"></script>
+		<script type="text/javascript" src="../js/hdportal.min.js?v=201808231413"></script>
+
+		<script type="text/javascript">
+			try {
+				hdFai.top = parent.hdFai.top;
+			} catch(e) {}
+			$.extend(HdPortal, {
+				"m_debug": false,
+				"isOem": false,
+				"isStoreVer": false,
+				"_isInnerAccount": true,
+				"storeId": 0,
+				"areaId": 0,
+				"HdPortalHost": "i.fkw.com",
+				"HomeHost": "fkw.com",
+				"OemPortalHost": "adm.webportal.top",
+				"isYKY": false,
+				"noSupportTipA": "<a onclick='openQuickPay()' href='javascript:;'>前往升级<\/a>",
+				"buyProductAuth": true,
+				"canRecharge": true,
+				"closeRecharge": false,
+				"accreditRecharge": true,
+				"isMainstore": true,
+				"isStaff": false,
+				"hdOpenTime": 1535939094129,
+				"feePercent": 0.02,
+				"resRoot": "//hd.faisys.com",
+				"hdVer": {
+					"FREE": 0,
+					"BY": 1,
+					"BJ": 2,
+					"MD": 4,
+					"ZS": 3
+				},
+				"_cssUrlInfo": {
+					"editPoupBox": "//hd.faisys.com/version2/css/poupBox/editPoupBox.min.css?v=201808061808",
+					"js_ZeroClipboard": "//hd.faisys.com/version2/js/comm/ZeroClipboard/ZeroClipboard.swf?v=201704111734"
+				},
+				"timeLimit": {
+					"quickPay": 0
+				},
+				"$data": {
+					"gameHost": "hd.faisco.cn",
+					"hpHost": "i.hd.fkw.com",
+					"hdhomeHost": "hd.fkw.com",
+					"aid": 17485030,
+					"httpStr": "https",
+					"comfortToAward": {
+						"comoptx": "optx",
+						"comattentionimg": "attentionimg",
+						"comimgw": "aimgw",
+						"comimg": "aimg",
+						"ctlmt": "tlmt",
+						"comimgh": "aimgh",
+						"comiscuscode": "iscuscode",
+						"cttype": "t_type",
+						"comfbt": "cfbt",
+						"comoci": "ocimg",
+						"comstl": "stl",
+						"comoct": "oct",
+						"comopti": "opti",
+						"conlinect": "onlinect",
+						"comcashtype": "cashtype",
+						"comiscancelver": "iscancelver",
+						"conlinewxnum": "onlinewxnum",
+						"comOpqrc": "opqrc",
+						"comStoreType": "storeType",
+						"comservicephone": "servicepho",
+						"comcashinfo": "cashinfo",
+						"comcet": "cet",
+						"combtn": "btn",
+						"cas": "style",
+						"comtxn": "txn",
+						"combtl": "btl",
+						"ca": "name",
+						"comcontinfo": "continfo",
+						"comNeedLessConsume": "needlessconsume",
+						"comStoresIds": "storesIds",
+						"comattention": "attention",
+						"comcbt": "cbt",
+						"comtxc": "txc",
+						"comAwardtype": "awardtype",
+						"comft": "cft",
+						"comOplink": "oplink",
+						"comcashsite": "cashsite",
+						"cc": "",
+						"ccc": ""
+					},
+					"isFaier": false,
+					"portalVer": 0,
+					"hblimit": 50000,
+					"isOpenABTest": false,
+					"isOpenOem": false
+				}
+			});
+
+			function openQuickPay(logId, srcId) {
+				if($.type(logId) == 'array') {
+					HdPortal.logDogList(logId);
+				} else {
+					logId && srcId && HdPortal.logDog(logId, srcId);
+				}
+				// m_aid % 2 == 0
+				if((true || HdPortal.hdOpenTime <= HdPortal.timeLimit.quickPay) && true) {
+					if(true) {
+						window.open("http://i.fkw.com/jump.jsp?t=42");
+					} else {
+						window.open("http://adm.webportal.top/portal.jsp#appId=shop&tab=4");
+					}
+
+				} else {
+					var verInfo = 1;
+					if(true) {
+						verInfo = 1;
+					} else if(false) {
+						verInfo = 2;
+					} else if(false) {
+						verInfo = 3;
+					}
+					HdPortal.quickPayMent({
+						verInfo: verInfo,
+						type: 2
+					});
+				}
+			}
+			var limitGameFor19 = ["47", "69"];
+			if(hdFai.top.indexTest || HdPortal.m_debug) {
+				$(function() {
+					$('body').append('<a id="oneself_link" href="' + document.URL + '" target="_blank">self</a>');
+				})
+			}
+		</script>
+		<script type="text/javascript">
+			(function() {
+				var fs = document.createElement("script");
+				fs.src = "//fe.faisys.com/jssdk_1_0/js/hawkEye.min.js?v=201807231924";
+				window.FAI_HAWK_EYE = {};
+				window.FAI_HAWK_EYE.jssdk_report_url = "//report.fkw.com/js/report";
+				window.FAI_HAWK_EYE.jssdk_appid = 5004;
+				window.FAI_HAWK_EYE.fai_aid = 0;
+				window.FAI_HAWK_EYE.fai_bs_aid = 17485030;
+				window.FAI_HAWK_EYE.fai_bs_id = 0;
+				window.FAI_HAWK_EYE.fai_bs_wid = 0;
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(fs, s);
+			})();
+		</script>
+
+		<script type="text/javascript" src="../js/poupBox.min.js?v=201808291625"></script>
+		<script type="text/javascript">
+			var gameSelector = {
+				change: 0,
+				isClickActive: false,
+				theHeight: 0,
+				tradeidList: [], //放除了节日主题外的其他主题的二级主题，用于log
+				crrThemeId1: null,
+				isShowGuide: true, //筛选条件
+				isATEST: true, //2018.5.7活动预览窗AB测
+				isShowNewGuide: true, //是否可以展示新手引导
+				fasterGameList: [{
+					"img": "new_start_1.png",
+					"gameName": "转盘抽奖",
+					"modelId": 358,
+					"srcId": 1
+				}, {
+					"img": "new_start_2.png",
+					"gameName": "H5小游戏",
+					"modelId": 436,
+					"srcId": 2
+				}, {
+					"img": "new_start_3.png",
+					"gameName": "砍价活动",
+					"modelId": 404,
+					"srcId": 3
+				}, {
+					"img": "new_start_5.png",
+					"gameName": "答题活动",
+					"modelId": 438,
+					"srcId": 49
+				}], //快速创建游戏的tab
+				isShowFasterCreate: true, //是否快速创建活动
+				hasClickFaster: false, //是否已经展示过此tab
+			};
+			var countInfo = {
+				isShowOriginal: false, //是否显示原型
+				verInfo: {
+					"freName": "免费版",
+					"byName": "白银版",
+					"bjName": "铂金版",
+					"zsName": "钻石版",
+					"freClass": "ver_free",
+					"byClass": "ver_by",
+					"bjClass": "ver_biz",
+					"zsClass": "ver_zs",
+					"verName": "免费版",
+					"verClass": "ver_free",
+					"ver": 0,
+					"createVer": 0,
+					"authVer": 0,
+					"realVer": 0,
+					"createAuthVer": 0,
+					"maxAuthVer": 0,
+					"gameAmountLimit": 500,
+					"awardAmountLimit": 2000,
+					"map": {
+						"0": {
+							"class": "ver_free",
+							"name": "免费版"
+						},
+						"1": {
+							"class": "ver_by",
+							"name": "白银版"
+						},
+						"2": {
+							"class": "ver_biz",
+							"name": "铂金版"
+						},
+						"3": {
+							"class": "ver_zs",
+							"name": "钻石版"
+						}
+					}
+				}, //版本
+				isVersion3: false,
+				limitConf: {
+					"sensitWordAndAdvance": [{
+						"sensword": "游戏",
+						"adVance": "活动"
+					}, {
+						"sensword": "红包",
+						"adVance": "hong包"
+					}, {
+						"sensword": "紅包",
+						"adVance": "hong包"
+					}, {
+						"sensword": "分享",
+						"adVance": "fen享"
+					}, {
+						"sensword": "现金",
+						"adVance": "xian金"
+					}, {
+						"sensword": "朋友圈",
+						"adVance": "peng友圈"
+					}, {
+						"sensword": "福利",
+						"adVance": "fu利"
+					}],
+					"wxcb": {
+						"name": "微信传播",
+						"level": 0
+					},
+					"guidePie": {
+						"introduce": "导流到其他产品的关键字",
+						"toFlyer": ["传单", "微传单", "招聘", "招生", "校园招聘", "招聘求职", "招生", "公司邀请函", "电子邀请函", "婚礼邀请函", "邀请函", "请柬", "表单", "H5", "H5测试", "测试"]
+					},
+					"tpzs": {
+						"name": "投票类展示",
+						"level": 0
+					},
+					"redPacketLimit": {
+						"debug": {
+							"default": 3000,
+							"special": [{
+								"aid": 968,
+								"money": 5
+							}]
+						},
+						"dev": {
+							"default": 50000,
+							"special": [{
+								"aid": 10865469,
+								"money": 300000
+							}]
+						}
+					},
+					"fkhd": {
+						"name": "访客互动类功能",
+						"level": 0
+					},
+					"tpgn": {
+						"name": "投票类功能",
+						"level": 0
+					},
+					"fkwPublicMsg": {
+						"limitDate": "2018-8-1 0:0:0",
+						"infoHref": "http://hd.fkw.com/news/11419",
+						"verMoney": [{
+							"verName": "白银版",
+							"verMoney": "898"
+						}, {
+							"verName": "铂金版",
+							"verMoney": "1198"
+						}, {
+							"verName": "钻石版",
+							"verMoney": "1498"
+						}]
+					},
+					"modelAidForUser": [1103893, 14993167, 15198356, 13428708, 15170929, 936152, 3912718, 9851606, 9852637, 14698510, 15338953]
+				},
+				css_activePreView: "//hd.faisys.com/version2/css/poupBox/activePreView.min.css?v=201808061808",
+				topListForTwo: [{
+					"id": 1,
+					"name": "全部节日"
+				}, {
+					"id": 31,
+					"name": "教师节",
+					"sortId": 31
+				}, {
+					"id": 32,
+					"name": "秋分",
+					"sortId": 32
+				}, {
+					"id": 34,
+					"name": "中秋节",
+					"sortId": 33
+				}, {
+					"id": 33,
+					"name": "国庆节",
+					"sortId": 34
+				}, {
+					"id": 35,
+					"name": "重阳节",
+					"sortId": 35
+				}, {
+					"id": 36,
+					"name": "万圣节",
+					"sortId": 36
+				}, {
+					"id": 37,
+					"name": "立冬",
+					"sortId": 37
+				}, {
+					"id": 888,
+					"name": "更多节日"
+				}],
+				otherListForTwo: [{
+					"id": 38,
+					"name": "双十一光棍节",
+					"sortId": 38
+				}, {
+					"id": 39,
+					"name": "感恩节",
+					"sortId": 39
+				}, {
+					"id": 40,
+					"name": "双十二",
+					"sortId": 40
+				}, {
+					"id": 41,
+					"name": "冬至",
+					"sortId": 41
+				}, {
+					"id": 42,
+					"name": "平安夜",
+					"sortId": 42
+				}, {
+					"id": 43,
+					"name": "圣诞节",
+					"sortId": 43
+				}, {
+					"id": 2,
+					"name": "元旦节",
+					"sortId": 1
+				}, {
+					"id": 3,
+					"name": "腊八节",
+					"sortId": 2
+				}, {
+					"id": 7,
+					"name": "立春",
+					"sortId": 3
+				}, {
+					"id": 4,
+					"name": "小年",
+					"sortId": 4
+				}, {
+					"id": 9,
+					"name": "情人节",
+					"sortId": 5
+				}, {
+					"id": 5,
+					"name": "除夕",
+					"sortId": 6
+				}, {
+					"id": 6,
+					"name": "春节",
+					"sortId": 7
+				}, {
+					"id": 8,
+					"name": "元宵节",
+					"sortId": 8
+				}, {
+					"id": 10,
+					"name": "惊蛰",
+					"sortId": 9
+				}, {
+					"id": 11,
+					"name": "妇女节",
+					"sortId": 10
+				}, {
+					"id": 12,
+					"name": "植树节",
+					"sortId": 11
+				}, {
+					"id": 13,
+					"name": "白色情人节",
+					"sortId": 12
+				}, {
+					"id": 14,
+					"name": "春分",
+					"sortId": 13
+				}, {
+					"id": 15,
+					"name": "愚人节",
+					"sortId": 14
+				}, {
+					"id": 17,
+					"name": "复活节",
+					"sortId": 15
+				}, {
+					"id": 16,
+					"name": "清明节",
+					"sortId": 16
+				}, {
+					"id": 63,
+					"name": "世界地球日",
+					"sortId": 17
+				}, {
+					"id": 18,
+					"name": "劳动节",
+					"sortId": 18
+				}, {
+					"id": 19,
+					"name": "母亲节",
+					"sortId": 19
+				}, {
+					"id": 20,
+					"name": "吃货节",
+					"sortId": 20
+				}, {
+					"id": 21,
+					"name": "520情人节",
+					"sortId": 21
+				}, {
+					"id": 22,
+					"name": "国际儿童节",
+					"sortId": 22
+				}, {
+					"id": 24,
+					"name": "父亲节",
+					"sortId": 23
+				}, {
+					"id": 23,
+					"name": "端午节",
+					"sortId": 24
+				}, {
+					"id": 25,
+					"name": "618年中大促",
+					"sortId": 25
+				}, {
+					"id": 26,
+					"name": "夏至",
+					"sortId": 26
+				}, {
+					"id": 27,
+					"name": "建军节",
+					"sortId": 27
+				}, {
+					"id": 28,
+					"name": "七夕",
+					"sortId": 28
+				}, {
+					"id": 30,
+					"name": "中元节",
+					"sortId": 29
+				}, {
+					"id": 29,
+					"name": "迎新开学季",
+					"sortId": 30
+				}, {
+					"id": 45,
+					"name": "其他热点"
+				}],
+				PlayTypeList: [{
+					"id": 52,
+					"name": "全部"
+				}, {
+					"id": 53,
+					"name": "动作类 ",
+					"sortId": 1
+				}, {
+					"id": 54,
+					"name": "手速类",
+					"sortId": 2
+				}, {
+					"id": 55,
+					"name": "消除类",
+					"sortId": 3
+				}, {
+					"id": 60,
+					"name": "接物品",
+					"sortId": 4
+				}, {
+					"id": 56,
+					"name": "跳跃类",
+					"sortId": 5
+				}, {
+					"id": 57,
+					"name": "反应类",
+					"sortId": 6
+				}, {
+					"id": 58,
+					"name": "益智类",
+					"sortId": 7
+				}, {
+					"id": 59,
+					"name": "答题类 ",
+					"sortId": 8
+				}],
+				tradeTypeList: [{
+					"id": 0,
+					"name": "全部",
+					"clickClass": "littleBlue"
+				}, {
+					"id": 46,
+					"isHaveMore": true,
+					"name": "节日"
+				}, {
+					"id": 47,
+					"name": "抽奖活动",
+					"sortId": 1
+				}, {
+					"id": 48,
+					"name": "游戏营销   ",
+					"sortId": 2,
+					"isHaveMore": true
+				}, {
+					"id": 49,
+					"name": "助力活动",
+					"sortId": 3
+				}, {
+					"id": 50,
+					"name": "投票活动",
+					"sortId": 4
+				}, {
+					"id": 51,
+					"name": "签到活动",
+					"sortId": 5
+				}],
+				hdModelList: [{
+					"gameId": 0,
+					"id": 0,
+					"rstyle": 0,
+					"aid": 0,
+					"isShow": true,
+					"sysKeyword": ["传单", "微传单", "招聘", "招生", "校园招聘", "招聘求职", "招生", "公司邀请函", "电子邀请函", "婚礼邀请函", "邀请函", "请柬", "表单", "H5", "H5测试", "测试"],
+					"photo": "//hd.faisys.com/version2/image/guidePie/guideFlyer/pic1.jpg",
+					"name": "微传单",
+					"preview": "//hd.faisys.com/version2/image/guidePie/guideFlyer/pic1.jpg",
+					"isguide": true,
+					"guidePic": "//hd.faisys.com/version2/image/guidePie/guideFlyer/pic2.png",
+					"newlink": "//hd.faisco.cn/0/67pqVVvzbPc/load.html?style=0",
+					"qrCode": "https://i.hd.fkw.com/qrCode.jsp?cmd=qrurl&siteUrl=https%3A%2F%2Fhd.faisco.cn%2F0%2F67pqVVvzbPc%2Fload.html%3Fstyle%3D0%26fromePreviewCode%3D17485030",
+					"dataShowPoupGif": "",
+					"fstImgId": "//d1.faiusr.com/2/.jpg",
+					"sign": "73078842df691c402adc75fd9854a7fd",
+					"gameExplain": "点击\u201C开始\u201D转盘开始转动，最终指针指着的即为您所中的奖品。",
+					"isRecom": false
+				}, {
+					"id": 479,
+					"aid": 8171176,
+					"acct": "fkhdty",
+					"gameId": 153,
+					"rstyle": 75,
+					"designer": 476,
+					"kind": 10,
+					"seq": "10100.0",
+					"name": "幸运大转盘",
+					"property": 1,
+					"pubdate": 1535413416000,
+					"photo": "//d1.faiusr.com/2/AAEIABACGAAgjJnK1wUogNjluQQwwgM4_gE.jpg",
+					"flag": 1,
+					"srcId": -1,
+					"preview": "//d1.faiusr.com/3/AAEIABADGAAgj5nK1wUosMG9-gEw4QE4fQ.gif",
+					"kind2": 2,
+					"seqr": "0.0",
+					"tryid": 178,
+					"fstImgId": "//d1.faiusr.com/3/AAEIABADGAAgzpnK1wUoyeKyqwUwgAU48Ag.gif",
+					"poupwindgif": "",
+					"key1": 44,
+					"key2": 47,
+					"key3": 0,
+					"recomScore": 5.0,
+					"hotScore": 87.1,
+					"keyword": "",
+					"sysKeyword": "抽奖",
+					"isHot": true,
+					"newlink": "//hd.faisco.cn/8171176/o2oXMDStnIkBI2URJ2XGKQ/load.html?style=75",
+					"qrCode": "https://i.hd.fkw.com/qrCode.jsp?cmd=qrurl&siteUrl=https%3A%2F%2Fhd.faisco.cn%2F8171176%2Fo2oXMDStnIkBI2URJ2XGKQ%2Fload.html%3Fstyle%3D75%26fromePreviewCode%3D17485030",
+					"dataShowPoupGif": "",
+					"sign": "66665e19044796852d92562e0fd991a0",
+					"gameExplain": "点击\u201C开始\u201D转盘开始转动，最终指针指着的即为您所中的奖品。",
+					"isRecom": true
+				}],
+				acct: "tz16739143",
+				agentAid: 0,
+				goal: 5,
+				designerList: [{
+					"aid": 1,
+					"sid": 168,
+					"sacct": "jason",
+					"name": "陈浩贤",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535955400902,
+					"loginTime": 1535955689662,
+					"authSite": 0,
+					"flag": 0,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1364809950000,
+					"authFlyer": 0,
+					"label": "陈浩贤",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 688,
+					"sacct": "yuxi",
+					"name": "陈雨曦",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535774191885,
+					"loginTime": 1535938095610,
+					"authSite": 0,
+					"flag": 6,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1473044978000,
+					"authFlyer": 0,
+					"label": "陈雨曦",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 405,
+					"sacct": "william",
+					"name": "陈秭全",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535683410783,
+					"loginTime": 1535683695483,
+					"authSite": 0,
+					"flag": 0,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1437373401000,
+					"authFlyer": 0,
+					"label": "陈秭全",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 449,
+					"sacct": "savannah",
+					"name": "邓子珊",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1536025368441,
+					"loginTime": 1536040156379,
+					"authSite": 0,
+					"flag": 0,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1444803411000,
+					"authFlyer": 0,
+					"label": "邓子珊",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 577,
+					"sacct": "jack",
+					"name": "甘杰",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535945426288,
+					"loginTime": 1536026375069,
+					"authSite": 0,
+					"flag": 6,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1459908351000,
+					"authFlyer": 0,
+					"label": "甘杰",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 410,
+					"sacct": "henry",
+					"name": "洪春海",
+					"creator": false,
+					"authBit": 0,
+					"lastLoginTime": 1530091022613,
+					"loginTime": 1530167290532,
+					"email": "",
+					"authSite": 0,
+					"flag": 4,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1438162191000,
+					"authFlyer": 0,
+					"label": "洪春海",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 546,
+					"sacct": "wendy",
+					"name": "胡伊敏",
+					"creator": false,
+					"authBit": 0,
+					"lastLoginTime": 1502782925000,
+					"loginTime": 1502786262000,
+					"authSite": 0,
+					"flag": 6,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1457055832000,
+					"authFlyer": 0,
+					"label": "胡伊敏",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 676,
+					"sacct": "pochi",
+					"name": "黄楚恒",
+					"creator": false,
+					"authBit": 0,
+					"lastLoginTime": 1519784867000,
+					"loginTime": 1519801613000,
+					"authSite": 0,
+					"flag": 14,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1472089310000,
+					"authFlyer": 0,
+					"label": "黄楚恒",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 124,
+					"sacct": "hhl",
+					"name": "黄海龙",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535939845785,
+					"loginTime": 1535941747878,
+					"authSite": 0,
+					"flag": 0,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1335149169000,
+					"authFlyer": 0,
+					"label": "黄海龙",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 606,
+					"sacct": "junh",
+					"name": "黄锐钧",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535687566274,
+					"loginTime": 1535946652644,
+					"authSite": 0,
+					"flag": 6,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1464590726000,
+					"authFlyer": 0,
+					"label": "黄锐钧",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 443,
+					"sacct": "huangsiyao",
+					"name": "黄思瑶",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1536024174049,
+					"loginTime": 1536024485365,
+					"authSite": 0,
+					"flag": 2,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1442902735000,
+					"authFlyer": 0,
+					"label": "黄思瑶",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 787,
+					"sacct": "xiaoxiao",
+					"name": "黄银笑",
+					"creator": false,
+					"authBit": 2,
+					"loginTime": 1486713692000,
+					"authSite": 0,
+					"flag": 6,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1486713310000,
+					"authFlyer": 0,
+					"label": "黄银笑",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 132,
+					"sacct": "jade",
+					"name": "蒋碧玉",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1536032094954,
+					"loginTime": 1536045587014,
+					"authSite": 0,
+					"flag": 10,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1338802674000,
+					"authFlyer": 0,
+					"label": "蒋碧玉",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 668,
+					"sacct": "bonnie",
+					"name": "雷宝华",
+					"creator": false,
+					"authBit": 0,
+					"lastLoginTime": 1520565673000,
+					"loginTime": 1520565683000,
+					"authSite": 0,
+					"flag": 70,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1470362494000,
+					"authFlyer": 0,
+					"label": "雷宝华",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 476,
+					"sacct": "lzz",
+					"name": "黎姿孜",
+					"creator": false,
+					"authBit": 0,
+					"lastLoginTime": 1532572155144,
+					"loginTime": 1532673477234,
+					"email": "",
+					"authSite": 0,
+					"flag": 0,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1446444641000,
+					"authFlyer": 0,
+					"label": "黎姿孜",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 232,
+					"sacct": "lyr",
+					"name": "李颖如",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1528711235043,
+					"loginTime": 1528711441783,
+					"authSite": 0,
+					"flag": 0,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1400036562000,
+					"authFlyer": 0,
+					"label": "李颖如",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 650,
+					"sacct": "yachan",
+					"name": "梁雅婵",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1536023715089,
+					"loginTime": 1536043967630,
+					"authSite": 0,
+					"flag": 6,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1468291419000,
+					"authFlyer": 0,
+					"label": "梁雅婵",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 128,
+					"sacct": "num",
+					"name": "梁智海",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535941888047,
+					"loginTime": 1535970650854,
+					"authSite": 0,
+					"flag": 0,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1336618157000,
+					"authFlyer": 0,
+					"label": "梁智海",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 473,
+					"sacct": "lx",
+					"name": "林璇",
+					"creator": false,
+					"authBit": 0,
+					"lastLoginTime": 1502934508000,
+					"loginTime": 1503018412000,
+					"authSite": 0,
+					"flag": 10,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1446187490000,
+					"authFlyer": 0,
+					"label": "林璇",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 264,
+					"sacct": "ty",
+					"name": "刘天佑",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1536031174985,
+					"loginTime": 1536032145539,
+					"authSite": 0,
+					"flag": 2,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1408431157000,
+					"authFlyer": 0,
+					"label": "刘天佑",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 333,
+					"sacct": "lhp",
+					"name": "陆焕萍",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535966904249,
+					"loginTime": 1535967127346,
+					"authSite": 0,
+					"flag": 0,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1427090839000,
+					"authFlyer": 0,
+					"label": "陆焕萍",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 275,
+					"sacct": "lvox",
+					"name": "吕源星",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535940370412,
+					"loginTime": 1535965521567,
+					"authSite": 0,
+					"flag": 0,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1411437496000,
+					"authFlyer": 0,
+					"label": "吕源星",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 995,
+					"sacct": "mi",
+					"name": "罗蔼甄",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1536039244072,
+					"loginTime": 1536047546759,
+					"authSite": 0,
+					"flag": 6,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1503904464000,
+					"authFlyer": 0,
+					"label": "罗蔼甄",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 363,
+					"sacct": "gary",
+					"name": "罗福福",
+					"creator": false,
+					"authBit": 0,
+					"lastLoginTime": 1482285208000,
+					"loginTime": 1482285243000,
+					"authSite": 0,
+					"flag": 0,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1431488341000,
+					"authFlyer": 0,
+					"label": "罗福福",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 639,
+					"sacct": "mai",
+					"name": "麦楚莹",
+					"creator": false,
+					"authBit": 0,
+					"lastLoginTime": 1529047501309,
+					"loginTime": 1529052404564,
+					"email": "",
+					"authSite": 0,
+					"flag": 6,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1467173398000,
+					"authFlyer": 0,
+					"label": "麦楚莹",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 687,
+					"sacct": "maik",
+					"name": "麦伟强",
+					"creator": false,
+					"authBit": 0,
+					"lastLoginTime": 1500945005000,
+					"loginTime": 1501034567000,
+					"authSite": 0,
+					"flag": 6,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1473044800000,
+					"authFlyer": 0,
+					"label": "麦伟强",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 147,
+					"sacct": "max",
+					"name": "麦栩",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535937087208,
+					"loginTime": 1536040010120,
+					"authSite": 0,
+					"flag": 0,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1343790901000,
+					"authFlyer": 0,
+					"label": "麦栩",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 439,
+					"sacct": "simman",
+					"name": "莫婵雯",
+					"creator": false,
+					"authBit": 2,
+					"authSite": 0,
+					"flag": 0,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1442218011000,
+					"authFlyer": 0,
+					"label": "莫婵雯",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 610,
+					"sacct": "peter",
+					"name": "彭嘉",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1536043223907,
+					"loginTime": 1536046592326,
+					"authSite": 0,
+					"flag": 6,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1465272718000,
+					"authFlyer": 0,
+					"label": "彭嘉",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 272,
+					"sacct": "yukiy",
+					"name": "丘玉玲",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535938856591,
+					"loginTime": 1535971626745,
+					"authSite": 0,
+					"flag": 2,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1410233527000,
+					"authFlyer": 0,
+					"label": "丘玉玲",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 675,
+					"sacct": "su",
+					"name": "苏庭琛",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535370488612,
+					"loginTime": 1536045571351,
+					"authSite": 0,
+					"flag": 6,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1472089143000,
+					"authFlyer": 0,
+					"label": "苏庭琛",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 284,
+					"sacct": "monica",
+					"name": "覃婉君",
+					"creator": false,
+					"authBit": 0,
+					"lastLoginTime": 1495704282000,
+					"loginTime": 1495761555000,
+					"authSite": 0,
+					"flag": 0,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1415168273000,
+					"authFlyer": 0,
+					"label": "覃婉君",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 241,
+					"sacct": "james",
+					"name": "王超杰",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535939076966,
+					"loginTime": 1536042696012,
+					"authSite": 0,
+					"flag": 2,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1401767344000,
+					"authFlyer": 0,
+					"label": "王超杰",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 326,
+					"sacct": "wt",
+					"name": "王婷",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535623556521,
+					"loginTime": 1535631877979,
+					"authSite": 0,
+					"flag": 0,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1426491687000,
+					"authFlyer": 0,
+					"label": "王婷",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 199,
+					"sacct": "wall",
+					"name": "王晓凯",
+					"creator": false,
+					"authBit": 0,
+					"lastLoginTime": 1491030247000,
+					"loginTime": 1491357028000,
+					"authSite": 0,
+					"flag": 0,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1387333614000,
+					"authFlyer": 0,
+					"label": "王晓凯",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 325,
+					"sacct": "carter",
+					"name": "吴焕佳",
+					"creator": false,
+					"authBit": 0,
+					"lastLoginTime": 1521340438000,
+					"loginTime": 1521340470000,
+					"authSite": 0,
+					"flag": 2,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1426486886000,
+					"authFlyer": 0,
+					"label": "吴焕佳",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 689,
+					"sacct": "ping",
+					"name": "吴金萍",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535938666287,
+					"loginTime": 1536032680624,
+					"authSite": 0,
+					"flag": 6,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1473146893000,
+					"authFlyer": 0,
+					"label": "吴金萍",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 248,
+					"sacct": "quentin",
+					"name": "伍逸群",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535961529290,
+					"loginTime": 1536031094011,
+					"authSite": 0,
+					"flag": 2,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1404193953000,
+					"authFlyer": 0,
+					"label": "伍逸群",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 786,
+					"sacct": "season",
+					"name": "谢宸",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535704179607,
+					"loginTime": 1535946254704,
+					"authSite": 0,
+					"flag": 6,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1486525803000,
+					"authFlyer": 0,
+					"label": "谢宸",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 117,
+					"sacct": "emma",
+					"name": "谢丽兰",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1536043975705,
+					"loginTime": 1536044939964,
+					"authSite": 0,
+					"flag": 2,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1322014018000,
+					"authFlyer": 0,
+					"label": "谢丽兰",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 785,
+					"sacct": "ina",
+					"name": "谢莹",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1526951609682,
+					"loginTime": 1526975101184,
+					"authSite": 0,
+					"flag": 6,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1486525403000,
+					"authFlyer": 0,
+					"label": "谢莹",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 444,
+					"sacct": "any",
+					"name": "徐玉碧",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535953942768,
+					"loginTime": 1536026849328,
+					"authSite": 0,
+					"flag": 10,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1442903310000,
+					"authFlyer": 0,
+					"label": "徐玉碧",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 580,
+					"sacct": "jun",
+					"name": "严丽君",
+					"creator": false,
+					"authBit": 0,
+					"lastLoginTime": 1494295228000,
+					"loginTime": 1494321227000,
+					"authSite": 0,
+					"flag": 6,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1460344529000,
+					"authFlyer": 0,
+					"label": "严丽君",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 169,
+					"sacct": "john",
+					"name": "张嘉杰",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1515120032000,
+					"loginTime": 1517907150000,
+					"authSite": 0,
+					"flag": 0,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1364809980000,
+					"authFlyer": 0,
+					"label": "张嘉杰",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 527,
+					"sacct": "rona",
+					"name": "张如娜",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1536026359178,
+					"loginTime": 1536027283381,
+					"authSite": 0,
+					"flag": 0,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1452669402000,
+					"authFlyer": 0,
+					"label": "张如娜",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 659,
+					"sacct": "sinki",
+					"name": "郑晓琪",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1534234107175,
+					"loginTime": 1534819642145,
+					"authSite": 0,
+					"flag": 6,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1469416973000,
+					"authFlyer": 0,
+					"label": "郑晓琪",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 380,
+					"sacct": "dczhong",
+					"name": "钟德灿",
+					"creator": false,
+					"authBit": 2,
+					"lastLoginTime": 1535956850943,
+					"loginTime": 1535966858661,
+					"authSite": 0,
+					"flag": 2,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1434346909000,
+					"authFlyer": 0,
+					"label": "钟德灿",
+					"gender": 0
+				}, {
+					"aid": 1,
+					"sid": 532,
+					"sacct": "zhouyy",
+					"name": "周颖瑜",
+					"creator": false,
+					"authBit": 0,
+					"lastLoginTime": 1487641541000,
+					"loginTime": 1487813378000,
+					"authSite": 0,
+					"flag": 2,
+					"authHd": 0,
+					"authWxast": 0,
+					"createTime": 1455606217000,
+					"authFlyer": 0,
+					"label": "周颖瑜",
+					"gender": 0
+				}],
+				registerPoup: '//hd.faisys.com/version2/css/newRegister.min.css?v=201808211749',
+				keyWordList: [{
+					"id": 1,
+					"keyword": "大转盘"
+				}, {
+					"id": 2,
+					"keyword": "砍价"
+				}, {
+					"id": 3,
+					"keyword": "答题"
+				}, {
+					"id": 4,
+					"keyword": "投票"
+				}, {
+					"id": 5,
+					"keyword": "在线支付"
+				}, {
+					"id": 6,
+					"keyword": "助力"
+				}, {
+					"id": 7,
+					"keyword": "签到"
+				}],
+				guideProduct: '//hd.faisys.com/version2/css/guideProduct.min.css?v=201808061808',
+				flyerHost: 'i.cd.fkw.com',
+			};
+			var bannerSwiperInfo = {
+				swiperOpenABTest: false,
+				bannerData: {
+					"dataList": {
+						"A": [{
+							"bannerSrc": "https://1.h40.faiusr.com/2/1/ACgIABACGAAgm-6e3AUo_pzc5AEw0A84yAE.jpg",
+							"btnSrc": "https://1.h40.faiusr.com/4/1/ACgIABAEGAAgr-va2wUohoXpigcwrwE4Lg.png",
+							"btnSrcHover": "https://1.h40.faiusr.com/4/1/ACgIABAEGAAguPva2wUorK-GhAMwrwE4Lg.png",
+							"btnPositionX": "5000000",
+							"btnPositionY": "5000000",
+							"isLink": false,
+							"link": "www.fkw.com",
+							"innerLink": "newActive",
+							"showSrcid": "1",
+							"clickSrcid": "2"
+						}, {
+							"bannerSrc": "https://1.h40.faiusr.com/2/1/ACgIABACGAAg65ad3AUoxIaMlAIw0A84yAE.jpg",
+							"btnSrc": "https://1.h40.faiusr.com/4/1/ACgIABAEGAAg9KXv2wUor5zG8AYwoAE4Ng.png",
+							"btnSrcHover": "https://1.h40.faiusr.com/4/1/ACgIABAEGAAg_KXv2wUo7saIrgEwoAE4Ng.png",
+							"btnPositionX": "1228",
+							"btnPositionY": "108",
+							"isLink": true,
+							"link": "https://hd.fkw.com/news/11039",
+							"innerLink": "giftCenter",
+							"showSrcid": 0,
+							"clickSrcid": 0
+						}],
+						"B": [{
+							"bannerSrc": "http://1.h40.faiusr.com.faidev.cc/2/1/ACgIABACGAAglYKk2wUotLaTODDsDTi_AQ.jpg",
+							"btnSrc": "http://1.h40.faiusr.com.faidev.cc/4/1/ACgIABAEGAAgup_k2wUoyNvq-wYwrwE4Lg.png",
+							"btnSrcHover": "",
+							"btnPositionX": "1150",
+							"btnPositionY": "115",
+							"isLink": false,
+							"link": "",
+							"innerLink": "myActive",
+							"showSrcid": 0,
+							"clickSrcid": 0
+						}, {
+							"bannerSrc": "http://1.h40.faiusr.com.faidev.cc/2/1/ACgIABACGAAgmpmk2wUo4oPQngUw7A04vgE.jpg",
+							"btnSrc": "http://1.h40.faiusr.com.faidev.cc/4/1/ACgIABAEGAAgnpmk2wUord6qpgUwrwE4Lg.png",
+							"btnSrcHover": "http://1.h40.faiusr.com.faidev.cc/4/1/ACgIABAEGAAgo5mk2wUo1_2g7QIwrwE4Lg.png",
+							"btnPositionX": "1150",
+							"btnPositionY": "115",
+							"isLink": true,
+							"link": "https://ones.ai/testcase.html?keyword=测试用例编写工具",
+							"innerLink": "",
+							"showSrcid": 0,
+							"clickSrcid": 0
+						}, {
+							"bannerSrc": "http://1.h40.faiusr.com.faidev.cc/2/1/ACgIABACGAAg35_k2wUoteK-1gEw7A04vgE.jpg",
+							"btnSrc": "",
+							"btnSrcHover": "",
+							"btnPositionX": 0,
+							"btnPositionY": 0,
+							"isLink": false,
+							"link": "",
+							"innerLink": "",
+							"showSrcid": 0,
+							"clickSrcid": 0
+						}, {
+							"bannerSrc": "http://1.h40.faiusr.com.faidev.cc/2/1/ACgIABACGAAg5Z_k2wUorYbh4wMw7A04vgE.jpg",
+							"btnSrc": "",
+							"btnSrcHover": "",
+							"btnPositionX": 0,
+							"btnPositionY": 0,
+							"isLink": false,
+							"link": "",
+							"innerLink": "",
+							"showSrcid": 0,
+							"clickSrcid": 0
+						}, {
+							"bannerSrc": "http://1.h40.faiusr.com.faidev.cc/2/1/ACgIABACGAAg6Z_k2wUohPf0ggUw7A04vgE.jpg",
+							"btnSrc": "",
+							"btnSrcHover": "",
+							"btnPositionX": 0,
+							"btnPositionY": 0,
+							"isLink": false,
+							"link": "",
+							"innerLink": "",
+							"showSrcid": 0,
+							"clickSrcid": 0
+						}, {
+							"bannerSrc": "http://1.h40.faiusr.com.faidev.cc/2/1/ACgIABACGAAg7p_k2wUo8-X0oQEw7A04vgE.jpg",
+							"btnSrc": "",
+							"btnSrcHover": "",
+							"btnPositionX": 0,
+							"btnPositionY": 0,
+							"isLink": false,
+							"link": "",
+							"innerLink": "",
+							"showSrcid": 0,
+							"clickSrcid": 0
+						}, {
+							"bannerSrc": "http://1.h40.faiusr.com.faidev.cc/2/1/ACgIABACGAAg8p_k2wUo1uCk9AMw7A04vgE.jpg",
+							"btnSrc": "",
+							"btnSrcHover": "",
+							"btnPositionX": 0,
+							"btnPositionY": 0,
+							"isLink": false,
+							"link": "",
+							"innerLink": "",
+							"showSrcid": 0,
+							"clickSrcid": 0
+						}, {
+							"bannerSrc": "http://1.h40.faiusr.com.faidev.cc/2/1/ACgIABACGAAg9p_k2wUo2Nf-gwMw7A04vgE.jpg",
+							"btnSrc": "",
+							"btnSrcHover": "",
+							"btnPositionX": 0,
+							"btnPositionY": 0,
+							"isLink": false,
+							"link": "",
+							"innerLink": "",
+							"showSrcid": 0,
+							"clickSrcid": 0
+						}, {
+							"bannerSrc": "http://1.h40.faiusr.com.faidev.cc/2/1/ACgIABACGAAg_p_k2wUo8KXW1QMw7A04vgE.jpg",
+							"btnSrc": "",
+							"btnSrcHover": "",
+							"btnPositionX": 0,
+							"btnPositionY": 0,
+							"isLink": false,
+							"link": "",
+							"innerLink": "",
+							"showSrcid": 0,
+							"clickSrcid": 0
+						}, {
+							"bannerSrc": "http://1.h40.faiusr.com.faidev.cc/2/1/ACgIABACGAAgjaCk2wUooLGvwAQw7A04vgE.jpg",
+							"btnSrc": "",
+							"btnSrcHover": "",
+							"btnPositionX": 0,
+							"btnPositionY": 0,
+							"isLink": false,
+							"link": "",
+							"innerLink": "",
+							"showSrcid": 0,
+							"clickSrcid": 0
+						}]
+					},
+					"ANumber": 2,
+					"BNumber": 1
+				},
+				isOem: false,
+				isA: true
+			};
+			top.HdPortal.asyncCss
+				.load('popup_adviceBoxPoup', '../css/adviceBoxPoup.min.css?v=201808061808');
+		</script>
+		<script type="text/javascript" src="../js/jquery.uploadify.min.js?v=201808211430"></script>
+		<script type="text/javascript" src="../js/angular.min.js?v=201808201753"></script>
+		<script type="text/javascript" src="../js/controller_selector.min.js?v=201808231202"></script>
+	</body>
+
+</html>
